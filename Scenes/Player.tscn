@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/toad.dae" type="PackedScene" id=1]
+
+[sub_resource type="CapsuleShape" id=1]
+radius = 8.67507
+height = 0.002
+
+[node name="Player" type="KinematicBody"]
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -2, 0, 1, -8.74228e-08, 0, 10, 0 )
+shape = SubResource( 1 )
+
+[node name="toad" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0 )
+
+[node name="SpringArm" type="SpringArm" parent="."]
+
+[node name="Camera" type="Camera" parent="SpringArm"]
