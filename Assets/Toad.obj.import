@@ -1,20 +1,22 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/Toad.obj-73dedf791b28ef958f116b1ccebb38af.mesh"
+uid="uid://bei4dfvnjuv53"
+path="res://.godot/imported/Toad.obj-73dedf791b28ef958f116b1ccebb38af.mesh"
 
 [deps]
 
-files=[ "res://.import/Toad.obj-73dedf791b28ef958f116b1ccebb38af.mesh" ]
+files=["res://.godot/imported/Toad.obj-73dedf791b28ef958f116b1ccebb38af.mesh"]
 
 source_file="res://Assets/Toad.obj"
-dest_files=[ "res://.import/Toad.obj-73dedf791b28ef958f116b1ccebb38af.mesh", "res://.import/Toad.obj-73dedf791b28ef958f116b1ccebb38af.mesh" ]
+dest_files=["res://.godot/imported/Toad.obj-73dedf791b28ef958f116b1ccebb38af.mesh", "res://.godot/imported/Toad.obj-73dedf791b28ef958f116b1ccebb38af.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
-octahedral_compression=true
-optimize_mesh_flags=4286
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
