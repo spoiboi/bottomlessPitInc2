@@ -1,8 +1,9 @@
 [gd_scene load_steps=4 format=3 uid="uid://bwkmihmul3u3j"]
 
-[ext_resource type="PackedScene" uid="uid://cotyop14wq5i6" path="res://Scenes/player.tscn" id="1_lma1r"]
+[ext_resource type="PackedScene" uid="uid://cotyop14wq5i6" path="res://Scenes/Player.tscn" id="1_lma1r"]
 
-[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_8sbg5"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_xn1s6"]
+size = Vector3(20, 1, 10)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_hpnst"]
 size = Vector2(20, 10)
@@ -12,9 +13,10 @@ size = Vector2(20, 10)
 [node name="Floor" type="Node3D" parent="."]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D"]
-shape = SubResource("WorldBoundaryShape3D_8sbg5")
+shape = SubResource("BoxShape3D_xn1s6")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
 mesh = SubResource("PlaneMesh_hpnst")
@@ -23,9 +25,10 @@ mesh = SubResource("PlaneMesh_hpnst")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -14.7895)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Floor2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 14.7895)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor2/StaticBody3D"]
-shape = SubResource("WorldBoundaryShape3D_8sbg5")
+shape = SubResource("BoxShape3D_xn1s6")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Floor2"]
 mesh = SubResource("PlaneMesh_hpnst")
