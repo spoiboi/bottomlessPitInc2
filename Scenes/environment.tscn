@@ -33,10 +33,6 @@ shape = SubResource("BoxShape3D_xn1s6")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Floor2"]
 mesh = SubResource("PlaneMesh_hpnst")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.749788, 0.661678, 0, -0.661678, 0.749788, 0, 6.59127, 11.0478)
-visible = false
-
 [node name="Player" parent="." instance=ExtResource("1_lma1r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.82303, 0.929076, -0.481676)
 
