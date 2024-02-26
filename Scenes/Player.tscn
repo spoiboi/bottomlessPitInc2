@@ -25,7 +25,8 @@ mesh = ExtResource("1_apk68")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.567171, 0)
 
 [node name="Camera3D" type="Camera3D" parent="CameraPivot"]
-transform = Transform3D(1, 0, 0, 0, 0.948694, 0.316195, 0, -0.316195, 0.948694, 0, 2.42075, 4.08205)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.42075, 4.08205)
 current = true
 script = ExtResource("3_gjw8x")
 radius = 10.0
+phi = 1.571
