@@ -28,7 +28,7 @@ func set_camera_position():
 	if ray_cast.is_colliding():
 		collision_length = ray_cast.get_collision_point().length()
 	
-	position = (collision_length - 3) * angle_vector
+	position = (collision_length - 1.5) * angle_vector
 	look_at(get_parent_node_3d().global_position)
 
 
