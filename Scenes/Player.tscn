@@ -16,7 +16,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.07433, 0)
 shape = SubResource("CapsuleShape3D_lk4wq")
 
 [node name="CharacterModel" type="Node3D" parent="."]
-transform = Transform3D(-0.01, 0, -8.74228e-10, 0, 0.01, 0, 8.74228e-10, 0, -0.01, 0, 0, 0)
+transform = Transform3D(-0.01, 0, -1.50996e-09, 0, 0.01, 0, 1.50996e-09, 0, -0.01, 0, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterModel"]
 mesh = ExtResource("1_apk68")
