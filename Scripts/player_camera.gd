@@ -16,7 +16,6 @@ extends Camera3D
 
 func set_camera_position():
 	position = radius * Vector3(sin(phi) * cos(theta), cos(phi), sin(phi) * sin(theta))
-	#rotation = Vector3(0, -theta + 90, 0)
 	look_at(get_parent_node_3d().global_position)
 
 
