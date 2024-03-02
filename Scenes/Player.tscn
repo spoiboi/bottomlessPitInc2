@@ -30,3 +30,5 @@ current = true
 script = ExtResource("3_gjw8x")
 radius = 10.0
 phi = 1.0
+
+[node name="RayCast3D" type="RayCast3D" parent="CameraPivot"]
