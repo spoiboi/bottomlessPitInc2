@@ -2,3 +2,4 @@ res://default_env.tres
 res://Scenes/environment.tscn
 res://Scenes/player.tscn
 res://Scripts/player_camera.gd
+res://Scripts/player.gd
