@@ -1,0 +1,495 @@
+[gd_scene load_steps=9 format=3 uid="uid://ds6snrftu1ftl"]
+
+[ext_resource type="Script" path="res://Scripts/spiky_cylinder.gd" id="1_t1kct"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_tickd"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_oi10q"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_rhx3k"]
+top_radius = 0.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4f87l"]
+margin = 0.0
+size = Vector3(20, 2, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_31rrb"]
+margin = 0.0
+size = Vector3(20, 2, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pp0j6"]
+margin = 0.0
+size = Vector3(20, 2, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gloc7"]
+margin = 0.0
+size = Vector3(20, 2, 1)
+
+[node name="SpikyCylinder" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00265956, 0, 0)
+script = ExtResource("1_t1kct")
+
+[node name="Cylinder" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-07, -10, 0, -4.37114e-07, 1.91069e-14, 10, -10, 4.37114e-07, -4.37114e-07, 0, 0, 0)
+mesh = SubResource("CylinderMesh_tickd")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cylinder"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cylinder/StaticBody3D"]
+transform = Transform3D(-4.37114e-07, -10, 0, -4.37114e-07, -1.13687e-13, 10, -10, 4.37114e-07, -4.37114e-07, -4.06516e-10, 0, 0.0093)
+shape = SubResource("CylinderShape3D_oi10q")
+
+[node name="SpikeRow1" type="Node3D" parent="."]
+
+[node name="Spikes" type="MeshInstance3D" parent="SpikeRow1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes2" type="MeshInstance3D" parent="SpikeRow1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes3" type="MeshInstance3D" parent="SpikeRow1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes4" type="MeshInstance3D" parent="SpikeRow1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes5" type="MeshInstance3D" parent="SpikeRow1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes6" type="MeshInstance3D" parent="SpikeRow1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes7" type="MeshInstance3D" parent="SpikeRow1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes8" type="MeshInstance3D" parent="SpikeRow1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes9" type="MeshInstance3D" parent="SpikeRow1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes10" type="MeshInstance3D" parent="SpikeRow1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes11" type="MeshInstance3D" parent="SpikeRow1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes12" type="MeshInstance3D" parent="SpikeRow1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes13" type="MeshInstance3D" parent="SpikeRow1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes14" type="MeshInstance3D" parent="SpikeRow1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes15" type="MeshInstance3D" parent="SpikeRow1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes16" type="MeshInstance3D" parent="SpikeRow1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes17" type="MeshInstance3D" parent="SpikeRow1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes18" type="MeshInstance3D" parent="SpikeRow1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes19" type="MeshInstance3D" parent="SpikeRow1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes20" type="MeshInstance3D" parent="SpikeRow1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes21" type="MeshInstance3D" parent="SpikeRow1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="SpikeRow1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpikeRow1/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+shape = SubResource("BoxShape3D_4f87l")
+
+[node name="SpikeRow2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+
+[node name="Spikes" type="MeshInstance3D" parent="SpikeRow2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes2" type="MeshInstance3D" parent="SpikeRow2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes3" type="MeshInstance3D" parent="SpikeRow2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes4" type="MeshInstance3D" parent="SpikeRow2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes5" type="MeshInstance3D" parent="SpikeRow2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes6" type="MeshInstance3D" parent="SpikeRow2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes7" type="MeshInstance3D" parent="SpikeRow2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes8" type="MeshInstance3D" parent="SpikeRow2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes9" type="MeshInstance3D" parent="SpikeRow2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes10" type="MeshInstance3D" parent="SpikeRow2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes11" type="MeshInstance3D" parent="SpikeRow2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes12" type="MeshInstance3D" parent="SpikeRow2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes13" type="MeshInstance3D" parent="SpikeRow2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes14" type="MeshInstance3D" parent="SpikeRow2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes15" type="MeshInstance3D" parent="SpikeRow2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes16" type="MeshInstance3D" parent="SpikeRow2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes17" type="MeshInstance3D" parent="SpikeRow2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes18" type="MeshInstance3D" parent="SpikeRow2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes19" type="MeshInstance3D" parent="SpikeRow2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes20" type="MeshInstance3D" parent="SpikeRow2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes21" type="MeshInstance3D" parent="SpikeRow2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="SpikeRow2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpikeRow2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+shape = SubResource("BoxShape3D_31rrb")
+
+[node name="SpikeRow3" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0)
+
+[node name="Spikes" type="MeshInstance3D" parent="SpikeRow3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes2" type="MeshInstance3D" parent="SpikeRow3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes3" type="MeshInstance3D" parent="SpikeRow3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes4" type="MeshInstance3D" parent="SpikeRow3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes5" type="MeshInstance3D" parent="SpikeRow3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes6" type="MeshInstance3D" parent="SpikeRow3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes7" type="MeshInstance3D" parent="SpikeRow3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes8" type="MeshInstance3D" parent="SpikeRow3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes9" type="MeshInstance3D" parent="SpikeRow3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes10" type="MeshInstance3D" parent="SpikeRow3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes11" type="MeshInstance3D" parent="SpikeRow3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes12" type="MeshInstance3D" parent="SpikeRow3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes13" type="MeshInstance3D" parent="SpikeRow3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes14" type="MeshInstance3D" parent="SpikeRow3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes15" type="MeshInstance3D" parent="SpikeRow3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes16" type="MeshInstance3D" parent="SpikeRow3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes17" type="MeshInstance3D" parent="SpikeRow3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes18" type="MeshInstance3D" parent="SpikeRow3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes19" type="MeshInstance3D" parent="SpikeRow3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes20" type="MeshInstance3D" parent="SpikeRow3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes21" type="MeshInstance3D" parent="SpikeRow3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="SpikeRow3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpikeRow3/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+shape = SubResource("BoxShape3D_pp0j6")
+
+[node name="SpikeRow 4" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1.19249e-08, 1, 0, -1, 1.19249e-08, 0, 0, 0)
+
+[node name="Spikes" type="MeshInstance3D" parent="SpikeRow 4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes2" type="MeshInstance3D" parent="SpikeRow 4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes3" type="MeshInstance3D" parent="SpikeRow 4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes4" type="MeshInstance3D" parent="SpikeRow 4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes5" type="MeshInstance3D" parent="SpikeRow 4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes6" type="MeshInstance3D" parent="SpikeRow 4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes7" type="MeshInstance3D" parent="SpikeRow 4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes8" type="MeshInstance3D" parent="SpikeRow 4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes9" type="MeshInstance3D" parent="SpikeRow 4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes10" type="MeshInstance3D" parent="SpikeRow 4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes11" type="MeshInstance3D" parent="SpikeRow 4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes12" type="MeshInstance3D" parent="SpikeRow 4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes13" type="MeshInstance3D" parent="SpikeRow 4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes14" type="MeshInstance3D" parent="SpikeRow 4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes15" type="MeshInstance3D" parent="SpikeRow 4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes16" type="MeshInstance3D" parent="SpikeRow 4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes17" type="MeshInstance3D" parent="SpikeRow 4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes18" type="MeshInstance3D" parent="SpikeRow 4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes19" type="MeshInstance3D" parent="SpikeRow 4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes20" type="MeshInstance3D" parent="SpikeRow 4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="Spikes21" type="MeshInstance3D" parent="SpikeRow 4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 5, 0)
+mesh = SubResource("CylinderMesh_rhx3k")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="SpikeRow 4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpikeRow 4/MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+shape = SubResource("BoxShape3D_gloc7")

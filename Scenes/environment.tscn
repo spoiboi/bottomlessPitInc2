@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bwkmihmul3u3j"]
+[gd_scene load_steps=5 format=3 uid="uid://bwkmihmul3u3j"]
 
 [ext_resource type="PackedScene" uid="uid://cotyop14wq5i6" path="res://Scenes/Player.tscn" id="1_lma1r"]
+[ext_resource type="PackedScene" uid="uid://ds6snrftu1ftl" path="res://Scenes/spiky_cylinder.tscn" id="2_bnass"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xn1s6"]
 size = Vector3(20, 1, 10)
@@ -39,3 +40,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.82303, 0.929076, -0.481676)
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.0976871, 0.995217, 0, -0.995217, -0.0976871, 0, 9.55045, 3.95304)
 light_energy = 2.34
+
+[node name="SpikyCylinder" parent="." instance=ExtResource("2_bnass")]
