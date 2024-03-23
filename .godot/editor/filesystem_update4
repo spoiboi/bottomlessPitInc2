@@ -1,8 +1,10 @@
 res://default_env.tres
 res://Scenes/environment.tscn
-
-res://Scenes/player.tscn
 res://Scenes/platform.tscn
+res://Scenes/vertical_spring.tscn
+res://Scripts/CollisionShape3D.gd
+res://Scenes/bouncyAreaCollision.gd
+res://Scripts/player.gd
+res://Scripts/player_camera.gd
 res://Scripts/spiky_cylinder.gd
 res://Scenes/spiky_cylinder.tscn
-

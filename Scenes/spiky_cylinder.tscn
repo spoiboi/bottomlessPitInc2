@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://ds6snrftu1ftl"]
+[gd_scene load_steps=9 format=3 uid="uid://ds6snrftu1ftl"]
 
 [ext_resource type="Script" path="res://Scripts/spiky_cylinder.gd" id="1_t1kct"]
 
@@ -21,6 +21,10 @@ size = Vector3(20, 2, 1)
 margin = 0.0
 size = Vector3(20, 2, 1)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_gloc7"]
+margin = 0.0
+size = Vector3(20, 2, 1)
+
 [node name="SpikyCylinder" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00265956, 0, 0)
 script = ExtResource("1_t1kct")
@@ -29,9 +33,9 @@ script = ExtResource("1_t1kct")
 transform = Transform3D(-4.37114e-07, -10, 0, -4.37114e-07, 1.91069e-14, 10, -10, 4.37114e-07, -4.37114e-07, 0, 0, 0)
 mesh = SubResource("CylinderMesh_tickd")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="StaticBody3D" type="StaticBody3D" parent="Cylinder"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cylinder/StaticBody3D"]
 transform = Transform3D(-4.37114e-07, -10, 0, -4.37114e-07, -1.13687e-13, 10, -10, 4.37114e-07, -4.37114e-07, -4.06516e-10, 0, 0.0093)
 shape = SubResource("CylinderShape3D_oi10q")
 
@@ -486,8 +490,6 @@ skeleton = NodePath("../..")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="SpikeRow 4"]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SpikeRow 4/MeshInstance3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpikeRow 4/MeshInstance3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SpikeRow 4/MeshInstance3D/StaticBody3D"]
-shape = SubResource("BoxShape3D_pp0j6")
+shape = SubResource("BoxShape3D_gloc7")
