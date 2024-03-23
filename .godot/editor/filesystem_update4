@@ -6,3 +6,4 @@ res://Scenes/spiky_cylinder.tscn
 res://what.tscn
 res://Scenes/vertical_spring.tscn
 res://Scripts/bouncyAreaCollision.gd
+res://Scenes/vertical_spring.gd

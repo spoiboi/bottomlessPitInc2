@@ -28,6 +28,7 @@ size = Vector3(20, 2, 1)
 [node name="SpikyCylinder" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00265956, 0, 0)
 script = ExtResource("1_t1kct")
+spinSpeed = 1000.0
 
 [node name="Cylinder" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-07, -10, 0, -4.37114e-07, 1.91069e-14, 10, -10, 4.37114e-07, -4.37114e-07, 0, 0, 0)
