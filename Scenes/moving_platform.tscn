@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7x0ggr7rlp35"]
+
+[ext_resource type="PackedScene" uid="uid://csg7h6jwhtt3b" path="res://Scenes/platform.tscn" id="1_pu4nf"]
+[ext_resource type="Script" path="res://Scripts/move_platform.gd" id="1_wobh5"]
+
+[sub_resource type="Curve3D" id="Curve3D_oa8qc"]
+_data = {
+"points": PackedVector3Array(5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -5, 0, 0, 5, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[node name="Moving Platform" type="Path3D"]
+curve = SubResource("Curve3D_oa8qc")
+script = ExtResource("1_wobh5")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="Platform" parent="PathFollow3D" instance=ExtResource("1_pu4nf")]
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, 0, 0)
