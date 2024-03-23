@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://c4m8lt4tqj350"]
 
-[ext_resource type="Script" path="res://Scenes/bouncyAreaCollision.gd" id="1_goxxe"]
+[ext_resource type="Script" path="res://Scripts/bouncyAreaCollision.gd" id="1_goxxe"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ll5dq"]
 
@@ -21,7 +21,6 @@ transform = Transform3D(1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 0.269106, 0)
 shape = SubResource("BoxShape3D_ll5dq")
 disabled = true
 script = ExtResource("1_goxxe")
-bounce = null
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0, 0)

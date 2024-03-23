@@ -38,3 +38,7 @@ func rotate_model(input_dir):
 		$CharacterModel.rotation.y = 3.14159 - input_dir.x
 	else:
 		$CharacterModel.rotation.y = input_dir.x
+
+
+func _on_bouncy_body_enter():
+	velocity.y = 1000

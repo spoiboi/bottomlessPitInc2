@@ -8,3 +8,5 @@ res://Scripts/player.gd
 res://Scripts/player_camera.gd
 res://Scripts/spiky_cylinder.gd
 res://Scenes/spiky_cylinder.tscn
+res://Scenes/player.tscn
+res://Scripts/bouncyAreaCollision.gd
