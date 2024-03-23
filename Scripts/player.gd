@@ -35,6 +35,6 @@ func _physics_process(delta):
 
 func rotate_model(input_dir):
 	if input_dir.y <= 0:
-		$CharacterModel.rotation.y = 3.14159 - input_dir.x
+		$CharacterModel.rotation.y = (PI - input_dir.x)+$CameraPivot/Camera3D.rotation.y
 	else:
-		$CharacterModel.rotation.y = input_dir.x
+		$CharacterModel.rotation.y = (input_dir.x)+$CameraPivot/Camera3D.rotation.y
