@@ -15,6 +15,10 @@ run/main_scene="res://Scenes/environment.tscn"
 config/features=PackedStringArray("4.2")
 config/icon="res://icon.png"
 
+[dotnet]
+
+project/assembly_name="Bottomless Pit Inc"
+
 [input]
 
 forward={
