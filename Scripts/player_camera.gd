@@ -33,6 +33,6 @@ func set_camera_position():
 
 
 func _physics_process(delta):
-	theta += Input.get_axis("camera_right", "camera_left") * delta
+	theta += Input.get_axis("camera_left", "camera_right") * delta
 	phi += Input.get_axis("camera_up", "camera_down") * delta
 	set_camera_position()
