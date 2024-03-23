@@ -1,8 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bwkmihmul3u3j"]
+[gd_scene load_steps=6 format=3 uid="uid://bwkmihmul3u3j"]
 
-
-[ext_resource type="PackedScene" uid="uid://cotyop14wq5i6" path="res://Scenes/player.tscn" id="1_lma1r"]
+[ext_resource type="PackedScene" uid="uid://cotyop14wq5i6" path="res://Scenes/Player.tscn" id="1_lma1r"]
 [ext_resource type="PackedScene" uid="uid://csg7h6jwhtt3b" path="res://Scenes/platform.tscn" id="2_8jmle"]
+[ext_resource type="PackedScene" uid="uid://ds6snrftu1ftl" path="res://Scenes/spiky_cylinder.tscn" id="3_0nkci"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xn1s6"]
 size = Vector3(20, 1, 10)
@@ -44,3 +44,6 @@ light_energy = 2.34
 
 [node name="Platform" parent="." instance=ExtResource("2_8jmle")]
 transform = Transform3D(40, 0, 0, 0, 40, 0, 0, 0, 40, -0.264393, -8.49254, -39.123)
+
+[node name="SpikyCylinder" parent="." instance=ExtResource("3_0nkci")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.668, 18.5388, -25.1948)

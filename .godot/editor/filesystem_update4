@@ -1,9 +1,4 @@
 res://default_env.tres
-res://Scenes/spiky_cylinder.tscn
 res://Scenes/environment.tscn
-
-res://Scenes/player.tscn
-res://Scripts/player_camera.gd
-res://Scripts/player.gd
 res://Scenes/platform.tscn
-
+res://Scenes/player.tscn
