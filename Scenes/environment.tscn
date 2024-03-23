@@ -1,15 +1,23 @@
-[gd_scene load_steps=7 format=3 uid="uid://bwkmihmul3u3j"]
+[gd_scene load_steps=9 format=3 uid="uid://bwkmihmul3u3j"]
 
-[ext_resource type="PackedScene" uid="uid://cotyop14wq5i6" path="res://Scenes/Player.tscn" id="1_lma1r"]
+[ext_resource type="PackedScene" uid="uid://cotyop14wq5i6" path="res://Scenes/player.tscn" id="1_lma1r"]
 [ext_resource type="PackedScene" uid="uid://csg7h6jwhtt3b" path="res://Scenes/platform.tscn" id="2_8jmle"]
 [ext_resource type="PackedScene" uid="uid://ds6snrftu1ftl" path="res://Scenes/spiky_cylinder.tscn" id="3_0nkci"]
 [ext_resource type="PackedScene" uid="uid://c4m8lt4tqj350" path="res://Scenes/vertical_spring.tscn" id="4_finww"]
+[ext_resource type="PackedScene" uid="uid://b7x0ggr7rlp35" path="res://Scenes/moving_platform.tscn" id="5_ckyls"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xn1s6"]
 size = Vector3(20, 1, 10)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_hpnst"]
 size = Vector2(20, 10)
+
+[sub_resource type="Curve3D" id="Curve3D_qg6cs"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0)
+}
+point_count = 3
 
 [node name="Environment" type="Node3D"]
 
@@ -54,3 +62,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 67.5478, 22.097, 4.75678)
 
 [node name="vertical_spring2" parent="." instance=ExtResource("4_finww")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -6.0486, -2.50009, 13.7596)
+
+[node name="Moving Platform" parent="." instance=ExtResource("5_ckyls")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.519, 0.711088, 2.16557)
+curve = SubResource("Curve3D_qg6cs")
