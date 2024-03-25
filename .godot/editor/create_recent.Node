@@ -1,7 +1,8 @@
+PathFollow3D
+Path3D
 MeshInstance3D
 CollisionShape3D
 StaticBody3D
-Path3D
 RayCast3D
 Node3D
 Camera3D

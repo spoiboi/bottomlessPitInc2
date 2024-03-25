@@ -1,5 +1,15 @@
 res://default_env.tres
+<<<<<<< Updated upstream
+=======
+res://Scenes/moving_platform.tscn
+res://Scripts/moving_platform.gd
+>>>>>>> Stashed changes
 res://Scenes/environment.tscn
-res://Scenes/player.tscn
 res://Scenes/platform.tscn
+<<<<<<< Updated upstream
 res://Scenes/crumbling_platform.tscn
+=======
+res://Scenes/spiky_cylinder.tscn
+res://Scenes/player.tscn
+res://what.tscn
+>>>>>>> Stashed changes
