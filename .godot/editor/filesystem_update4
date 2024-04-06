@@ -3,3 +3,4 @@ res://Scenes/environment.tscn
 res://Scenes/player.tscn
 res://Scenes/platform.tscn
 res://Scenes/crumbling_platform.tscn
+res://Scripts/crumbling_platform.gd
