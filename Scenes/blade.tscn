@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://bgji6ic61gwk7"]
+
+[ext_resource type="Script" path="res://Scripts/blade.gd" id="1_jejg3"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_es745"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_bc0be"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xsrxk"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h0sli"]
+
+[node name="Blade" type="Node3D"]
+script = ExtResource("1_jejg3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_es745")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 10, -0.077, 0, 0)
+mesh = SubResource("BoxMesh_bc0be")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_xsrxk")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 10, 0, 0, 0)
+shape = SubResource("BoxShape3D_h0sli")
