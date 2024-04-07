@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://2xeio07hv8rq"]
+[gd_scene load_steps=6 format=3 uid="uid://v3campbe5tqo"]
 
 [ext_resource type="Script" path="res://Scripts/bouncyAreaCollision.gd" id="1_goxxe"]
 

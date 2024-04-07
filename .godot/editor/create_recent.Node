@@ -1,9 +1,7 @@
-
+WorldEnvironment
 ShapeCast3D
-
 PathFollow3D
 Path3D
-
 MeshInstance3D
 CollisionShape3D
 StaticBody3D
