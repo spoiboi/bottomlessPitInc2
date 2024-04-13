@@ -1,12 +1,11 @@
 res://default_env.tres
-res://Scenes/teleporter.tscn
-res://Backgrounds/background1.gdshader
-res://Scripts/teleporter.gd
-res://Scenes/environment.tscn
 res://Scenes/player.tscn
+res://Backgrounds/background1.gdshader
 res://Scenes/platform.tscn
 res://Scenes/spiky_cylinder.tscn
+res://Scenes/environment.tscn
 res://Scenes/crumbling_platform.tscn
 res://Scenes/deathplane.tscn
+res://Scenes/teleporter.tscn
 res://Scenes/blank_level.tscn
-res://Scripts/deathplane.gd
+res://Levels/blank_level.tscn
