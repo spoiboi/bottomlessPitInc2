@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://kumhavcsjp4k"]
+
+[ext_resource type="PackedScene" uid="uid://ds6snrftu1ftl" path="res://Scenes/spiky_cylinder.tscn" id="1_3tv0i"]
+[ext_resource type="PackedScene" uid="uid://bo2nwkv56svsg" path="res://Scenes/deathplane.tscn" id="2_fxbrq"]
+[ext_resource type="PackedScene" uid="uid://csg7h6jwhtt3b" path="res://Scenes/platform.tscn" id="2_oirci"]
+[ext_resource type="PackedScene" uid="uid://cotyop14wq5i6" path="res://Scenes/player.tscn" id="3_bvaen"]
+
+[node name="EasyLevel" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.40254, -0.796032, -0.270674)
+
+[node name="deathplane" parent="." instance=ExtResource("2_fxbrq")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, -20, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.809017, 0.587785, 0, -0.587785, 0.809017, 0, 0.909138, 10)
+
+[node name="Platform" parent="." instance=ExtResource("2_oirci")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -5, 0)
+
+[node name="Player" parent="." instance=ExtResource("3_bvaen")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.51476, 0)
+
+[node name="SpikyCylinder" parent="." instance=ExtResource("1_3tv0i")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, -7.5, -16.025)
