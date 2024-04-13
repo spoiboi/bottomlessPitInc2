@@ -1,13 +1,15 @@
 res://default_env.tres
+res://Scenes/environment.tscn
 res://Backgrounds/background1.gdshader
+res://Levels/Moving To Your Mom's House.tscn
+res://Scenes/player.tscn
 res://Scenes/platform.tscn
 res://Scenes/spiky_cylinder.tscn
-res://Scenes/environment.tscn
-res://Scenes/crumbling_platform.tscn
+res://what.tscn
+res://Scenes/moving_platform.tscn
+res://Scenes/blade.tscn
+res://Scenes/rotating_wheel.tscn
+res://Scenes/vertical_spring.tscn
+res://Backgrounds/funny_background1.tscn
 res://Scenes/deathplane.tscn
-res://Scenes/teleporter.tscn
-res://Scenes/blank_level.tscn
-res://easy_level.tscn
-res://Scenes/player.tscn
-res://Scripts/spiky_cylinder.gd
-res://Scenes/respawn_stub.gd
+res://Levels/moving_to_your_moms_house.tscn

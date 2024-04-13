@@ -1,7 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://ds6snrftu1ftl"]
+[gd_scene load_steps=8 format=3 uid="uid://ds6snrftu1ftl"]
 
 [ext_resource type="Script" path="res://Scripts/spiky_cylinder.gd" id="1_t1kct"]
-[ext_resource type="Script" path="res://Scenes/respawn_stub.gd" id="2_nevic"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_tickd"]
 
@@ -31,8 +30,6 @@ transform = Transform3D(-4.37114e-07, -10, 0, -4.37114e-07, 1.91069e-14, 10, -10
 mesh = SubResource("CylinderMesh_tickd")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
-collision_layer = 0
-script = ExtResource("2_nevic")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(-4.37114e-07, -10, 0, -4.37114e-07, -1.13687e-13, 10, -10, 4.37114e-07, -4.37114e-07, -4.06516e-10, 0, 0.0093)
@@ -145,13 +142,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 5, 0)
 mesh = SubResource("CylinderMesh_rhx3k")
 skeleton = NodePath("../..")
 
-[node name="RigidBody3D" type="RigidBody3D" parent="SpikeRow1"]
-freeze = true
-freeze_mode = 1
-max_contacts_reported = 10000000
-contact_monitor = true
+[node name="StaticBody3D" type="StaticBody3D" parent="SpikeRow1"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SpikeRow1/RigidBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpikeRow1/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
 shape = SubResource("BoxShape3D_4f87l")
 
@@ -263,13 +256,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 5, 0)
 mesh = SubResource("CylinderMesh_rhx3k")
 skeleton = NodePath("../..")
 
-[node name="RigidBody3D" type="RigidBody3D" parent="SpikeRow2"]
-freeze = true
-freeze_mode = 1
-max_contacts_reported = 10000
-contact_monitor = true
+[node name="StaticBody3D" type="StaticBody3D" parent="SpikeRow2"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SpikeRow2/RigidBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpikeRow2/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
 shape = SubResource("BoxShape3D_31rrb")
 
@@ -381,13 +370,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 5, 0)
 mesh = SubResource("CylinderMesh_rhx3k")
 skeleton = NodePath("../..")
 
-[node name="RigidBody3D" type="RigidBody3D" parent="SpikeRow3"]
-freeze = true
-freeze_mode = 1
-max_contacts_reported = 10000
-contact_monitor = true
+[node name="StaticBody3D" type="StaticBody3D" parent="SpikeRow3"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SpikeRow3/RigidBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpikeRow3/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
 shape = SubResource("BoxShape3D_pp0j6")
 
@@ -501,17 +486,8 @@ skeleton = NodePath("../..")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="SpikeRow 4"]
 
-[node name="RigidBody3D" type="RigidBody3D" parent="SpikeRow 4/MeshInstance3D"]
+[node name="StaticBody3D" type="StaticBody3D" parent="SpikeRow 4/MeshInstance3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
-freeze = true
-freeze_mode = 1
-max_contacts_reported = 10000
-contact_monitor = true
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SpikeRow 4/MeshInstance3D/RigidBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpikeRow 4/MeshInstance3D/StaticBody3D"]
 shape = SubResource("BoxShape3D_pp0j6")
-
-[connection signal="body_entered" from="SpikeRow1/RigidBody3D" to="." method="_on_static_body_3d_body_entered"]
-[connection signal="body_entered" from="SpikeRow2/RigidBody3D" to="." method="_on_static_body_3d_body_entered"]
-[connection signal="body_entered" from="SpikeRow3/RigidBody3D" to="." method="_on_static_body_3d_body_entered"]
-[connection signal="body_entered" from="SpikeRow 4/MeshInstance3D/RigidBody3D" to="." method="_on_static_body_3d_body_entered"]

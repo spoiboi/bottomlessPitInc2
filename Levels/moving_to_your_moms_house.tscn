@@ -1,0 +1,67 @@
+[gd_scene load_steps=10 format=3 uid="uid://b0dqt2gdgfgg7"]
+
+[ext_resource type="PackedScene" uid="uid://wkbbl7c6vjce" path="res://Backgrounds/funny_background1.tscn" id="1_07v2u"]
+[ext_resource type="PackedScene" uid="uid://cotyop14wq5i6" path="res://Scenes/player.tscn" id="2_wowgn"]
+[ext_resource type="PackedScene" uid="uid://csg7h6jwhtt3b" path="res://Scenes/platform.tscn" id="3_lr4lw"]
+[ext_resource type="PackedScene" uid="uid://bkol6cate26rl" path="res://Scenes/moving_platform.tscn" id="4_vfelj"]
+[ext_resource type="PackedScene" uid="uid://bqanftgk7h1hd" path="res://Scenes/teleporter.tscn" id="5_cai8f"]
+[ext_resource type="PackedScene" uid="uid://dnr22wo8t4i7c" path="res://Scenes/deathplane.tscn" id="6_hkwkn"]
+
+[sub_resource type="Curve3D" id="Curve3D_18ngg"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, -20, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, -20, 0, 0, 0, 0, 0, 0, 0, 50, -20, 0, 0, 0, 0, 0, 0, 0, 50, -50, 0, 0, 0, 0, 0, 0, 0, 50, -20, 0, 0, 0, 0, 0, 0, 0, 0, -20),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 7
+
+[sub_resource type="Curve3D" id="Curve3D_qfp7s"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 0, -20, 0, 0, 0, 0, 0, 0, 0, 0, -40, 0, 0, 0, 0, 0, 0, -20, 0, -20, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
+}
+point_count = 5
+
+[sub_resource type="Curve3D" id="Curve3D_m55ek"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, -40, 0, 0, 0, 0, 0, 0, -20, 0, -20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 0, -20, 0, 0, 0, 0, 0, 0, 0, 0, -40),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
+}
+point_count = 5
+
+[node name="MovingToYourMom\'sHouse" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("2_wowgn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1000, 0)
+directional_shadow_max_distance = 8192.0
+
+[node name="WorldEnvironment" parent="." instance=ExtResource("1_07v2u")]
+
+[node name="Path3D" parent="." instance=ExtResource("4_vfelj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -20)
+curve = SubResource("Curve3D_18ngg")
+
+[node name="Platform" parent="." instance=ExtResource("3_lr4lw")]
+transform = Transform3D(20, 0, 0, 0, 5, 0, 0, 0, 15, 0, 0, 0)
+
+[node name="Platform2" parent="." instance=ExtResource("3_lr4lw")]
+transform = Transform3D(20, 0, 0, 0, 5, 0, 0, 0, 15, 15, 50, -70)
+
+[node name="Platform3" parent="." instance=ExtResource("3_lr4lw")]
+transform = Transform3D(20, 0, 0, 0, 5, 0, 0, 0, 15, 15, 50, -140.041)
+
+[node name="Path3D2" parent="." instance=ExtResource("4_vfelj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 50, -85)
+curve = SubResource("Curve3D_qfp7s")
+
+[node name="Path3D3" parent="." instance=ExtResource("4_vfelj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 50, -85)
+curve = SubResource("Curve3D_m55ek")
+
+[node name="Teleporter" parent="." instance=ExtResource("5_cai8f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.2534, 54.1064, -139.791)
+
+[node name="deathplane" parent="." instance=ExtResource("6_hkwkn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -57.3445, 0)
