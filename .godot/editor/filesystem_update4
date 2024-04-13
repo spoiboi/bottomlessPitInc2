@@ -1,12 +1,13 @@
 res://default_env.tres
+res://Scenes/player.tscn
+res://Backgrounds/background1.gdshader
+res://Scenes/platform.tscn
+res://Scenes/spiky_cylinder.tscn
 res://Scenes/environment.tscn
-
 res://Scenes/crumbling_platform.tscn
 res://Scenes/deathplane.tscn
 res://Scenes/teleporter.tscn
 res://Scenes/blank_level.tscn
 res://Levels/blank_level.tscn
 res://Levels/crumbling_hell.tscn
-
-res://Backgrounds/background1.gdshader
-
+res://Scripts/player.gd

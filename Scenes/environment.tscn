@@ -5,9 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://ds6snrftu1ftl" path="res://Scenes/spiky_cylinder.tscn" id="3_8tlmh"]
 [ext_resource type="PackedScene" uid="uid://dyauuntaex86k" path="res://Scenes/crumbling_platform.tscn" id="4_iqrnt"]
 [ext_resource type="PackedScene" uid="uid://bkol6cate26rl" path="res://Scenes/moving_platform.tscn" id="5_tjeuy"]
-[ext_resource type="PackedScene" uid="uid://wkbbl7c6vjce" path="res://Backgrounds/funny_background1.tscn" id="6_pmx3e"]
-[ext_resource type="PackedScene" path="res://Scenes/deathplane.tscn" id="8_ivcdc"]
-[ext_resource type="PackedScene" path="res://Scenes/teleporter.tscn" id="9_k3yen"]
+[ext_resource type="PackedScene" path="res://Backgrounds/funny_background1.tscn" id="6_pmx3e"]
+[ext_resource type="PackedScene" uid="uid://bo2nwkv56svsg" path="res://Scenes/deathplane.tscn" id="8_ivcdc"]
+[ext_resource type="PackedScene" uid="uid://bqanftgk7h1hd" path="res://Scenes/teleporter.tscn" id="9_k3yen"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xn1s6"]
 size = Vector3(20, 1, 10)
