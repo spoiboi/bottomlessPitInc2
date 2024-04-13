@@ -1,5 +1,5 @@
-RigidBody3D
 DirectionalLight3D
+RigidBody3D
 MeshInstance3D
 ShapeCast3D
 WorldEnvironment

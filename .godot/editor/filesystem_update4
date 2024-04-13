@@ -11,3 +11,4 @@ res://easy_level.tscn
 res://Scenes/player.tscn
 res://Scripts/spiky_cylinder.gd
 res://Scenes/respawn_stub.gd
+res://spiky_level.tscn
