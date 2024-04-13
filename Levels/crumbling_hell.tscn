@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bo2nwkv56svsg" path="res://Scenes/deathplane.tscn" id="3_mdgem"]
 [ext_resource type="PackedScene" uid="uid://dyauuntaex86k" path="res://Scenes/crumbling_platform.tscn" id="4_7cown"]
 [ext_resource type="PackedScene" uid="uid://bqanftgk7h1hd" path="res://Scenes/teleporter.tscn" id="5_sg8g3"]
-[ext_resource type="PackedScene" path="res://Backgrounds/funny_background1.tscn" id="6_c237c"]
+[ext_resource type="PackedScene" uid="uid://wkbbl7c6vjce" path="res://Backgrounds/funny_background1.tscn" id="6_c237c"]
 
 [node name="Node3D" type="Node3D"]
 
