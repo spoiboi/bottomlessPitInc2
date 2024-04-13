@@ -8,7 +8,7 @@ var initial_z = 0
 
 var first_time = true
 
-const SPEED = 5.0
+const SPEED = 7.5
 const JUMP_VELOCITY = 7.5
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
