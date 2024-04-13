@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bo2nwkv56svsg"]
+
+[ext_resource type="Script" path="res://Scripts/deathplane.gd" id="1_nf8hx"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_6rj43"]
+
+[node name="deathplane" type="Node3D"]
+script = ExtResource("1_nf8hx")
+
+[node name="checker" type="ShapeCast3D" parent="."]
+shape = SubResource("WorldBoundaryShape3D_6rj43")

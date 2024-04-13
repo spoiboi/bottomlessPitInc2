@@ -18,7 +18,7 @@ func _process(delta):
 func crumble():
 	position.y -= crumble_velocity
 	crumble_velocity +=0.1
-	if position.y < (default_height - 100):
+	if position.y < (default_height - 20):
 		position.y = default_height
 		crumble_velocity = 0
 		crumbling = false
