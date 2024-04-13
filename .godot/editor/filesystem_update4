@@ -8,3 +8,5 @@ res://Scenes/platform.tscn
 res://Scenes/spiky_cylinder.tscn
 res://Scenes/crumbling_platform.tscn
 res://Scenes/deathplane.tscn
+res://Scenes/blank_level.tscn
+res://Scripts/deathplane.gd
