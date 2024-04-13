@@ -1,14 +1,13 @@
-[gd_scene load_steps=16 format=3 uid="uid://bwkmihmul3u3j"]
+[gd_scene load_steps=12 format=3 uid="uid://bwkmihmul3u3j"]
 
 [ext_resource type="PackedScene" uid="uid://cotyop14wq5i6" path="res://Scenes/player.tscn" id="1_lma1r"]
 [ext_resource type="PackedScene" uid="uid://csg7h6jwhtt3b" path="res://Scenes/platform.tscn" id="2_8jmle"]
 [ext_resource type="PackedScene" uid="uid://ds6snrftu1ftl" path="res://Scenes/spiky_cylinder.tscn" id="3_8tlmh"]
 [ext_resource type="PackedScene" uid="uid://dyauuntaex86k" path="res://Scenes/crumbling_platform.tscn" id="4_iqrnt"]
 [ext_resource type="PackedScene" uid="uid://bkol6cate26rl" path="res://Scenes/moving_platform.tscn" id="5_tjeuy"]
-[ext_resource type="Shader" path="res://Backgrounds/background1.gdshader" id="6_mrmas"]
-[ext_resource type="Texture2D" uid="uid://bt6uufgqoxxs0" path="res://Backgrounds/background1.png" id="7_8ui0d"]
-[ext_resource type="PackedScene" uid="uid://bo2nwkv56svsg" path="res://Scenes/deathplane.tscn" id="8_ivcdc"]
-[ext_resource type="PackedScene" uid="uid://bqanftgk7h1hd" path="res://Scenes/teleporter.tscn" id="9_k3yen"]
+[ext_resource type="PackedScene" uid="uid://wkbbl7c6vjce" path="res://Backgrounds/funny_background1.tscn" id="6_pmx3e"]
+[ext_resource type="PackedScene" path="res://Scenes/deathplane.tscn" id="8_ivcdc"]
+[ext_resource type="PackedScene" path="res://Scenes/teleporter.tscn" id="9_k3yen"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xn1s6"]
 size = Vector3(20, 1, 10)
@@ -22,18 +21,6 @@ _data = {
 "tilts": PackedFloat32Array(0, 0, 0)
 }
 point_count = 3
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_f3ua0"]
-shader = ExtResource("6_mrmas")
-shader_parameter/stretch = 2.0
-shader_parameter/image = ExtResource("7_8ui0d")
-
-[sub_resource type="Sky" id="Sky_ifh5i"]
-sky_material = SubResource("ShaderMaterial_f3ua0")
-
-[sub_resource type="Environment" id="Environment_y3x2h"]
-background_mode = 2
-sky = SubResource("Sky_ifh5i")
 
 [node name="Environment" type="Node3D"]
 
@@ -84,8 +71,7 @@ transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -21.1314, -2.17346, 0.3452
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5902, -1, 0)
 curve = SubResource("Curve3D_0ltg0")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_y3x2h")
+[node name="WorldEnvironment" parent="." instance=ExtResource("6_pmx3e")]
 
 [node name="deathplane" parent="." instance=ExtResource("8_ivcdc")]
 transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -40.7532, 0)
