@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bbabkkpfax7"
+path="res://.godot/imported/Froggy.obj-6cbb203845ad5d6faf1d23d545335125.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Froggy.obj-6cbb203845ad5d6faf1d23d545335125.mesh"]
+
+source_file="res://Assets/Froggy.obj"
+dest_files=["res://.godot/imported/Froggy.obj-6cbb203845ad5d6faf1d23d545335125.mesh", "res://.godot/imported/Froggy.obj-6cbb203845ad5d6faf1d23d545335125.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

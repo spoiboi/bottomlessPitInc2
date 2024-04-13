@@ -1,8 +1,8 @@
+MeshInstance3D
 ShapeCast3D
 WorldEnvironment
 PathFollow3D
 Path3D
-MeshInstance3D
 CollisionShape3D
 StaticBody3D
 RayCast3D

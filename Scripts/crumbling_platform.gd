@@ -2,6 +2,7 @@ extends Node3D
 
 @export var default_height = 0
 @export var crumble_velocity = 0
+
 @export var crumbling = false
 
 # Called when the node enters the scene tree for the first time.
@@ -22,3 +23,7 @@ func crumble():
 		position.y = default_height
 		crumble_velocity = 0
 		crumbling = false
+
+#func start_timer(start_delta, current_delta):
+		#
+		
