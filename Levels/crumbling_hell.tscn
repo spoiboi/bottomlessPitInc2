@@ -1,3 +1,15 @@
-[gd_scene format=3 uid="uid://bvpedq8nv2huj"]
+[gd_scene load_steps=3 format=3 uid="uid://bvpedq8nv2huj"]
 
-[node name="crumbling_hell" type="Node3D"]
+[ext_resource type="PackedScene" uid="uid://csg7h6jwhtt3b" path="res://Scenes/platform.tscn" id="1_fhe6r"]
+[ext_resource type="PackedScene" uid="uid://cotyop14wq5i6" path="res://Scenes/player.tscn" id="2_hft3q"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Platform" parent="." instance=ExtResource("1_fhe6r")]
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, 0, 1.73689)
+
+[node name="Player" parent="." instance=ExtResource("2_hft3q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.77749, 3.92584)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.407805, 0.913069, 0, -0.913069, 0.407805, 0, 11.1359, 0)
