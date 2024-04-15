@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cotyop14wq5i6" path="res://Scenes/player.tscn" id="1_4vdl3"]
 [ext_resource type="PackedScene" uid="uid://csg7h6jwhtt3b" path="res://Scenes/platform.tscn" id="2_cengx"]
 [ext_resource type="PackedScene" uid="uid://bqanftgk7h1hd" path="res://Scenes/teleporter.tscn" id="3_f3djb"]
-[ext_resource type="PackedScene" uid="uid://bo2nwkv56svsg" path="res://Scenes/deathplane.tscn" id="4_y3bwi"]
+[ext_resource type="PackedScene" uid="uid://dnr22wo8t4i7c" path="res://Scenes/deathplane.tscn" id="4_y3bwi"]
 
 [node name="blankLevel" type="Node3D"]
 

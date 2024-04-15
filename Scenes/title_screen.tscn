@@ -1,0 +1,56 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmolak1p7byp"]
+
+[ext_resource type="Script" path="res://Scripts/title_screen.gd" id="1_ppbl8"]
+
+[node name="title screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ppbl8")
+
+[node name="level 1" type="Button" parent="."]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 274.0
+offset_right = 318.0
+offset_bottom = 459.0
+text = "Level 1"
+
+[node name="level 2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 274.0
+offset_right = 607.0
+offset_bottom = 457.0
+text = "Level 2"
+
+[node name="level 3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 679.0
+offset_top = 271.0
+offset_right = 905.0
+offset_bottom = 458.0
+text = "Level 3"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 23.0
+offset_right = 879.0
+offset_bottom = 238.0
+text = "BOTTOMLESS PIT DEMO
+
+TOUCH THE FROG AT THE END TO WIN!
+
+USE SPACE TO JUMP
+
+USE WASD TO MOVE
+
+ARROW KEYS FOR CAMERA"
+
+[connection signal="pressed" from="level 1" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="level 2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="level 3" to="." method="_on_level_3_pressed"]

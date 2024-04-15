@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Bottomless Pit Inc"
-run/main_scene="res://Scenes/environment.tscn"
+run/main_scene="res://Scenes/title_screen.tscn"
 config/features=PackedStringArray("4.2")
 config/icon="res://icon.png"
 

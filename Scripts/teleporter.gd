@@ -9,5 +9,4 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if($checker.get_collision_count() > 0):
-		for x in range($checker.get_collision_count()):
-			$checker.get_collider(x).respawn()
+		get_tree().change_scene_to_file("res://Scenes/title_screen.tscn")

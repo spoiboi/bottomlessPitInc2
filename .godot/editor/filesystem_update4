@@ -1,4 +1,5 @@
 res://default_env.tres
+res://Scenes/player.tscn
 res://Backgrounds/background1.gdshader
 res://Scenes/platform.tscn
 res://Scenes/spiky_cylinder.tscn
@@ -7,8 +8,11 @@ res://Scenes/crumbling_platform.tscn
 res://Scenes/deathplane.tscn
 res://Scenes/teleporter.tscn
 res://Scenes/blank_level.tscn
-res://easy_level.tscn
-res://Scenes/player.tscn
-res://Scripts/spiky_cylinder.gd
-res://Scenes/respawn_stub.gd
 res://spiky_level.tscn
+res://Levels/moving_to_your_moms_house.tscn
+res://easy_level.tscn
+res://Scripts/title_screen.gd
+res://Start.gd
+res://Scenes/title_screen.tscn
+res://Levels/spiky_level.tscn
+res://Scripts/teleporter.gd
