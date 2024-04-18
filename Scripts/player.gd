@@ -8,11 +8,11 @@ var initial_z = 0
 
 var first_time = true
 
-const SPEED = 7.5
-const JUMP_VELOCITY = 7.5
+@export var SPEED = 7.5
+@export var JUMP_VELOCITY = 7.5
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
-var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
+var gravity = ProjectSettings.get_setting("physics/3d/default_gravity") * 3
 
 func _physics_process(delta):
 	# Get respawn points if its the first time in this level.

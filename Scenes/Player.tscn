@@ -9,6 +9,7 @@ height = 2.4
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_51qa5")
+JUMP_VELOCITY = 13.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.18087, 0)
