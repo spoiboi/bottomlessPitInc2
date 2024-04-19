@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://b0dqt2gdgfgg7"]
 
 [ext_resource type="PackedScene" uid="uid://wkbbl7c6vjce" path="res://Backgrounds/funny_background1.tscn" id="1_07v2u"]
-[ext_resource type="PackedScene" uid="uid://cotyop14wq5i6" path="res://Scenes/player.tscn" id="2_wowgn"]
+[ext_resource type="PackedScene" uid="uid://cotyop14wq5i6" path="res://Scenes/Player.tscn" id="2_wowgn"]
 [ext_resource type="PackedScene" uid="uid://csg7h6jwhtt3b" path="res://Scenes/platform.tscn" id="3_lr4lw"]
 [ext_resource type="PackedScene" uid="uid://bkol6cate26rl" path="res://Scenes/moving_platform.tscn" id="4_vfelj"]
 [ext_resource type="PackedScene" uid="uid://bqanftgk7h1hd" path="res://Scenes/teleporter.tscn" id="5_cai8f"]
@@ -39,7 +39,7 @@ directional_shadow_max_distance = 8192.0
 
 [node name="WorldEnvironment" parent="." instance=ExtResource("1_07v2u")]
 
-[node name="Path3D" parent="." instance=ExtResource("4_vfelj")]
+[node name="MovingPlatform1" parent="." instance=ExtResource("4_vfelj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -20)
 curve = SubResource("Curve3D_18ngg")
 
@@ -52,11 +52,11 @@ transform = Transform3D(20, 0, 0, 0, 5, 0, 0, 0, 15, 15, 50, -70)
 [node name="Platform3" parent="." instance=ExtResource("3_lr4lw")]
 transform = Transform3D(20, 0, 0, 0, 5, 0, 0, 0, 15, 15, 50, -140.041)
 
-[node name="Path3D2" parent="." instance=ExtResource("4_vfelj")]
+[node name="MovingPlatform2" parent="." instance=ExtResource("4_vfelj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 50, -85)
 curve = SubResource("Curve3D_qfp7s")
 
-[node name="Path3D3" parent="." instance=ExtResource("4_vfelj")]
+[node name="MovingPlatform3" parent="." instance=ExtResource("4_vfelj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 50, -85)
 curve = SubResource("Curve3D_m55ek")
 
