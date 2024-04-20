@@ -1,6 +1,45 @@
-[gd_scene load_steps=2 format=3 uid="uid://cmolak1p7byp"]
+[gd_scene load_steps=13 format=3 uid="uid://cmolak1p7byp"]
 
+[ext_resource type="FontFile" uid="uid://oigad7atfyty" path="res://Nicolast.otf" id="1_j1cod"]
 [ext_resource type="Script" path="res://Scripts/title_screen.gd" id="1_ppbl8"]
+
+[sub_resource type="Theme" id="Theme_svx4q"]
+default_font = ExtResource("1_j1cod")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kvepm"]
+bg_color = Color(0.964706, 0.964706, 0.964706, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_arbji"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8p1qj"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Theme" id="Theme_7qa7q"]
+/styles/normal = SubResource("StyleBoxFlat_kvepm")
+Panel/styles/normal = SubResource("StyleBoxFlat_arbji")
+Panel/styles/panel = SubResource("StyleBoxFlat_8p1qj")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0l0st"]
+bg_color = Color(0.964706, 0.376471, 0.392157, 1)
+
+[sub_resource type="Theme" id="Theme_gukyv"]
+default_font = ExtResource("1_j1cod")
+default_font_size = 40
+Button/styles/normal = SubResource("StyleBoxFlat_0l0st")
+
+[sub_resource type="Theme" id="Theme_lk6tq"]
+default_font = ExtResource("1_j1cod")
+Button/styles/normal = SubResource("StyleBoxFlat_0l0st")
+
+[sub_resource type="Theme" id="Theme_thqqn"]
+default_font = ExtResource("1_j1cod")
+default_font_size = 40
+Button/styles/normal = SubResource("StyleBoxFlat_0l0st")
+
+[sub_resource type="Theme" id="Theme_ecpc3"]
+default_font = ExtResource("1_j1cod")
+Button/styles/normal = SubResource("StyleBoxFlat_0l0st")
 
 [node name="title screen" type="Control"]
 layout_mode = 3
@@ -9,7 +48,17 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_svx4q")
 script = ExtResource("1_ppbl8")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_7qa7q")
 
 [node name="level 1" type="Button" parent="."]
 layout_mode = 0
@@ -17,6 +66,7 @@ offset_left = 92.0
 offset_top = 274.0
 offset_right = 318.0
 offset_bottom = 459.0
+theme = SubResource("Theme_gukyv")
 text = "Level 1"
 
 [node name="level 2" type="Button" parent="."]
@@ -25,6 +75,8 @@ offset_left = 380.0
 offset_top = 274.0
 offset_right = 607.0
 offset_bottom = 457.0
+theme = SubResource("Theme_lk6tq")
+theme_override_font_sizes/font_size = 40
 text = "Level 2"
 
 [node name="level 3" type="Button" parent="."]
@@ -33,6 +85,7 @@ offset_left = 679.0
 offset_top = 271.0
 offset_right = 905.0
 offset_bottom = 458.0
+theme = SubResource("Theme_thqqn")
 text = "Level 3"
 
 [node name="Button" type="Button" parent="."]
@@ -41,6 +94,7 @@ offset_left = 117.0
 offset_top = 23.0
 offset_right = 879.0
 offset_bottom = 238.0
+theme = SubResource("Theme_ecpc3")
 text = "BOTTOMLESS PIT DEMO
 
 TOUCH THE FROG AT THE END TO WIN!

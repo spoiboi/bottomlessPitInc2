@@ -1,3 +1,5 @@
+Panel
+GPUParticles3D
 CharacterBody3D
 Button
 DirectionalLight3D
@@ -11,4 +13,3 @@ CollisionShape3D
 StaticBody3D
 RayCast3D
 Node3D
-Camera3D

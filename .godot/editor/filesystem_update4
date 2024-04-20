@@ -1,8 +1,10 @@
 res://default_env.tres
-res://Scenes/moving_platform.tscn
 res://Backgrounds/background1.gdshader
+res://Scenes/player.tscn
 res://Scenes/title_screen.tscn
 res://Scenes/spiky_cylinder.tscn
 res://Levels/crumbling_hell.tscn
 res://Levels/moving_to_your_moms_house.tscn
 res://Scenes/platform.tscn
+res://Scenes/moving_platform.tscn
+res://Scripts/player.gd

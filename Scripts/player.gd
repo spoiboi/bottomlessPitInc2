@@ -7,6 +7,7 @@ var initial_y = 0
 var initial_z = 0
 
 var first_time = true
+var jumping = true
 
 @export var SPEED = 7.5
 @export var JUMP_VELOCITY = 7.5
@@ -27,10 +28,15 @@ func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
+	elif (jumping==true):
+		jumping=false
+		$jumpcloud.restart()
+		
 
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		jumping = true
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
