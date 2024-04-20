@@ -9,3 +9,5 @@ res://Scenes/platform.tscn
 res://Scenes/player.tscn
 res://Levels/spiky_level.tscn
 res://Scripts/spiky_cylinder.gd
+res://Backgrounds/funny_background1.tscn
+res://background2.gdshader

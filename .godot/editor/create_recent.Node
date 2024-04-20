@@ -1,10 +1,10 @@
+WorldEnvironment
 CharacterBody3D
 Button
 DirectionalLight3D
 RigidBody3D
 MeshInstance3D
 ShapeCast3D
-WorldEnvironment
 PathFollow3D
 Path3D
 CollisionShape3D

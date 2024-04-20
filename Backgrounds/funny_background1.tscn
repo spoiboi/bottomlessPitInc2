@@ -15,5 +15,5 @@ sky_material = SubResource("ShaderMaterial_f3ua0")
 background_mode = 2
 sky = SubResource("Sky_ifh5i")
 
-[node name="WorldEnvironment" type="WorldEnvironment"]
+[node name="Background1" type="WorldEnvironment"]
 environment = SubResource("Environment_y3x2h")
