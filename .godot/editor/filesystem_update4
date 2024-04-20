@@ -6,3 +6,6 @@ res://Scenes/spiky_cylinder.tscn
 res://Levels/crumbling_hell.tscn
 res://Levels/moving_to_your_moms_house.tscn
 res://Scenes/platform.tscn
+res://Scenes/player.tscn
+res://Levels/spiky_level.tscn
+res://Scripts/spiky_cylinder.gd
