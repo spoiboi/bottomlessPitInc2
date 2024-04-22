@@ -17,7 +17,7 @@ script = ExtResource("1_au1o6")
 transform = Transform3D(10, 0, 0, 0, 4, 0, 0, 0, 10, 0, 0, 0)
 rotation_mode = 0
 
-[node name="StaticBody3D" type="AnimatableBody3D" parent="PathFollow3D"]
+[node name="StaticBody3D" type="CharacterBody3D" parent="PathFollow3D"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="PathFollow3D/StaticBody3D"]
 shape = SubResource("BoxShape3D_6qgp8")
