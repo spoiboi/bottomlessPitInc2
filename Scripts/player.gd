@@ -2,9 +2,7 @@ extends CharacterBody3D
 
 @onready var camera = $CameraPivot/Camera3D
 
-var initial_x = 0
-var initial_y = 0
-var initial_z = 0
+
 
 var first_time = true
 var jumping = true
@@ -16,12 +14,6 @@ var jumping = true
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity") * 3
 
 func _physics_process(delta):
-	# Get respawn points if its the first time in this level.
-	if first_time:
-		initial_x = position.x
-		initial_y = position.y
-		initial_z = position.z
-		first_time = false
 	
 	if Input.is_action_just_pressed("kys"):
 		respawn()
@@ -62,6 +54,6 @@ func rotate_model(input_dir):
 		$CharacterModel.rotation.y = (input_dir.x)+$CameraPivot/Camera3D.rotation.y
 		
 func respawn():
-	position.x = initial_x
-	position.y = initial_y
-	position.z = initial_z
+	
+	velocity.y = 0
+	get_tree().reload_current_scene()

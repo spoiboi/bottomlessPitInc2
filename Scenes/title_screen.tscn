@@ -54,9 +54,11 @@ script = ExtResource("1_ppbl8")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = -1
+anchor_right = 2.185
+anchor_bottom = 2.524
+offset_right = 708.88
+offset_bottom = 197.448
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_7qa7q")
