@@ -1,10 +1,10 @@
+MeshInstance3D
 Panel
 GPUParticles3D
 CharacterBody3D
 Button
 DirectionalLight3D
 RigidBody3D
-MeshInstance3D
 ShapeCast3D
 WorldEnvironment
 PathFollow3D
@@ -12,4 +12,3 @@ Path3D
 CollisionShape3D
 StaticBody3D
 RayCast3D
-Node3D

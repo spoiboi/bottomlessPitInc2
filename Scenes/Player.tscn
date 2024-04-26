@@ -1,11 +1,34 @@
-[gd_scene load_steps=9 format=3 uid="uid://cotyop14wq5i6"]
+[gd_scene load_steps=13 format=3 uid="uid://cotyop14wq5i6"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_51qa5"]
-[ext_resource type="ArrayMesh" uid="uid://bei4dfvnjuv53" path="res://Assets/Toad.obj" id="1_apk68"]
+[ext_resource type="Material" uid="uid://86i0gut57do5" path="res://Scenes/playerMatte.tres" id="2_xmld4"]
 [ext_resource type="Script" path="res://Scripts/player_camera.gd" id="3_gjw8x"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lk4wq"]
 height = 2.4
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_lujla"]
+material = ExtResource("2_xmld4")
+top_radius = 5.0
+bottom_radius = 5.0
+height = 85.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_74owk"]
+material = ExtResource("2_xmld4")
+radius = 25.0
+height = 50.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_k0fv6"]
+material = ExtResource("2_xmld4")
+top_radius = 3.0
+bottom_radius = 3.0
+height = 50.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ski7d"]
+material = ExtResource("2_xmld4")
+top_radius = 3.0
+bottom_radius = 3.0
+height = 80.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k5fkm"]
 
@@ -45,10 +68,31 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.18087, 0)
 shape = SubResource("CapsuleShape3D_lk4wq")
 
 [node name="CharacterModel" type="Node3D" parent="."]
-transform = Transform3D(-0.01, 0, -1.50996e-09, 0, 0.01, 0, 1.50996e-09, 0, -0.01, 0, 0, 0)
+transform = Transform3D(-0.01, 0, -1.50996e-09, 0, 0.01, 0, 1.50996e-09, 0, -0.01, 0, 0.8, 0)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterModel"]
-mesh = ExtResource("1_apk68")
+[node name="Body" type="MeshInstance3D" parent="CharacterModel"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.94994, 0)
+mesh = SubResource("CylinderMesh_lujla")
+
+[node name="Head" type="MeshInstance3D" parent="CharacterModel"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 60.4008, 0)
+mesh = SubResource("SphereMesh_74owk")
+
+[node name="Leg_l" type="MeshInstance3D" parent="CharacterModel"]
+transform = Transform3D(0.707107, -0.707107, 0, 0.707107, 0.707107, 0, -4.9738e-14, 4.9738e-14, 1, 20, -62, 0)
+mesh = SubResource("CylinderMesh_k0fv6")
+
+[node name="Leg_r" type="MeshInstance3D" parent="CharacterModel"]
+transform = Transform3D(0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0, 1, -20, -62, 0)
+mesh = SubResource("CylinderMesh_k0fv6")
+
+[node name="Arm_l" type="MeshInstance3D" parent="CharacterModel"]
+transform = Transform3D(0.866026, -0.5, 0, 0.5, 0.866026, 0, 9.9476e-14, 0, 1, 22, 0.450867, 4.54747e-13)
+mesh = SubResource("CylinderMesh_ski7d")
+
+[node name="Arm_r" type="MeshInstance3D" parent="CharacterModel"]
+transform = Transform3D(0.866026, 0.5, 0, -0.5, 0.866026, 0, 9.9476e-14, 0, 1, -22, 0.450867, -4.54747e-13)
+mesh = SubResource("CylinderMesh_ski7d")
 
 [node name="CameraPivot" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.567171, 0)
