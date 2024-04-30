@@ -11,3 +11,6 @@ res://Levels/moving_to_your_moms_house.tscn
 res://Scenes/player.tscn
 res://Scenes/crumbling_platform.tscn
 res://Scripts/crumbling_platform.gd
+res://Scenes/teleporter.tscn
+res://Scripts/teleporter.gd
+res://Scenes/spiky_cylinder.tscn

@@ -1,9 +1,9 @@
+GPUParticles3D
 Timer
 CollisionShape3D
 Area3D
 MeshInstance3D
 Panel
-GPUParticles3D
 CharacterBody3D
 Button
 DirectionalLight3D
@@ -12,4 +12,3 @@ ShapeCast3D
 WorldEnvironment
 PathFollow3D
 Path3D
-StaticBody3D

@@ -1,9 +1,27 @@
-[gd_scene load_steps=4 format=3 uid="uid://bqanftgk7h1hd"]
+[gd_scene load_steps=10 format=3 uid="uid://bqanftgk7h1hd"]
 
 [ext_resource type="ArrayMesh" uid="uid://bbabkkpfax7" path="res://Assets/Froggy.obj" id="1_3fbb3"]
 [ext_resource type="Script" path="res://Scripts/teleporter.gd" id="1_52hjb"]
+[ext_resource type="Texture2D" uid="uid://b4546y55e7y40" path="res://Assets/green.png" id="2_27itd"]
+[ext_resource type="FontFile" uid="uid://oigad7atfyty" path="res://Nicolast.otf" id="4_mxd6w"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ap1ou"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2ogj4"]
+albedo_texture = ExtResource("2_27itd")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_6gqmh"]
+radial_velocity_min = 2.0
+radial_velocity_max = 5.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jt0ct"]
+albedo_texture = ExtResource("2_27itd")
+
+[sub_resource type="TextMesh" id="TextMesh_2vimc"]
+material = SubResource("StandardMaterial3D_jt0ct")
+text = "*"
+font = ExtResource("4_mxd6w")
+font_size = 64
 
 [node name="Teleporter" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.17711, 0)
@@ -17,4 +35,11 @@ target_position = Vector3(0, -0.5, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.17565, 0.0017339, 0)
+material_override = SubResource("StandardMaterial3D_2ogj4")
 mesh = ExtResource("1_3fbb3")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0118922, 0)
+amount = 10
+process_material = SubResource("ParticleProcessMaterial_6gqmh")
+draw_pass_1 = SubResource("TextMesh_2vimc")

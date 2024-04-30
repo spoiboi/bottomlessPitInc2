@@ -1,11 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://bkol6cate26rl"]
+[gd_scene load_steps=7 format=3 uid="uid://bkol6cate26rl"]
 
 [ext_resource type="Script" path="res://Scripts/moving_platform.gd" id="1_au1o6"]
+[ext_resource type="Texture2D" uid="uid://bnd0dopxxt46f" path="res://Assets/metal.jpg" id="2_3kwtb"]
 
 [sub_resource type="Curve3D" id="Curve3D_fxhrx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6qgp8"]
 size = Vector3(1, 0.5, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gyuw1"]
+albedo_texture = ExtResource("2_3kwtb")
 
 [sub_resource type="BoxMesh" id="BoxMesh_s24tt"]
 
@@ -24,5 +28,6 @@ shape = SubResource("BoxShape3D_6qgp8")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="PathFollow3D/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_gyuw1")
 mesh = SubResource("BoxMesh_s24tt")
 skeleton = NodePath("")

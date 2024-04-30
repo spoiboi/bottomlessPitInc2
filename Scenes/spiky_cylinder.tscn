@@ -1,7 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://ds6snrftu1ftl"]
+[gd_scene load_steps=11 format=3 uid="uid://ds6snrftu1ftl"]
 
 [ext_resource type="Script" path="res://Scripts/spiky_cylinder.gd" id="1_t1kct"]
 [ext_resource type="Script" path="res://Scenes/respawn_stub.gd" id="2_nevic"]
+[ext_resource type="Texture2D" uid="uid://bnd0dopxxt46f" path="res://Assets/metal.jpg" id="2_vcxjn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w5nkw"]
+albedo_texture = ExtResource("2_vcxjn")
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_tickd"]
 
@@ -28,6 +32,7 @@ script = ExtResource("1_t1kct")
 
 [node name="Cylinder" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-07, -10, 0, -4.37114e-07, 1.91069e-14, 10, -10, 4.37114e-07, -4.37114e-07, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_w5nkw")
 mesh = SubResource("CylinderMesh_tickd")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
