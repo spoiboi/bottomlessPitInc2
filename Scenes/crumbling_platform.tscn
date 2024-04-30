@@ -1,15 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://dyauuntaex86k"]
+[gd_scene load_steps=9 format=3 uid="uid://dyauuntaex86k"]
 
-[ext_resource type="Texture2D" uid="uid://rvk24qyyi83i" path="res://Assets/WOOOD.jpg" id="1_gaxfw"]
 [ext_resource type="Script" path="res://Scripts/crumbling_platform.gd" id="1_wmjh1"]
+[ext_resource type="Texture2D" uid="uid://bsou3jlehv0mv" path="res://Assets/crumble.png" id="2_w188c"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pxjkh"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0nvel"]
-albedo_texture = ExtResource("1_gaxfw")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cfmt0"]
-albedo_texture = ExtResource("1_gaxfw")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s051v"]
+albedo_texture = ExtResource("2_w188c")
 
 [sub_resource type="BoxMesh" id="BoxMesh_kgh4p"]
 
@@ -17,7 +14,7 @@ albedo_texture = ExtResource("1_gaxfw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5fbr4"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_806rf"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_oyt8r"]
 
 [node name="crumblingPlatform" type="Node3D"]
 script = ExtResource("1_wmjh1")
@@ -30,13 +27,20 @@ shape = SubResource("BoxShape3D_pxjkh")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0, -0.00633454)
-material_override = SubResource("StandardMaterial3D_0nvel")
-material_overlay = SubResource("StandardMaterial3D_cfmt0")
+material_override = SubResource("StandardMaterial3D_s051v")
 ignore_occlusion_culling = true
 mesh = SubResource("BoxMesh_kgh4p")
 skin = SubResource("Skin_lt5rr")
 surface_material_override/0 = SubResource("StandardMaterial3D_5fbr4")
 
-[node name="checker" type="ShapeCast3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 0.5, 0)
-shape = SubResource("BoxShape3D_806rf")
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.748898, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.110378, 0)
+shape = SubResource("BoxShape3D_oyt8r")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
