@@ -63,7 +63,7 @@ height = 0.5
 script = ExtResource("1_51qa5")
 JUMP_VELOCITY = 13.0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="player" type="CollisionShape3D" parent="." groups=["player"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.18087, 0)
 shape = SubResource("CapsuleShape3D_lk4wq")
 

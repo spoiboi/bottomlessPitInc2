@@ -14,7 +14,8 @@ func _process(delta):
 
 
 func _on_area_3d_body_entered(body):
-	$Timer.start(0.7)
+	if body.name == "Player":
+		$Timer.start(0.7)
 
 
 func _on_timer_timeout():

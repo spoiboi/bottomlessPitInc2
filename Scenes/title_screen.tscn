@@ -67,27 +67,27 @@ theme = SubResource("Theme_7qa7q")
 layout_mode = 0
 offset_left = 59.0
 offset_top = 378.0
-offset_right = 285.0
-offset_bottom = 563.0
+offset_right = 213.0
+offset_bottom = 509.0
 theme = SubResource("Theme_gukyv")
 text = "Level 1"
 
 [node name="level 2" type="Button" parent="."]
 layout_mode = 0
-offset_left = 420.0
-offset_top = 379.0
-offset_right = 647.0
-offset_bottom = 562.0
+offset_left = 270.0
+offset_top = 378.0
+offset_right = 431.0
+offset_bottom = 510.0
 theme = SubResource("Theme_lk6tq")
 theme_override_font_sizes/font_size = 40
 text = "Level 2"
 
 [node name="level 3" type="Button" parent="."]
 layout_mode = 0
-offset_left = 810.0
-offset_top = 388.0
-offset_right = 1036.0
-offset_bottom = 575.0
+offset_left = 470.0
+offset_top = 380.0
+offset_right = 644.0
+offset_bottom = 513.0
 theme = SubResource("Theme_thqqn")
 text = "Level 3"
 
@@ -106,13 +106,26 @@ USE SPACE TO JUMP
 
 USE WASD TO MOVE
 
-ARROW KEYS FOR CAMERA"
+ARROW KEYS FOR CAMERA
+
+USE K TO RESTART LEVEL
+
+ESC TO RETURN TO THE MENU"
 
 [node name="Logo" type="Sprite2D" parent="."]
 position = Vector2(585, 109)
 scale = Vector2(1, 1.14737)
 texture = ExtResource("3_pp3rk")
 
+[node name="level 4" type="Button" parent="."]
+offset_left = 689.0
+offset_top = 380.0
+offset_right = 873.0
+offset_bottom = 513.0
+theme = SubResource("Theme_thqqn")
+text = "Level 4"
+
 [connection signal="pressed" from="level 1" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="level 2" to="." method="_on_level_2_pressed"]
 [connection signal="pressed" from="level 3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="level 4" to="." method="_on_level_4_pressed"]

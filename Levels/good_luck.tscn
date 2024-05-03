@@ -1,0 +1,40 @@
+[gd_scene load_steps=8 format=3 uid="uid://bat4q3rfwie28"]
+
+[ext_resource type="PackedScene" uid="uid://cotyop14wq5i6" path="res://Scenes/player.tscn" id="1_0ie0v"]
+[ext_resource type="PackedScene" uid="uid://csg7h6jwhtt3b" path="res://Scenes/platform.tscn" id="2_nd1oq"]
+[ext_resource type="PackedScene" uid="uid://bqanftgk7h1hd" path="res://Scenes/teleporter.tscn" id="3_wqxp8"]
+[ext_resource type="PackedScene" uid="uid://dnr22wo8t4i7c" path="res://Scenes/deathplane.tscn" id="4_pduy0"]
+[ext_resource type="PackedScene" uid="uid://ds6snrftu1ftl" path="res://Scenes/spiky_cylinder.tscn" id="5_0canj"]
+[ext_resource type="PackedScene" uid="uid://dyauuntaex86k" path="res://Scenes/crumbling_platform.tscn" id="5_2hd0p"]
+[ext_resource type="PackedScene" uid="uid://wkbbl7c6vjce" path="res://Backgrounds/funny_background1.tscn" id="7_qt80n"]
+
+[node name="blankLevel" type="Node3D"]
+
+[node name="crumblingPlatform2" parent="." instance=ExtResource("5_2hd0p")]
+transform = Transform3D(12.5955, -0.920122, 0, 0.920122, 6.37046, 0, 0, 0, 12.64, 9.02372, 8.47081, -20.773)
+
+[node name="Player" parent="." instance=ExtResource("1_0ie0v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15.2739, 0)
+
+[node name="Platform" parent="." instance=ExtResource("2_nd1oq")]
+transform = Transform3D(10, 0, 0, 0, 5, 0, 0, 0, 10, 0, 7.57767, -3)
+
+[node name="Teleporter" parent="." instance=ExtResource("3_wqxp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15.5071, -44.1005)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.178012, -0.984028, 3.66579e-09, 0.181233, 0.0327853, 0.982894, -0.967195, -0.174967, 0.184174, -0.746615, 9.72125, -3.10499)
+
+[node name="deathplane" parent="." instance=ExtResource("4_pduy0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -14, 0)
+
+[node name="crumblingPlatform" parent="." instance=ExtResource("5_2hd0p")]
+transform = Transform3D(12.6252, -0.310128, 0, 0.611071, 6.4075, 0, 0, 0, 12.64, -4.75538, 5.90875, -15.6561)
+
+[node name="SpikyCylinder" parent="." instance=ExtResource("5_0canj")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -9.76383, 6.59241, -27.7942)
+
+[node name="Platform2" parent="." instance=ExtResource("2_nd1oq")]
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 20, -0.0445557, 10.5049, -41.9675)
+
+[node name="WorldEnvironment" parent="." instance=ExtResource("7_qt80n")]
