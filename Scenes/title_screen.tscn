@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://cmolak1p7byp"]
+[gd_scene load_steps=15 format=3 uid="uid://cmolak1p7byp"]
 
 [ext_resource type="FontFile" uid="uid://oigad7atfyty" path="res://Nicolast.otf" id="1_j1cod"]
 [ext_resource type="Script" path="res://Scripts/title_screen.gd" id="1_ppbl8"]
 [ext_resource type="Texture2D" uid="uid://caeh0anufrt3s" path="res://Assets/logo.png" id="3_pp3rk"]
+[ext_resource type="AudioStream" uid="uid://bcx5ns0myowt4" path="res://Sounds/title.mp3" id="4_hmcx7"]
 
 [sub_resource type="Theme" id="Theme_svx4q"]
 default_font = ExtResource("1_j1cod")
@@ -65,29 +66,29 @@ theme = SubResource("Theme_7qa7q")
 
 [node name="level 1" type="Button" parent="."]
 layout_mode = 0
-offset_left = 59.0
-offset_top = 378.0
-offset_right = 213.0
-offset_bottom = 509.0
+offset_left = 36.0
+offset_top = 510.0
+offset_right = 190.0
+offset_bottom = 641.0
 theme = SubResource("Theme_gukyv")
 text = "Level 1"
 
 [node name="level 2" type="Button" parent="."]
 layout_mode = 0
-offset_left = 270.0
-offset_top = 378.0
-offset_right = 431.0
-offset_bottom = 510.0
+offset_left = 242.0
+offset_top = 509.0
+offset_right = 403.0
+offset_bottom = 641.0
 theme = SubResource("Theme_lk6tq")
 theme_override_font_sizes/font_size = 40
 text = "Level 2"
 
 [node name="level 3" type="Button" parent="."]
 layout_mode = 0
-offset_left = 470.0
-offset_top = 380.0
-offset_right = 644.0
-offset_bottom = 513.0
+offset_left = 449.0
+offset_top = 511.0
+offset_right = 623.0
+offset_bottom = 644.0
 theme = SubResource("Theme_thqqn")
 text = "Level 3"
 
@@ -118,12 +119,18 @@ scale = Vector2(1, 1.14737)
 texture = ExtResource("3_pp3rk")
 
 [node name="level 4" type="Button" parent="."]
-offset_left = 689.0
-offset_top = 380.0
-offset_right = 873.0
-offset_bottom = 513.0
+layout_mode = 0
+offset_left = 683.0
+offset_top = 512.0
+offset_right = 867.0
+offset_bottom = 645.0
 theme = SubResource("Theme_thqqn")
 text = "Level 4"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_hmcx7")
+volume_db = -4.622
+autoplay = true
 
 [connection signal="pressed" from="level 1" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="level 2" to="." method="_on_level_2_pressed"]
