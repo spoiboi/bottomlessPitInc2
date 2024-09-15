@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://x3li7amubj51"]
+
+[ext_resource type="PackedScene" uid="uid://ebto8aqsjv61" path="res://anim_idle.glb" id="1_naetw"]
+
+[node name="character_mesh" instance=ExtResource("1_naetw")]
+
+[node name="HairBackup" parent="." index="2"]
+visible = false

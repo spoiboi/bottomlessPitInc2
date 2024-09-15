@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=3 uid="uid://cjcyg5y6n41s"]
+
+[ext_resource type="PackedScene" uid="uid://ds6snrftu1ftl" path="res://Scenes/spiky_cylinder.tscn" id="1_v6cwk"]
+[ext_resource type="PackedScene" uid="uid://csg7h6jwhtt3b" path="res://Scenes/platform.tscn" id="2_2agm4"]
+[ext_resource type="PackedScene" uid="uid://dnr22wo8t4i7c" path="res://Scenes/deathplane.tscn" id="3_5oroo"]
+[ext_resource type="PackedScene" uid="uid://cotyop14wq5i6" path="res://Scenes/player.tscn" id="4_1io7e"]
+[ext_resource type="PackedScene" uid="uid://bqanftgk7h1hd" path="res://Scenes/teleporter.tscn" id="5_t40n3"]
+[ext_resource type="PackedScene" uid="uid://wkbbl7c6vjce" path="res://Assets/Backgrounds/funny_background1.tscn" id="6_pxa6l"]
+[ext_resource type="AudioStream" uid="uid://bs0xcs1jsiix6" path="res://Sounds/level.mp3" id="7_xj2mt"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="SpikyCylinder" parent="." instance=ExtResource("1_v6cwk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.269, -5, -13.618)
+
+[node name="Platform" parent="." instance=ExtResource("2_2agm4")]
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0.00265956, 0, 3.12511)
+
+[node name="deathplane" parent="." instance=ExtResource("3_5oroo")]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, -20, 0)
+
+[node name="Player" parent="." instance=ExtResource("4_1io7e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.3677, 3.4629)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.78043, 0.625243, 0, -0.625243, 0.78043, 0, 5.617, 10.106)
+
+[node name="SpikyCylinder2" parent="." instance=ExtResource("1_v6cwk")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -12.349, -10, -30)
+
+[node name="SpikyCylinder3" parent="." instance=ExtResource("1_v6cwk")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, -10, -45)
+
+[node name="Platform2" parent="." instance=ExtResource("2_2agm4")]
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -10, -66.8415)
+
+[node name="Teleporter" parent="." instance=ExtResource("5_t40n3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8, -66.3116)
+
+[node name="WorldEnvironment" parent="." instance=ExtResource("6_pxa6l")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_xj2mt")
+autoplay = true

@@ -1,0 +1,20 @@
+[gd_scene load_steps=6 format=3 uid="uid://dvwons2rfkk6c"]
+
+[ext_resource type="Shader" path="res://Assets/Backgrounds/background3.gdshader" id="1_dlk3w"]
+[ext_resource type="Texture2D" uid="uid://dk2efg1bv22qr" path="res://Assets/Backgrounds/background2.png" id="2_4bxlp"]
+
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wgm5v"]
+shader = ExtResource("1_dlk3w")
+shader_parameter/delta = 0.02
+shader_parameter/image = ExtResource("2_4bxlp")
+
+[sub_resource type="Sky" id="Sky_5eb7n"]
+sky_material = SubResource("ShaderMaterial_wgm5v")
+
+[sub_resource type="Environment" id="Environment_jjt4l"]
+background_mode = 2
+sky = SubResource("Sky_5eb7n")
+
+[node name="Background2" type="WorldEnvironment"]
+environment = SubResource("Environment_jjt4l")

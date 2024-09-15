@@ -1,4 +1,5 @@
 res://default_env.tres
+<<<<<<< Updated upstream
 res://Scenes/environment.tscn
 res://Scenes/player.tscn
 res://Scenes/platform.tscn
@@ -7,3 +8,18 @@ res://what.tscn
 res://Scenes/vertical_spring.tscn
 res://Scripts/bouncyAreaCollision.gd
 res://Scenes/vertical_spring.gd
+=======
+res://Backgrounds/background1.gdshader
+res://Backgrounds/background3.gdshader
+res://Backgrounds/background2.gdshader
+res://Scenes/title_screen.tscn
+res://Levels/crumbling_hell.tscn
+res://Levels/moving_to_your_moms_house.tscn
+res://Levels/spiky_level.tscn
+res://Levels/blank_level.tscn
+res://Scenes/teleporter.tscn
+res://Assets/Backgrounds/background1.gdshader
+res://Assets/Backgrounds/background2.gdshader
+res://Assets/Backgrounds/background3.gdshader
+res://character_mesh.tscn
+>>>>>>> Stashed changes
