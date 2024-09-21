@@ -1,3 +1,6 @@
+res://default_env.tres
+res://Scenes/crumbling_platform.tscn
 res://Backgrounds/background1.gdshader
 res://Backgrounds/background3.gdshader
 res://Backgrounds/background2.gdshader
+res://Scripts/crumbling_platform.gd
