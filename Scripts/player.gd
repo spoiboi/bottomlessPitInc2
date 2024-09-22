@@ -32,6 +32,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		$jump.play()
+		$anim_idle/AnimationPlayer.play("Jump")
 		jumping = true
 
 	# Get the input direction and handle the movement/deceleration.
