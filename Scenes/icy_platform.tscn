@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://ddoodpt7ajlro"]
+
+[ext_resource type="Texture2D" uid="uid://kmuxefap2hs8" path="res://Assets/Ice.jpg" id="1_ubhq2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_feqew"]
+albedo_texture = ExtResource("1_ubhq2")
+
+[sub_resource type="BoxMesh" id="BoxMesh_5b6tl"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gv6hj"]
+
+[node name="IcyPlatform" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 0.5, 0, 0, 0, 2, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_feqew")
+mesh = SubResource("BoxMesh_5b6tl")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 0.5, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_gv6hj")
