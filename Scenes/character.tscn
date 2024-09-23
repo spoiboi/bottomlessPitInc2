@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ysyt4r1ufi72"]
+
+[ext_resource type="PackedScene" uid="uid://cge8wwata6dkq" path="res://Assets/anim_idle.glb" id="1_jvg6d"]
+
+[node name="anim_idle" instance=ExtResource("1_jvg6d")]
+
+[node name="HairBackup" parent="." index="2"]
+visible = false

@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://cotyop14wq5i6"]
+[gd_scene load_steps=17 format=3 uid="uid://cotyop14wq5i6"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_51qa5"]
-[ext_resource type="Material" path="res://Scenes/playerMatte.tres" id="2_xmld4"]
+[ext_resource type="PackedScene" uid="uid://ysyt4r1ufi72" path="res://Scenes/character.tscn" id="2_cu0d3"]
+[ext_resource type="Material" uid="uid://86i0gut57do5" path="res://Scenes/playerMatte.tres" id="2_xmld4"]
 [ext_resource type="Script" path="res://Scripts/player_camera.gd" id="3_gjw8x"]
 [ext_resource type="AudioStream" uid="uid://c5tcqouj78c2p" path="res://Sounds/a.mp3" id="4_vxdfa"]
 
@@ -76,8 +77,12 @@ JUMP_VELOCITY = 13.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CylinderShape3D_n32bj")
 
+[node name="character" parent="." instance=ExtResource("2_cu0d3")]
+transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, 0, 0, 0)
+
 [node name="CharacterModel" type="Node3D" parent="."]
 transform = Transform3D(-0.01, 0, -1.50996e-09, 0, 0.01, 0, 1.50996e-09, 0, -0.01, 0, 0.8, 0)
+visible = false
 
 [node name="Body" type="MeshInstance3D" parent="CharacterModel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.94994, 0)
