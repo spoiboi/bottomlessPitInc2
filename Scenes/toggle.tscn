@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://41ry64u4g4hv"]
+
+[ext_resource type="Script" path="res://Scripts/toggle.gd" id="1_watrx"]
+[ext_resource type="Texture2D" uid="uid://b1ug2owlhx201" path="res://Assets/Screenshot (15).png" id="2_qtopy"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_52u87"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5gt78"]
+albedo_texture = ExtResource("2_qtopy")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u7itl"]
+
+[node name="Toggle" type="Node3D"]
+script = ExtResource("1_watrx")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_52u87")
+surface_material_override/0 = SubResource("StandardMaterial3D_5gt78")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_u7itl")

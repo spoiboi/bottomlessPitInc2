@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bqanftgk7h1hd"]
+[gd_scene load_steps=10 format=3 uid="uid://cnab4kdt2ummt"]
 
 [ext_resource type="ArrayMesh" uid="uid://bbabkkpfax7" path="res://Assets/Froggy.obj" id="1_3fbb3"]
 [ext_resource type="Script" path="res://Scripts/teleporter.gd" id="1_52hjb"]
