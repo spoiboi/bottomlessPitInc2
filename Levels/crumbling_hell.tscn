@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://bvpedq8nv2huj"]
+[gd_scene load_steps=9 format=3 uid="uid://bvpedq8nv2huj"]
 
 [ext_resource type="PackedScene" uid="uid://csg7h6jwhtt3b" path="res://Scenes/platform.tscn" id="1_fhe6r"]
 [ext_resource type="PackedScene" uid="uid://cotyop14wq5i6" path="res://Scenes/Player.tscn" id="2_hft3q"]
 [ext_resource type="PackedScene" uid="uid://dnr22wo8t4i7c" path="res://Scenes/deathplane.tscn" id="3_mdgem"]
 [ext_resource type="PackedScene" uid="uid://dyauuntaex86k" path="res://Scenes/crumbling_platform.tscn" id="4_7cown"]
-[ext_resource type="PackedScene" uid="uid://bqanftgk7h1hd" path="res://Scenes/teleporter.tscn" id="5_sg8g3"]
+[ext_resource type="PackedScene" uid="uid://cnab4kdt2ummt" path="res://Scenes/teleporter.tscn" id="5_sg8g3"]
 [ext_resource type="PackedScene" uid="uid://wkbbl7c6vjce" path="res://Backgrounds/funny_background1.tscn" id="6_c237c"]
 [ext_resource type="AudioStream" uid="uid://bs0xcs1jsiix6" path="res://Sounds/level.mp3" id="7_41rlv"]
+[ext_resource type="PackedScene" uid="uid://briu0fuadh25y" path="res://Scenes/onbutton.tscn" id="8_gjehk"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -60,3 +61,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.36009, -88.8968)
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_41rlv")
 autoplay = true
+
+[node name="Button" parent="." instance=ExtResource("8_gjehk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.25762, 1.69117, -13.1394)

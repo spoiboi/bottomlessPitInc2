@@ -152,8 +152,8 @@ skeleton = NodePath("../..")
 [node name="RigidBody3D" type="RigidBody3D" parent="SpikeRow1"]
 freeze = true
 freeze_mode = 1
-max_contacts_reported = 10000000
 contact_monitor = true
+max_contacts_reported = 10000000
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SpikeRow1/RigidBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
@@ -270,8 +270,8 @@ skeleton = NodePath("../..")
 [node name="RigidBody3D" type="RigidBody3D" parent="SpikeRow2"]
 freeze = true
 freeze_mode = 1
-max_contacts_reported = 10000
 contact_monitor = true
+max_contacts_reported = 10000
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SpikeRow2/RigidBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
@@ -388,8 +388,8 @@ skeleton = NodePath("../..")
 [node name="RigidBody3D" type="RigidBody3D" parent="SpikeRow3"]
 freeze = true
 freeze_mode = 1
-max_contacts_reported = 10000
 contact_monitor = true
+max_contacts_reported = 10000
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SpikeRow3/RigidBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
@@ -509,8 +509,8 @@ skeleton = NodePath("../..")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
 freeze = true
 freeze_mode = 1
-max_contacts_reported = 10000
 contact_monitor = true
+max_contacts_reported = 10000
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SpikeRow 4/MeshInstance3D/RigidBody3D"]
 shape = SubResource("BoxShape3D_pp0j6")

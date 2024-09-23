@@ -8,6 +8,3 @@ var areaBouncy
 func _ready():
 	player = get_parent().get_node("Player")
 	areaBouncy = get_node("bouncyArea")
-
-
-
