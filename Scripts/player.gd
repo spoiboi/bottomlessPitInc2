@@ -32,6 +32,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		$jump.play()
+		$character/AnimationPlayer.stop()
 		$character/AnimationPlayer.play("Jump")
 		jumping = true
 
@@ -39,6 +40,9 @@ func _physics_process(delta):
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir = Input.get_vector("left", "right", "forward", "back").normalized()
 	rotate_model(input_dir)
+	
+	if is_on_floor():
+		$character/AnimationPlayer.play("Run")
 	
 	#$CharacterModel.rotation.z = input_dir.y
 	#print($CharacterModel.rotation.y)

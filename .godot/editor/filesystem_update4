@@ -7,3 +7,5 @@ res://Scenes/player.tscn
 res://Scenes/title_screen.tscn
 res://Scenes/environment.tscn
 res://Scripts/player.gd
+res://Scenes/crumbling_platform.tscn
+res://Scenes/teleporter.tscn
