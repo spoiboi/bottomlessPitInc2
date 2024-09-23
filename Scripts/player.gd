@@ -32,7 +32,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		$jump.play()
-		$anim_idle/AnimationPlayer.play("Jump")
+		$character/AnimationPlayer.play("Jump")
 		jumping = true
 
 	# Get the input direction and handle the movement/deceleration.
@@ -54,9 +54,9 @@ func _physics_process(delta):
 
 func rotate_model(input_dir):
 	if input_dir.y <= 0:
-		$CharacterModel.rotation.y = (PI - input_dir.x)+$CameraPivot/Camera3D.rotation.y
+		$character.rotation.y = (PI - input_dir.x)+$CameraPivot/Camera3D.rotation.y
 	else:
-		$CharacterModel.rotation.y = (input_dir.x)+$CameraPivot/Camera3D.rotation.y
+		$character.rotation.y = (input_dir.x)+$CameraPivot/Camera3D.rotation.y
 		
 func respawn():
 	
