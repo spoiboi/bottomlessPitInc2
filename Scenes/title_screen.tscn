@@ -3,7 +3,7 @@
 [ext_resource type="FontFile" uid="uid://oigad7atfyty" path="res://Nicolast.otf" id="1_j1cod"]
 [ext_resource type="Script" path="res://Scripts/title_screen.gd" id="1_ppbl8"]
 [ext_resource type="Texture2D" uid="uid://caeh0anufrt3s" path="res://Assets/logo.png" id="3_pp3rk"]
-[ext_resource type="AudioStream" uid="uid://bcx5ns0myowt4" path="res://Sounds/title.mp3" id="4_hmcx7"]
+[ext_resource type="AudioStream" uid="uid://c8uxmkh06qu62" path="res://Sounds/Unfunky Groove.mp3" id="4_n0fc1"]
 
 [sub_resource type="Theme" id="Theme_svx4q"]
 default_font = ExtResource("1_j1cod")
@@ -128,7 +128,7 @@ theme = SubResource("Theme_thqqn")
 text = "Level 4"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_hmcx7")
+stream = ExtResource("4_n0fc1")
 volume_db = -4.622
 autoplay = true
 

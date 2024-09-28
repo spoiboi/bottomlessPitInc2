@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c8uxmkh06qu62"
+path="res://.godot/imported/Unfunky Groove.mp3-28da3d025b7e0f90ff36654af5635a82.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Unfunky Groove.mp3"
+dest_files=["res://.godot/imported/Unfunky Groove.mp3-28da3d025b7e0f90ff36654af5635a82.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
