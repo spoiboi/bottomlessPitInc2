@@ -6,3 +6,4 @@ res://Scenes/environment.tscn
 res://Scenes/character.tscn
 res://Scenes/crumbling_platform.tscn
 res://Scenes/teleporter.tscn
+res://Scripts/player.gd

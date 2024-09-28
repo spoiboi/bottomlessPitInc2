@@ -41,9 +41,6 @@ func _physics_process(delta):
 	var input_dir = Input.get_vector("left", "right", "forward", "back").normalized()
 	rotate_model(input_dir)
 	
-	if is_on_floor():
-		$character/AnimationPlayer.play("Run")
-	
 	#$CharacterModel.rotation.z = input_dir.y
 	#print($CharacterModel.rotation.y)
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
@@ -54,15 +51,26 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
+	animate_model(input_dir)
 	move_and_slide()
 
 func rotate_model(input_dir):
-	if input_dir.y <= 0:
+	if input_dir == Vector2(0,0):
+		pass
+	elif input_dir.y <= 0:
 		$character.rotation.y = (PI - input_dir.x)+$CameraPivot/Camera3D.rotation.y
 	else:
 		$character.rotation.y = (input_dir.x)+$CameraPivot/Camera3D.rotation.y
 		
 func respawn():
-	
 	velocity.y = 0
 	get_tree().reload_current_scene()
+	
+func animate_model(input_dir):
+	if is_on_floor():
+		if input_dir == Vector2(0,0):
+			$character/AnimationPlayer.play("Idle")
+		else:
+			$character/AnimationPlayer.play("Run")
+	else:
+		$character/AnimationPlayer.play("Jump")
