@@ -1,13 +1,4 @@
 res://default_env.tres
-<<<<<<< Updated upstream
-res://Scenes/title_screen.tscn
-res://Backgrounds/background3.gdshader
-res://Scenes/player.tscn
-res://Scenes/environment.tscn
-res://Scenes/character.tscn
-res://Scenes/crumbling_platform.tscn
-res://Scenes/teleporter.tscn
-=======
 res://Scenes/player.tscn
 res://Backgrounds/background3.gdshader
 res://Scenes/platform.tscn
@@ -30,4 +21,3 @@ res://Levels/good_luck.tscn
 res://Scenes/ofbutton.tscn
 res://Scenes/ofbutton.gd
 res://Scenes/ofbutton1.gd
->>>>>>> Stashed changes
