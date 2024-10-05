@@ -8,8 +8,6 @@ AudioStreamPlayer
 AudioStreamPlayer3D
 AudioStreamPlayer2D
 Timer
-Area3D
 Panel
 CharacterBody3D
 Button
-DirectionalLight3D

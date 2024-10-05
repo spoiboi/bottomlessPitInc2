@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://dmtw08nr7oowm"]
+
+[ext_resource type="Texture2D" uid="uid://rvh1ax4byvkb" path="res://Assets/Untitled1.png" id="1_2k2hl"]
+[ext_resource type="Script" path="res://Scenes/ofbutton1.gd" id="1_gbuaw"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_i6fny"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xgsr7"]
+albedo_texture = ExtResource("1_2k2hl")
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_vq8h7"]
+height = 0.5
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_2ofyx"]
+height = 0.5
+radius = 0.2
+
+[node name="Ofbutton" type="Node3D"]
+script = ExtResource("1_gbuaw")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.25, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("CylinderMesh_i6fny")
+surface_material_override/0 = SubResource("StandardMaterial3D_xgsr7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("CylinderShape3D_vq8h7")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+shape = SubResource("CylinderShape3D_2ofyx")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

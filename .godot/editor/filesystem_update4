@@ -1,4 +1,5 @@
 res://default_env.tres
+<<<<<<< Updated upstream
 res://Scenes/title_screen.tscn
 res://Backgrounds/background3.gdshader
 res://Scenes/player.tscn
@@ -6,3 +7,27 @@ res://Scenes/environment.tscn
 res://Scenes/character.tscn
 res://Scenes/crumbling_platform.tscn
 res://Scenes/teleporter.tscn
+=======
+res://Scenes/player.tscn
+res://Backgrounds/background3.gdshader
+res://Scenes/platform.tscn
+res://Scenes/spiky_cylinder.tscn
+res://what.tscn
+res://Scenes/vertical_spring.tscn
+res://Scenes/environment.tscn
+res://Scenes/deathplane.tscn
+res://Backgrounds/funny_background1.tscn
+res://Scenes/crumbling_platform.tscn
+res://Scenes/moving_platform.tscn
+res://Scenes/rotating_wheel.tscn
+res://Scenes/teleporter.tscn
+res://Scenes/toggle.tscn
+res://Scenes/onbutton.tscn
+res://Scenes/offbutton.tscn
+res://Levels/blank_level.tscn
+res://Levels/crumbling_hell.tscn
+res://Levels/good_luck.tscn
+res://Scenes/ofbutton.tscn
+res://Scenes/ofbutton.gd
+res://Scenes/ofbutton1.gd
+>>>>>>> Stashed changes

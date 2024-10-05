@@ -13,6 +13,7 @@ height = 0.5
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_tfsy0"]
 height = 0.5
+radius = 0.2
 
 [node name="Button" type="Node3D"]
 script = ExtResource("1_idcgc")
