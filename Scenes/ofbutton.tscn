@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dmtw08nr7oowm"]
 
 [ext_resource type="Texture2D" uid="uid://rvh1ax4byvkb" path="res://Assets/Untitled1.png" id="1_2k2hl"]
-[ext_resource type="Script" path="res://Scenes/ofbutton1.gd" id="1_gbuaw"]
+[ext_resource type="Script" path="res://Scripts/ofbutton1.gd" id="1_gbuaw"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_i6fny"]
 

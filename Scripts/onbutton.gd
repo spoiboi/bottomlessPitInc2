@@ -10,6 +10,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
+var count = 0
 
 func _on_nutz_body_entered(body: Node3D) -> void:
-	position.y -= 1
+	if (count < 2):
+		position.y -= 0.4
+	count = count + 1

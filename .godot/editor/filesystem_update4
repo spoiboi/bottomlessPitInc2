@@ -21,3 +21,5 @@ res://Levels/good_luck.tscn
 res://Scenes/ofbutton.tscn
 res://Scenes/ofbutton.gd
 res://Scenes/ofbutton1.gd
+res://Scripts/ofbutton1.gd
+res://Scripts/onbutton.gd

@@ -64,7 +64,7 @@ stream = ExtResource("7_41rlv")
 autoplay = true
 
 [node name="Button" parent="." instance=ExtResource("8_lfdah")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.25503, 1.5122, -1.39512)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.25503, 0.869992, -1.39512)
 
 [node name="Ofbutton" parent="." instance=ExtResource("10_0gx5i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.242, 1.34017, -1.40307)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.242, 0.845767, -1.40307)
