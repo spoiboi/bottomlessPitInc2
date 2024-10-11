@@ -1,4 +1,5 @@
 CollisionShape3D
+Timer
 Path3D
 RayCast3D
 MeshInstance3D

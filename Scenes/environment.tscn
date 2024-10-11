@@ -50,3 +50,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 67.5478, 22.097, 4.75678)
 
 [node name="vertical_spring2" parent="." instance=ExtResource("4_finww")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -6.0486, -2.50009, 13.7596)
+
+[node name="vertical_spring3" parent="." instance=ExtResource("4_finww")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88.9583, 23.2284, 23.6283)

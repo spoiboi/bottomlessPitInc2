@@ -1,9 +1,9 @@
 res://default_env.tres
-res://Scenes/environment.tscn
-res://Scenes/player.tscn
+res://Scripts/bouncyAreaCollision.gd
 res://Scenes/platform.tscn
 res://Scenes/spiky_cylinder.tscn
 res://what.tscn
 res://Scenes/vertical_spring.tscn
-res://Scripts/bouncyAreaCollision.gd
+res://Scenes/player.tscn
 res://Scenes/vertical_spring.gd
+res://Scenes/environment.tscn
