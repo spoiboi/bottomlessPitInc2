@@ -1,6 +1,7 @@
 res://default_env.tres
-res://Scenes/player.tscn
+res://Levels/crumbling_hell.tscn
 res://Backgrounds/background3.gdshader
+res://Scenes/player.tscn
 res://Scenes/platform.tscn
 res://Scenes/spiky_cylinder.tscn
 res://what.tscn
@@ -15,11 +16,8 @@ res://Scenes/teleporter.tscn
 res://Scenes/toggle.tscn
 res://Scenes/onbutton.tscn
 res://Scenes/offbutton.tscn
-res://Levels/blank_level.tscn
-res://Levels/crumbling_hell.tscn
 res://Levels/good_luck.tscn
+res://Levels/blank_level.tscn
 res://Scenes/ofbutton.tscn
-res://Scenes/ofbutton.gd
-res://Scenes/ofbutton1.gd
-res://Scripts/ofbutton1.gd
+res://Levels/funny level.tscn
 res://Scripts/onbutton.gd
