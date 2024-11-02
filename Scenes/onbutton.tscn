@@ -60,5 +60,5 @@ surface_material_override/0 = SubResource("StandardMaterial3D_q2g3n")
 
 [connection signal="body_entered" from="onAreaShape" to="." method="_on_on_area_shape_body_entered"]
 [connection signal="body_entered" from="onAreaShape" to="." method="_on_nutz_body_entered"]
-[connection signal="body_entered" from="offAreaShape" to="." method="_on_nutz_body_entered"]
 [connection signal="body_entered" from="offAreaShape" to="." method="_on_off_area_shape_body_entered"]
+[connection signal="body_entered" from="offAreaShape" to="." method="_on_nutz_body_entered"]

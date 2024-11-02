@@ -62,5 +62,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.36009, -88.8968)
 stream = ExtResource("7_41rlv")
 autoplay = true
 
-[node name="Brother" parent="." instance=ExtResource("8_lfdah")]
+[node name="Les Buttons" parent="." instance=ExtResource("8_lfdah")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.33663, 0.496332, -1.85148)

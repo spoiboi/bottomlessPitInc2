@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://byu2ial1jsp01"]
+
+[ext_resource type="Script" path="res://Scenes/on_platform.gd" id="1_3oyoy"]
+[ext_resource type="Texture2D" uid="uid://b1ug2owlhx201" path="res://Assets/Screenshot (15).png" id="2_gi5nr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bkrnl"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_nbyhe"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3v5k3"]
+albedo_texture = ExtResource("2_gi5nr")
+
+[node name="OnPlatform" type="Node3D"]
+script = ExtResource("1_3oyoy")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_bkrnl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_nbyhe")
+surface_material_override/0 = SubResource("StandardMaterial3D_3v5k3")

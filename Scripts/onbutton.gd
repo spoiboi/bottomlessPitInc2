@@ -13,12 +13,15 @@ func _process(delta: float) -> void:
 var onCount = 0
 var offCount = 0
 
+signal turning_on
+signal turning_off
 
 func _on_on_area_shape_body_entered(body: Node3D) -> void:
 	if (onCount == 0):
 		$onStaticShape.position.y -= .45
 		$onAreaShape.position.y -= .45
 		$onMesh.position.y -= .45
+		emit_signal("turning_on")
 		onCount = 1
 		if (offCount == 1):
 			offCount = 0
@@ -26,12 +29,12 @@ func _on_on_area_shape_body_entered(body: Node3D) -> void:
 			$offAreaShape.position.y += .45
 			$offMeshShape.position.y += .45
 			
-
 func _on_off_area_shape_body_entered(body: Node3D) -> void:
 	if (offCount == 0):
 		$offStaticShape.position.y -= .45
 		$offAreaShape.position.y -= .45
 		$offMeshShape.position.y -= .45
+		emit_signal("turning_off")
 		offCount = 1
 		if (onCount == 1):
 			onCount = 0
