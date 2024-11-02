@@ -1,0 +1,37 @@
+[gd_scene load_steps=8 format=3 uid="uid://di35wor1moco7"]
+
+[ext_resource type="Texture2D" uid="uid://bnd0dopxxt46f" path="res://Assets/metal.jpg" id="1_ihbfv"]
+[ext_resource type="Texture2D" uid="uid://b1ug2owlhx201" path="res://Assets/Screenshot (15).png" id="2_bd161"]
+[ext_resource type="Script" path="res://Scripts/vertical_spring.gd" id="3_a8gxh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_776n7"]
+albedo_texture = ExtResource("1_ihbfv")
+
+[sub_resource type="BoxMesh" id="BoxMesh_cla2b"]
+size = Vector3(0.15, 2, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_flglc"]
+albedo_texture = ExtResource("2_bd161")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g10hx"]
+
+[node name="Wall" type="Node3D"]
+script = ExtResource("3_a8gxh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_776n7")
+mesh = SubResource("BoxMesh_cla2b")
+surface_material_override/0 = SubResource("StandardMaterial3D_flglc")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05, 0, 0)
+
+[node name="Area3D" type="Area3D" parent="StaticBody3D"]
+script = ExtResource("3_a8gxh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D/Area3D"]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_g10hx")
+
+[connection signal="body_entered" from="StaticBody3D/Area3D" to="." method="_on_area_3d_body_entered"]

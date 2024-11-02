@@ -1,15 +1,13 @@
+MeshInstance3D
 CollisionShape3D
 Area3D
 StaticBody3D
-MeshInstance3D
 AnimationPlayer
 GPUParticles3D
 AudioStreamPlayer
 AudioStreamPlayer3D
 AudioStreamPlayer2D
 Timer
-Area3D
 Panel
 CharacterBody3D
 Button
-DirectionalLight3D
