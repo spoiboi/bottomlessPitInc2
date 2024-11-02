@@ -1,7 +1,7 @@
 res://default_env.tres
-res://Scenes/title_screen.tscn
-res://Backgrounds/background3.gdshader
 res://Scenes/player.tscn
+res://Backgrounds/background3.gdshader
+res://Scenes/title_screen.tscn
 res://Scenes/environment.tscn
 res://Scenes/character.tscn
 res://Scenes/crumbling_platform.tscn
