@@ -48,3 +48,4 @@ mono_crash.*.json
 .godot/editor/editor_layout.cfg
 .godot/editor/crumbling_platform.tscn-editstate-c14e5ae23e2982a68255e135b6e5ff08.cfg
 .godot/editor/character.tscn-editstate-78ec84556dfaaee07f5c3febee60df92.cfg
+.godot/scene_groups_cache.cfg
