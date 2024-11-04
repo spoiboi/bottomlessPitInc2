@@ -1,4 +1,5 @@
 MeshInstance3D
+DirectionalLight3D
 CollisionShape3D
 Area3D
 StaticBody3D
