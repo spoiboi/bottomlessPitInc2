@@ -1,4 +1,4 @@
-extends Node
+extends Node3D
 
 var boosted = false
 var current_Body
@@ -7,6 +7,10 @@ var location = []
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
+
+
+func _physics_process(delta):
+	rotate_object_local(Vector3(0, 0, 1), delta)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
