@@ -1,8 +1,9 @@
 [gd_scene load_steps=11 format=3 uid="uid://ds6snrftu1ftl"]
 
 [ext_resource type="Script" path="res://Scripts/spiky_cylinder.gd" id="1_t1kct"]
-[ext_resource type="Script" path="res://Scenes/respawn_stub.gd" id="2_nevic"]
+[ext_resource type="Script" path="res://Scripts/respawn_stub.gd" id="2_nevic"]
 [ext_resource type="Texture2D" uid="uid://bnd0dopxxt46f" path="res://Assets/metal.jpg" id="2_vcxjn"]
+
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w5nkw"]
 albedo_texture = ExtResource("2_vcxjn")

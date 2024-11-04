@@ -7,12 +7,15 @@ extends CharacterBody3D
 var first_time = true
 var jumping = true
 
+var spawn_pos
 @export var SPEED = 7.5
 @export var JUMP_VELOCITY = 7.5
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity") * 3
-
+func _init():
+	spawn_pos = position
+	
 func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("menu"):
@@ -31,9 +34,6 @@ func _physics_process(delta):
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
-		$jump.play()
-		$character/AnimationPlayer.stop()
-		$character/AnimationPlayer.play("Jump")
 		jumping = true
 
 	# Get the input direction and handle the movement/deceleration.
@@ -41,8 +41,6 @@ func _physics_process(delta):
 	var input_dir = Input.get_vector("left", "right", "forward", "back").normalized()
 	rotate_model(input_dir)
 	
-	#$CharacterModel.rotation.z = input_dir.y
-	#print($CharacterModel.rotation.y)
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	direction = direction.rotated(Vector3.UP, -camera.theta + PI * 0.5)
 	if direction:
@@ -64,7 +62,9 @@ func rotate_model(input_dir):
 		
 func respawn():
 	velocity.y = 0
-	get_tree().reload_current_scene()
+	position = spawn_pos 
+	position.y += 20
+	#get_tree().reload_current_scene()
 	
 func animate_model(input_dir):
 	if is_on_floor():
