@@ -4,11 +4,17 @@
 [ext_resource type="Texture2D" uid="uid://kmuxefap2hs8" path="res://Assets/Ice.jpg" id="2_3146t"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oxp1i"]
+albedo_color = Color(0.458824, 0.54902, 0.980392, 0.670588)
 albedo_texture = ExtResource("2_3146t")
+albedo_texture_force_srgb = true
+metallic = 0.75
+roughness = 0.8
+emission_energy_multiplier = 4.17
+rim = 0.0
+anisotropy = -1.0
 
 [sub_resource type="TorusMesh" id="TorusMesh_455w6"]
 lightmap_size_hint = Vector2i(33, 6)
-flip_faces = true
 inner_radius = 0.7
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_y61xj"]
@@ -21,15 +27,19 @@ script = ExtResource("1_8xcsw")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_oxp1i")
-transparency = 0.15
+gi_lightmap_scale = 1
 mesh = SubResource("TorusMesh_455w6")
 
 [node name="StaticBody3D2" type="StaticBody3D" parent="."]
+collision_layer = 2
+collision_mask = 2
 
 [node name="Area3D" type="Area3D" parent="StaticBody3D2"]
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2/Area3D"]
-transform = Transform3D(1.4, 0, 0, 0, -4.37114e-09, -1.4, 0, 0.1, -6.11959e-08, 0, 0, 0)
+transform = Transform3D(1.5, 0, 0, 0, -6.55671e-09, -1.5, 0, 0.15, -6.55671e-08, 0, 0, 0)
 shape = SubResource("CylinderShape3D_y61xj")
 
 [node name="Timer" type="Timer" parent="."]
@@ -40,6 +50,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.2, 0, -0.02, 0)
 
 [node name="StaticBody3D3" type="StaticBody3D" parent="Node3D"]
 transform = Transform3D(0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0, 0, 1, 0, 0, 0)
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/StaticBody3D3"]
 transform = Transform3D(0.3, 0, 0, 0, -6.55671e-09, -0.3, 0, 0.15, -1.31134e-08, 0.840185, 0, 0)
@@ -59,6 +71,8 @@ shape = SubResource("CapsuleShape3D_nwxgv")
 
 [node name="StaticBody3D5" type="StaticBody3D" parent="Node3D"]
 transform = Transform3D(0.92388, 0.382683, 0, -0.382683, 0.92388, 0, 0, 0, 1, 0, 0, 0)
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/StaticBody3D5"]
 transform = Transform3D(0.3, 0, 0, 0, -6.55671e-09, -0.3, 0, 0.15, -1.31134e-08, 0.840185, 0, 0)
@@ -78,6 +92,8 @@ shape = SubResource("CapsuleShape3D_nwxgv")
 
 [node name="StaticBody3D4" type="StaticBody3D" parent="Node3D"]
 transform = Transform3D(0.92388, -0.382683, 0, 0.382683, 0.92388, 0, 0, 0, 1, 0, 0, 0)
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/StaticBody3D4"]
 transform = Transform3D(0.3, 0, 0, 0, -6.55671e-09, -0.3, 0, 0.15, -1.31134e-08, 0.840185, 0, 0)
@@ -96,6 +112,8 @@ transform = Transform3D(0.3, 0, 0, 0, -6.55671e-09, -0.3, 0, 0.15, -1.31134e-08,
 shape = SubResource("CapsuleShape3D_nwxgv")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Node3D"]
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/StaticBody3D"]
 transform = Transform3D(0.3, 0, 0, 0, -6.55671e-09, -0.3, 0, 0.15, -1.31134e-08, 0.840185, 0, 0)
@@ -115,6 +133,8 @@ shape = SubResource("CapsuleShape3D_nwxgv")
 
 [node name="StaticBody3D6" type="StaticBody3D" parent="Node3D"]
 transform = Transform3D(0.554844, -0.831954, 0, 0.831954, 0.554844, 0, 0, 0, 1, 0, 0, 0)
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/StaticBody3D6"]
 transform = Transform3D(0.3, 0, 0, 0, -6.55671e-09, -0.3, 0, 0.15, -1.31134e-08, 0.840185, 0, 0)
@@ -134,6 +154,8 @@ shape = SubResource("CapsuleShape3D_nwxgv")
 
 [node name="StaticBody3D7" type="StaticBody3D" parent="Node3D"]
 transform = Transform3D(0.980955, 0.194234, 0, -0.194234, 0.980955, 0, 0, 0, 1, 0, 0, 0)
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/StaticBody3D7"]
 transform = Transform3D(0.3, 0, 0, 0, -6.55671e-09, -0.3, 0, 0.15, -1.31134e-08, 0.840185, 0, 0)
@@ -153,6 +175,8 @@ shape = SubResource("CapsuleShape3D_nwxgv")
 
 [node name="StaticBody3D8" type="StaticBody3D" parent="Node3D"]
 transform = Transform3D(0.830984, -0.556296, 0, 0.556296, 0.830984, 0, 0, 0, 1, 0, 0, 0)
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/StaticBody3D8"]
 transform = Transform3D(0.3, 0, 0, 0, -6.55671e-09, -0.3, 0, 0.15, -1.31134e-08, 0.840185, 0, 0)
@@ -172,6 +196,8 @@ shape = SubResource("CapsuleShape3D_nwxgv")
 
 [node name="StaticBody3D2" type="StaticBody3D" parent="Node3D"]
 transform = Transform3D(0.980615, -0.195946, 0, 0.195946, 0.980615, 0, 0, 0, 1, 0, 0, 0)
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/StaticBody3D2"]
 transform = Transform3D(0.3, 0, 0, 0, -6.55671e-09, -0.3, 0, 0.15, -1.31134e-08, 0.840185, 0, 0)

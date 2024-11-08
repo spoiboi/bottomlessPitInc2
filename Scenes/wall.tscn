@@ -1,11 +1,22 @@
-[gd_scene load_steps=9 format=3 uid="uid://di35wor1moco7"]
+[gd_scene load_steps=10 format=3 uid="uid://di35wor1moco7"]
 
-[ext_resource type="Texture2D" uid="uid://bnd0dopxxt46f" path="res://Assets/metal.jpg" id="1_ihbfv"]
+[ext_resource type="Texture2D" uid="uid://kmuxefap2hs8" path="res://Assets/Ice.jpg" id="2_3w0ii"]
 [ext_resource type="Texture2D" uid="uid://b1ug2owlhx201" path="res://Assets/Screenshot (15).png" id="2_bd161"]
 [ext_resource type="Script" path="res://Scripts/vertical_spring.gd" id="3_a8gxh"]
 
+[sub_resource type="CanvasTexture" id="CanvasTexture_0ss2h"]
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_776n7"]
-albedo_texture = ExtResource("1_ihbfv")
+albedo_color = Color(0.398916, 0.860105, 0.596457, 1)
+albedo_texture = ExtResource("2_3w0ii")
+metallic = 1.0
+metallic_specular = 0.78
+metallic_texture_channel = 1
+clearcoat = 0.0
+subsurf_scatter_enabled = true
+subsurf_scatter_strength = 1.0
+refraction_scale = 1.0
+detail_mask = SubResource("CanvasTexture_0ss2h")
 
 [sub_resource type="BoxMesh" id="BoxMesh_cla2b"]
 size = Vector3(0.15, 2, 1)
