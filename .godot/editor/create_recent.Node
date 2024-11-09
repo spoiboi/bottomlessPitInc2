@@ -2,6 +2,8 @@ CollisionShape3D
 RigidBody3D
 MeshInstance3D
 Area3D
+MeshInstance3D
+DirectionalLight3D
 StaticBody3D
 DirectionalLight3D
 AnimationPlayer
