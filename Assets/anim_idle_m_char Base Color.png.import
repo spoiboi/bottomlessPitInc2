@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nx1mxsewalao"
+uid="uid://4oshlrjrdbnv"
 path.s3tc="res://.godot/imported/anim_idle_m_char Base Color.png-e5c1a8e4e5048baef62c9b8c7658e30d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "df107bb8d1bd1c2155cda5eb13ac0600"
 }
 
 [deps]

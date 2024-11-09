@@ -1,12 +1,10 @@
 extends CharacterBody3D
-
 @onready var camera = $CameraPivot/Camera3D
-
 
 
 var first_time = true
 var jumping = true
-
+var on_ice = false
 var spawn_pos
 @export var SPEED = 7.5
 @export var JUMP_VELOCITY = 7.5
@@ -15,7 +13,14 @@ var spawn_pos
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity") * 3
 func _init():
 	spawn_pos = position
-	
+func _ready():
+	pass
+	#var ice_platform = get_parent().get_node("IcyPlatform/Area3D")
+	#print(ice_platform)
+	#ice_platform.connect("on_ice_platform", self, "_on_ice_platform")
+
+func _on_ice_platform(is_on_ice):
+	on_ice = is_on_ice
 func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("menu"):
@@ -29,6 +34,7 @@ func _physics_process(delta):
 	elif (jumping==true):
 		jumping=false
 		$jumpcloud.restart()
+
 		
 
 	# Handle jump.
@@ -51,7 +57,6 @@ func _physics_process(delta):
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 	animate_model(input_dir)
 	move_and_slide()
-
 func rotate_model(input_dir):
 	if input_dir == Vector2(0,0):
 		pass
