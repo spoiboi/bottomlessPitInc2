@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dttdy4dcm5nt0"]
+[gd_scene load_steps=5 format=3 uid="uid://dttdy4dcm5nt0"]
 
-[ext_resource type="PackedScene" uid="uid://cotyop14wq5i6" path="res://Scenes/player.tscn" id="1_dewut"]
+[ext_resource type="PackedScene" uid="uid://cotyop14wq5i6" path="res://Scenes/Player.tscn" id="1_dewut"]
 [ext_resource type="PackedScene" uid="uid://csg7h6jwhtt3b" path="res://Scenes/platform.tscn" id="2_f51ui"]
 [ext_resource type="PackedScene" uid="uid://cnab4kdt2ummt" path="res://Scenes/teleporter.tscn" id="3_3ok5c"]
 [ext_resource type="PackedScene" uid="uid://ddl5ibdcryb5b" path="res://Scenes/deathplane.tscn" id="4_7hdd8"]
-[ext_resource type="PackedScene" uid="uid://ddoodpt7ajlro" path="res://Scenes/icy_platform.tscn" id="5_6iqiv"]
 
 [node name="blankLevel2" type="Node3D"]
 
@@ -25,6 +24,3 @@ transform = Transform3D(0.178012, -0.984028, 3.66579e-09, 0.181233, 0.0327853, 0
 
 [node name="deathplane" parent="." instance=ExtResource("4_7hdd8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -14, 0)
-
-[node name="IcyPlatform" parent="." instance=ExtResource("5_6iqiv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
