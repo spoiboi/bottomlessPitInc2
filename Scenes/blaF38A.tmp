@@ -28,4 +28,4 @@ transform = Transform3D(0.178012, -0.984028, 3.66579e-09, 0.181233, 0.0327853, 0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -14, 0)
 
 [node name="IcyPlatform" parent="." instance=ExtResource("5_n55aj")]
-transform = Transform3D(1, 0, 0, 0, -0.989935, -0.141523, 0, 0.141523, -0.989935, 8, 0, 5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.2845, 8.16631, 0)

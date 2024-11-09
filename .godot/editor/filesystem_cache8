@@ -1,15 +1,15 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1731169429
+::res://::1731171373
 bouncy_area.gd::GDScript::-1::1726438234::0::1::::<>CollisionShape3D<>::
-default_env.tres::Environment::5705348327446296659::1730561169::0::1::::<><>::
+default_env.tres::Environment::5705348327446296659::1731171373::0::1::::<><>::
 easy_level.tscn::PackedScene::743917128488240904::1726930310::0::1::::<><>::uid://ds6snrftu1ftl::::res://Scenes/spiky_cylinder.tscn<>uid://dnr22wo8t4i7c::::res://Scenes/deathplane.tscn<>uid://csg7h6jwhtt3b::::res://Scenes/platform.tscn<>uid://cotyop14wq5i6::::res://Scenes/player.tscn
 export_presets.cfg::TextFile::-1::1727047530::0::1::::<><>::
 icon.png::CompressedTexture2D::5740550874194149832::1726438234::1731092788::1::::<><>::
 Nicolast.otf::FontFile::999523341950937430::1726930310::1731092788::1::::<><>::
 Start.gd::GDScript::-1::1726930310::0::1::::<>Button<>::
-::res://Assets/::1731092789
+::res://Assets/::1731171556
 anim_idle.glb::PackedScene::5204276044836035016::1727043986::1731092789::1::::<><>::uid://nx1mxsewalao::::res://Assets/anim_idle_m_char Base Color.png
-anim_idle_m_char Base Color.png::CompressedTexture2D::961536963031269274::1727043986::1731092788::1::::<><>::
+anim_idle_m_char Base Color.png::CompressedTexture2D::2065483764937189339::1727043986::1731171963::1::::<><>::
 CharModelOBJ.obj::Mesh::3251225264537204202::1727043975::1731092788::1::::<><>::
 crumble.png::CompressedTexture2D::3679985989714137833::1726930310::1731092788::1::::<><>::
 Froggy.obj::Mesh::2125163192817158::1726930310::1731092788::1::::<><>::
@@ -23,32 +23,35 @@ Toad.obj::Mesh::2685457526110793340::1726438234::1731092788::1::::<><>::
 Untitled1.png::CompressedTexture2D::1237033761123131481::1727050694::1731092788::1::::<><>::
 Untitled.png::CompressedTexture2D::1925507096859514226::1727050694::1731092788::1::::<><>::
 WOOOD.jpg::CompressedTexture2D::1237219210061803268::1726438234::1731092788::1::::<><>::
-::res://Backgrounds/::1731092995
+::res://Backgrounds/::1731171373
 background1.gdshader::Shader::-1::1727050195::0::1::::<><>::
 background1.png::CompressedTexture2D::3785254751557180529::1726930310::1731092788::1::::<><>::
 background2.gdshader::Shader::-1::1727050195::0::1::::<><>::
 background2.png::CompressedTexture2D::7917140839139438437::1726930310::1731092788::1::::<><>::
-background3.gdshader::Shader::-1::1731092995::0::1::::<><>::
+background3.gdshader::Shader::-1::1731171373::0::1::::<><>::
 funny_background1.tscn::PackedScene::1564861467687707588::1726930310::0::1::::<><>::res://Backgrounds/background1.gdshader<>uid://bt6uufgqoxxs0::::res://Backgrounds/background1.png
 funny_background_2.tscn::PackedScene::8679518319196303816::1726930310::0::1::::<><>::res://Backgrounds/background3.gdshader<>uid://dk2efg1bv22qr::::res://Backgrounds/background2.png
-::res://Levels/::1730696717
-blank_level.tscn::PackedScene::8532299795480740227::1730561169::0::1::::<><>::uid://cotyop14wq5i6::::res://Scenes/Player.tscn<>uid://csg7h6jwhtt3b::::res://Scenes/platform.tscn<>uid://cnab4kdt2ummt::::res://Scenes/teleporter.tscn<>uid://ddl5ibdcryb5b::::res://Scenes/deathplane.tscn
+::res://Levels/::1731171556
+blank_level.tscn::PackedScene::8532299795480740227::1731171372::0::1::::<><>::uid://cotyop14wq5i6::::res://Scenes/player.tscn<>uid://csg7h6jwhtt3b::::res://Scenes/platform.tscn<>uid://cnab4kdt2ummt::::res://Scenes/teleporter.tscn<>uid://ddl5ibdcryb5b::::res://Scenes/deathplane.tscn
 buttonLevel.tscn::PackedScene::841901017342275355::1730696717::0::1::::<><>::res://Levels/button_level.gd<>uid://cotyop14wq5i6::::res://Scenes/player.tscn<>uid://cnab4kdt2ummt::::res://Scenes/teleporter.tscn<>uid://ddl5ibdcryb5b::::res://Scenes/deathplane.tscn<>uid://csg7h6jwhtt3b::::res://Scenes/platform.tscn<>uid://briu0fuadh25y::::res://Scenes/onbutton.tscn<>uid://dvwons2rfkk6c::::res://Backgrounds/funny_background_2.tscn<>uid://byu2ial1jsp01::::res://Scenes/on_platform.tscn<>uid://dnmwaogw4ptfy::::res://Scenes/off_platform.tscn
 button_level.gd::GDScript::-1::1730696717::0::1::::<>Node3D<>::
-crumbling_hell.tscn::PackedScene::3891601183727399893::1730696717::0::1::::<><>::uid://csg7h6jwhtt3b::::res://Scenes/platform.tscn<>uid://cotyop14wq5i6::::res://Scenes/player.tscn<>uid://ddl5ibdcryb5b::::res://Scenes/deathplane.tscn<>uid://dyauuntaex86k::::res://Scenes/crumbling_platform.tscn<>uid://cnab4kdt2ummt::::res://Scenes/teleporter.tscn<>uid://wkbbl7c6vjce::::res://Backgrounds/funny_background1.tscn<>uid://bs0xcs1jsiix6::::res://Sounds/level.mp3<>uid://briu0fuadh25y::::res://Scenes/onbutton.tscn
+crumbling_hell.tscn::PackedScene::3891601183727399893::1731171373::0::1::::<><>::uid://csg7h6jwhtt3b::::res://Scenes/platform.tscn<>uid://cotyop14wq5i6::::res://Scenes/player.tscn<>uid://ddl5ibdcryb5b::::res://Scenes/deathplane.tscn<>uid://dyauuntaex86k::::res://Scenes/crumbling_platform.tscn<>uid://cnab4kdt2ummt::::res://Scenes/teleporter.tscn<>uid://wkbbl7c6vjce::::res://Backgrounds/funny_background1.tscn<>uid://bs0xcs1jsiix6::::res://Sounds/level.mp3<>uid://briu0fuadh25y::::res://Scenes/onbutton.tscn
 funny level.tscn::PackedScene::140582870187307977::1730556165::0::1::::<><>::
 good_luck.tscn::PackedScene::2427434723685318215::1727050694::0::1::::<><>::uid://cotyop14wq5i6::::res://Scenes/player.tscn<>uid://csg7h6jwhtt3b::::res://Scenes/platform.tscn<>uid://cnab4kdt2ummt::::res://Scenes/teleporter.tscn<>uid://ddl5ibdcryb5b::::res://Scenes/deathplane.tscn<>uid://ds6snrftu1ftl::::res://Scenes/spiky_cylinder.tscn<>uid://dyauuntaex86k::::res://Scenes/crumbling_platform.tscn<>uid://bs0xcs1jsiix6::::res://Sounds/level.mp3<>uid://dvwons2rfkk6c::::res://Backgrounds/funny_background_2.tscn
 moving_to_your_moms_house.tscn::PackedScene::4148341737418354796::1727042649::0::1::::<><>::uid://cotyop14wq5i6::::res://Scenes/Player.tscn<>uid://csg7h6jwhtt3b::::res://Scenes/platform.tscn<>uid://bkol6cate26rl::::res://Scenes/moving_platform.tscn<>uid://bqanftgk7h1hd::::res://Scenes/teleporter.tscn<>uid://dnr22wo8t4i7c::::res://Scenes/deathplane.tscn<>uid://dvwons2rfkk6c::::res://Backgrounds/funny_background_2.tscn<>uid://bs0xcs1jsiix6::::res://Sounds/level.mp3
+parkor_level.tscn::PackedScene::-1::1731171556::0::1::::<><>::
 spiky_level.tscn::PackedScene::159121742718508498::1727042649::0::1::::<><>::uid://ds6snrftu1ftl::::res://Scenes/spiky_cylinder.tscn<>uid://csg7h6jwhtt3b::::res://Scenes/platform.tscn<>uid://dnr22wo8t4i7c::::res://Scenes/deathplane.tscn<>uid://cotyop14wq5i6::::res://Scenes/Player.tscn<>uid://bqanftgk7h1hd::::res://Scenes/teleporter.tscn<>uid://wkbbl7c6vjce::::res://Backgrounds/funny_background1.tscn<>uid://bs0xcs1jsiix6::::res://Sounds/level.mp3
-::res://Scenes/::1731092788
+::res://Scenes/::1731171556
 blade.tscn::PackedScene::5251440919838934654::1726930310::0::1::::<><>::res://Scripts/blade.gd
 blank_level.tscn::PackedScene::3963461146837998017::1727042649::0::1::::<><>::uid://cotyop14wq5i6::::res://Scenes/Player.tscn<>uid://csg7h6jwhtt3b::::res://Scenes/platform.tscn<>uid://bqanftgk7h1hd::::res://Scenes/teleporter.tscn<>uid://dnr22wo8t4i7c::::res://Scenes/deathplane.tscn
+boost_ring.tscn::PackedScene::-1::1731171556::0::1::::<><>::
 character.tscn::PackedScene::1723183735443525219::1730561169::0::1::::<><>::uid://cge8wwata6dkq::::res://Assets/anim_idle.glb
-crumbling_platform.tscn::PackedScene::8845045066286631908::1730561169::0::1::::<><>::res://Scripts/crumbling_platform.gd<>uid://bsou3jlehv0mv::::res://Assets/crumble.png
-deathplane.tscn::PackedScene::7394372590694588369::1727050694::0::1::::<><>::res://Scripts/deathplane.gd
-environment.tscn::PackedScene::3951962298660484769::1730561169::0::1::::<><>::uid://cotyop14wq5i6::::res://Scenes/Player.tscn<>uid://csg7h6jwhtt3b::::res://Scenes/platform.tscn<>uid://ds6snrftu1ftl::::res://Scenes/spiky_cylinder.tscn<>uid://dyauuntaex86k::::res://Scenes/crumbling_platform.tscn<>uid://bkol6cate26rl::::res://Scenes/moving_platform.tscn<>uid://wkbbl7c6vjce::::res://Backgrounds/funny_background1.tscn<>uid://ddl5ibdcryb5b::::res://Scenes/deathplane.tscn<>uid://cnab4kdt2ummt::::res://Scenes/teleporter.tscn
+crumbling_platform.tscn::PackedScene::8845045066286631908::1731171372::0::1::::<><>::res://Scripts/crumbling_platform.gd<>uid://bsou3jlehv0mv::::res://Assets/crumble.png
+deathplane.tscn::PackedScene::7394372590694588369::1731171372::0::1::::<><>::res://Scripts/deathplane.gd
+environment.tscn::PackedScene::3951962298660484769::1731171371::0::1::::<><>::uid://cotyop14wq5i6::::res://Scenes/player.tscn<>uid://csg7h6jwhtt3b::::res://Scenes/platform.tscn<>uid://ds6snrftu1ftl::::res://Scenes/spiky_cylinder.tscn<>uid://dyauuntaex86k::::res://Scenes/crumbling_platform.tscn<>uid://bkol6cate26rl::::res://Scenes/moving_platform.tscn<>uid://wkbbl7c6vjce::::res://Backgrounds/funny_background1.tscn<>uid://ddl5ibdcryb5b::::res://Scenes/deathplane.tscn<>uid://cnab4kdt2ummt::::res://Scenes/teleporter.tscn
+icy_platform.gd::GDScript::-1::1731171556::0::1::::<>Node3D<>::
 icy_platform.tscn::PackedScene::7399586084486519044::1727042649::0::1::::<><>::uid://kmuxefap2hs8::::res://Assets/Ice.jpg
-moving_platform.tscn::PackedScene::3117933761078160961::1726930310::0::1::::<><>::res://Scripts/moving_platform.gd<>uid://bnd0dopxxt46f::::res://Assets/metal.jpg
+moving_platform.tscn::PackedScene::3117933761078160961::1731171372::0::1::::<><>::res://Scripts/moving_platform.gd<>uid://bnd0dopxxt46f::::res://Assets/metal.jpg
 ofbutton.tscn::PackedScene::280363026790993760::1730696717::0::1::::<><>::uid://rvh1ax4byvkb::::res://Assets/Untitled1.png<>res://Scripts/ofbutton1.gd
 offbutton.tscn::PackedScene::2129860643072410187::1730696717::0::1::::<><>::
 offy_platform.gd::GDScript::-1::1730696717::0::1::::<>Node3D<>::
@@ -56,27 +59,29 @@ off_platform.tscn::PackedScene::8097826070897976982::1730696717::0::1::::<><>::r
 onbutton.tscn::PackedScene::3597405325792236904::1730696717::0::1::::<><>::res://Scripts/onbutton.gd<>uid://2oy25tq1mdxy::::res://Assets/Untitled.png<>uid://rvh1ax4byvkb::::res://Assets/Untitled1.png
 on_platform.gd::GDScript::-1::1730696717::0::1::::<>Node3D<>::
 on_platform.tscn::PackedScene::4113894149429929800::1730696717::0::1::::<><>::res://Scenes/on_platform.gd<>uid://b1ug2owlhx201::::res://Assets/Screenshot (15).png
-platform.tscn::PackedScene::6050583906857802381::1726930310::0::1::::<><>::uid://rvk24qyyi83i::::res://Assets/WOOOD.jpg
-player.tscn::PackedScene::5796191393949712423::1730561168::0::1::::<><>::res://Scripts/player.gd<>uid://ysyt4r1ufi72::::res://Scenes/character.tscn<>uid://86i0gut57do5::::res://Scenes/playerMatte.tres<>res://Scripts/player_camera.gd<>uid://c5tcqouj78c2p::::res://Sounds/a.mp3
+platform.tscn::PackedScene::6050583906857802381::1731171371::0::1::::<><>::uid://rvk24qyyi83i::::res://Assets/WOOOD.jpg
+player.tscn::PackedScene::5796191393949712423::1731171371::0::1::::<><>::res://Scripts/player.gd<>uid://ysyt4r1ufi72::::res://Scenes/character.tscn<>uid://86i0gut57do5::::res://Scenes/playerMatte.tres<>res://Scripts/player_camera.gd<>uid://c5tcqouj78c2p::::res://Sounds/a.mp3
 playerMatte.tres::StandardMaterial3D::2380758278161489862::1726930310::0::1::::<><>::
-rotating_wheel.tscn::PackedScene::4118362385812910947::1726930310::0::1::::<><>::
+rotating_wheel.tscn::PackedScene::4118362385812910947::1731171372::0::1::::<><>::
 Screenshot (29).png::CompressedTexture2D::3793685614918992427::1730696717::1731092788::1::::<><>::
-spiky_cylinder.tscn::PackedScene::8487773969642301781::1728138660::0::1::::<><>::res://Scripts/spiky_cylinder.gd<>res://Scripts/respawn_stub.gd<>uid://bnd0dopxxt46f::::res://Assets/metal.jpg
-teleporter.tscn::PackedScene::5685409370464700747::1730561169::0::1::::<><>::uid://bbabkkpfax7::::res://Assets/Froggy.obj<>res://Scripts/teleporter.gd<>uid://b4546y55e7y40::::res://Assets/green.png<>uid://oigad7atfyty::::res://Nicolast.otf
+spiky_cylinder.tscn::PackedScene::8487773969642301781::1731171371::0::1::::<><>::res://Scripts/spiky_cylinder.gd<>res://Scripts/respawn_stub.gd<>uid://bnd0dopxxt46f::::res://Assets/metal.jpg
+teleporter.tscn::PackedScene::5685409370464700747::1731171372::0::1::::<><>::uid://bbabkkpfax7::::res://Assets/Froggy.obj<>res://Scripts/teleporter.gd<>uid://b4546y55e7y40::::res://Assets/green.png<>uid://oigad7atfyty::::res://Nicolast.otf
 title_screen.tscn::PackedScene::166019918607136371::1730561168::0::1::::<><>::uid://oigad7atfyty::::res://Nicolast.otf<>res://Scripts/title_screen.gd<>uid://caeh0anufrt3s::::res://Assets/logo.png<>uid://c8uxmkh06qu62::::res://Sounds/Unfunky Groove.mp3
 toggle.tscn::PackedScene::2090227009010155063::1727050694::0::1::::<><>::res://Scripts/toggle.gd<>uid://b1ug2owlhx201::::res://Assets/Screenshot (15).png
-vertical_spring.tscn::PackedScene::6835114714060128109::1727050694::0::1::::<><>::res://Scripts/bouncyAreaCollision.gd
+vertical_spring.tscn::PackedScene::6835114714060128109::1731171371::0::1::::<><>::res://Scripts/bouncyAreaCollision.gd
 wall.tscn::PackedScene::7780436937332624820::1730556165::0::1::::<><>::uid://bnd0dopxxt46f::::res://Assets/metal.jpg<>uid://b1ug2owlhx201::::res://Assets/Screenshot (15).png<>res://Scripts/vertical_spring.gd
-::res://Scripts/::1730696717
+::res://Scripts/::1731171556
 blade.gd::GDScript::-1::1726438234::0::1::::<>Node3D<>::
+boost_ring.gd::GDScript::-1::1731171556::0::1::::<>Node3D<>::
 bouncyAreaCollision.gd::GDScript::-1::1727050694::0::1::::<>CollisionShape3D<>::
 CollisionShape3D.gd::GDScript::-1::1726438234::0::1::::<>CollisionShape3D<>::
-crumbling_platform.gd::GDScript::-1::1728745190::0::1::::<>Node3D<>::
-deathplane.gd::GDScript::-1::1726930310::0::1::::<>Node3D<>::
+crumbling_platform.gd::GDScript::-1::1731171221::0::1::::<>Node3D<>::
+deathplane.gd::GDScript::-1::1731171369::0::1::::<>Node3D<>::
+ice.gd::GDScript::-1::1731171556::0::1::::<>Area3D<>::
 moving_platform.gd::GDScript::-1::1726930310::0::1::::<>Path3D<>::
 ofbutton1.gd::GDScript::-1::1730556165::0::1::::<>Node3D<>::
 onbutton.gd::GDScript::-1::1730696717::0::1::::<>Node3D<>::
-player.gd::GDScript::-1::1727654854::0::1::::<>CharacterBody3D<>::
+player.gd::GDScript::-1::1731171556::0::1::::<>CharacterBody3D<>::
 player_camera.gd::GDScript::-1::1726438234::0::1::::<>Camera3D<>::
 respawn_stub.gd::GDScript::-1::1726930310::0::1::::<>StaticBody3D<>::
 spiky_cylinder.gd::GDScript::-1::1726930310::0::1::::<>Node3D<>::

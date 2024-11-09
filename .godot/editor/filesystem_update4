@@ -14,3 +14,6 @@ res://Scenes/teleporter.tscn
 res://Levels/blank_level.tscn
 res://Levels/crumbling_hell.tscn
 res://Scripts/deathplane.gd
+res://Scripts/ice.gd
+res://Scripts/player.gd
+

@@ -1,15 +1,23 @@
 extends Node3D
 
+var current_Body
+@export var jump = 15
+#var wall_Y = get_global_position().y
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if current_Body != null:
+		current_Body.velocity.y = -1
 
 func _on_area_3d_body_entered(body):
 	if body.name == "Player":
-		body.velocity.y = 50
+		current_Body = body
+
+func _on_area_3d_body_exited(body: Node3D) -> void:
+	if body.name == "Player":
+		body.velocity.y = jump
+		current_Body = null

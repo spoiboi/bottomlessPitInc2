@@ -10,7 +10,6 @@
 
 [node name="Player" parent="." instance=ExtResource("1_4vdl3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.77918, 0)
-SPEED = null
 
 [node name="Platform" parent="." instance=ExtResource("2_cengx")]
 transform = Transform3D(10, 0, 0, 0, 5, 0, 0, 0, 10, 0, -0.66388, 0)
@@ -28,4 +27,4 @@ transform = Transform3D(0.178012, -0.984028, 3.66579e-09, 0.181233, 0.0327853, 0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -14, 0)
 
 [node name="IcyPlatform" parent="." instance=ExtResource("5_n55aj")]
-transform = Transform3D(1, 0, 0, 0, -0.989935, -0.141523, 0, 0.141523, -0.989935, 8, 0, 5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.2845, 8.16631, 0)
