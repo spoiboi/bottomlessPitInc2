@@ -1,9 +1,7 @@
 res://default_env.tres
-res://Scenes/player.tscn
 res://Backgrounds/background3.gdshader
 res://Scenes/platform.tscn
 res://Scenes/spiky_cylinder.tscn
-res://what.tscn
 res://Scenes/vertical_spring.tscn
 res://Scenes/environment.tscn
 res://Scenes/deathplane.tscn
@@ -20,10 +18,13 @@ res://Levels/blank_level.tscn
 res://Scenes/ofbutton.tscn
 res://Levels/crumbling_hell.tscn
 res://Levels/funny level.tscn
-res://Scripts/onbutton.gd
 res://Levels/buttonLevel.tscn
-res://Levels/button_level.gd
 res://Scenes/on_platform.tscn
-res://Scenes/on_platform.gd
 res://Scenes/off_platform.tscn
+res://Scenes/player.tscn
+res://Scripts/ofbutton1.gd
 res://Scenes/offy_platform.gd
+res://Scenes/on_platform.gd
+res://Levels/button_level.gd
+res://Scenes/Ball.tscn
+res://Scenes/ball.gd

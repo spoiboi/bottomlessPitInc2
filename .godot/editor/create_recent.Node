@@ -1,8 +1,9 @@
-MeshInstance3D
-DirectionalLight3D
 CollisionShape3D
+RigidBody3D
+MeshInstance3D
 Area3D
 StaticBody3D
+DirectionalLight3D
 AnimationPlayer
 GPUParticles3D
 AudioStreamPlayer
@@ -11,4 +12,3 @@ AudioStreamPlayer2D
 Timer
 Panel
 CharacterBody3D
-Button
