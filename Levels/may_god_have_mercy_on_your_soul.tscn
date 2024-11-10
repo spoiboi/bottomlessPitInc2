@@ -1,0 +1,139 @@
+[gd_scene load_steps=10 format=3 uid="uid://c6mc8xci22cd3"]
+
+[ext_resource type="PackedScene" uid="uid://cotyop14wq5i6" path="res://Scenes/Player.tscn" id="1_tsplm"]
+[ext_resource type="PackedScene" uid="uid://csg7h6jwhtt3b" path="res://Scenes/platform.tscn" id="2_a263u"]
+[ext_resource type="PackedScene" uid="uid://cnab4kdt2ummt" path="res://Scenes/teleporter.tscn" id="3_2vyn8"]
+[ext_resource type="PackedScene" uid="uid://ddl5ibdcryb5b" path="res://Scenes/deathplane.tscn" id="4_2i51c"]
+[ext_resource type="PackedScene" uid="uid://di35wor1moco7" path="res://Scenes/wall.tscn" id="5_e71hb"]
+[ext_resource type="PackedScene" uid="uid://bkol6cate26rl" path="res://Scenes/moving_platform.tscn" id="6_eom4w"]
+[ext_resource type="PackedScene" uid="uid://dqn5qg0jpqjx2" path="res://Scenes/trick_crumbling_platform.tscn" id="6_sbw58"]
+
+[sub_resource type="Curve3D" id="Curve3D_y6vp2"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -100, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0)
+}
+point_count = 3
+
+[sub_resource type="Curve3D" id="Curve3D_xvdue"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0)
+}
+point_count = 3
+
+[node name="blankLevel2" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_tsplm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="Platform" parent="." instance=ExtResource("2_a263u")]
+transform = Transform3D(10, 0, 0, 0, 5, 0, 0, 0, 10, 0, -0.66388, 0)
+
+[node name="TiltedSideJumps" type="Node" parent="."]
+
+[node name="Platform3" parent="TiltedSideJumps" instance=ExtResource("2_a263u")]
+transform = Transform3D(8.27149, 2.80991, 0, -5.61982, 4.13575, 0, 0, 0, 10, -6, -3, -15)
+
+[node name="Platform7" parent="TiltedSideJumps" instance=ExtResource("2_a263u")]
+transform = Transform3D(8.27149, 2.80991, 0, -5.61982, 4.13575, 0, 0, 0, 10, -6, -3, -35)
+
+[node name="Platform8" parent="TiltedSideJumps" instance=ExtResource("2_a263u")]
+transform = Transform3D(8.27149, 2.80991, 0, -5.61982, 4.13575, 0, 0, 0, 10, -6, -3, -55)
+
+[node name="Platform4" parent="TiltedSideJumps" instance=ExtResource("2_a263u")]
+transform = Transform3D(8.27081, -2.81042, 0, 5.62083, 4.1354, 0, 0, 0, 10, 8, -3, -25)
+
+[node name="Platform5" parent="TiltedSideJumps" instance=ExtResource("2_a263u")]
+transform = Transform3D(8.27081, -2.81042, 0, 5.62083, 4.1354, 0, 0, 0, 10, 8, -3, -45)
+
+[node name="Platform6" parent="TiltedSideJumps" instance=ExtResource("2_a263u")]
+transform = Transform3D(8.27081, -2.81042, 0, 5.62083, 4.1354, 0, 0, 0, 10, 8, -3, -65)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.178012, -0.984028, 3.66579e-09, 0.181233, 0.0327853, 0.982894, -0.967195, -0.174967, 0.184174, -0.746615, 9.72125, -3.10499)
+
+[node name="deathplane" parent="." instance=ExtResource("4_2i51c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -14, 0)
+
+[node name="WallClimbSection" type="Node" parent="."]
+
+[node name="Wall" parent="WallClimbSection" instance=ExtResource("5_e71hb")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -4.25, 6, -80)
+
+[node name="Wall3" parent="WallClimbSection" instance=ExtResource("5_e71hb")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -4.25, 26, -80)
+
+[node name="Wall7" parent="WallClimbSection" instance=ExtResource("5_e71hb")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -4.25, 46, -80)
+
+[node name="Wall8" parent="WallClimbSection" instance=ExtResource("5_e71hb")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -4.25, 65, -80)
+
+[node name="Wall4" parent="WallClimbSection" instance=ExtResource("5_e71hb")]
+transform = Transform3D(-10, 0, 8.74228e-07, 0, 10, 0, -8.74228e-07, 0, -10, 4.25, 36, -80)
+
+[node name="Wall5" parent="WallClimbSection" instance=ExtResource("5_e71hb")]
+transform = Transform3D(-10, 0, 8.74228e-07, 0, 10, 0, -8.74228e-07, 0, -10, 4.25, 56, -80)
+
+[node name="Wall2" parent="WallClimbSection" instance=ExtResource("5_e71hb")]
+transform = Transform3D(-10, 0, 8.74228e-07, 0, 10, 0, -8.74228e-07, 0, -10, 4.25, 16, -80)
+
+[node name="Platform9" parent="WallClimbSection" instance=ExtResource("2_a263u")]
+transform = Transform3D(10, 0, 0, 0, 5, 0, 0, 0, 10, 0, -3, -80)
+
+[node name="FloorCrumble" type="Node" parent="."]
+
+[node name="Platform11" parent="FloorCrumble" instance=ExtResource("2_a263u")]
+transform = Transform3D(8, 0, 0, 0, 1, 0, 0, 0, 8, -10, 70, -90)
+
+[node name="Platform12" parent="FloorCrumble" instance=ExtResource("2_a263u")]
+transform = Transform3D(8, 0, 0, 0, 1, 0, 0, 0, 8, -21, 70, -100)
+
+[node name="Platform13" parent="FloorCrumble" instance=ExtResource("2_a263u")]
+transform = Transform3D(8, 0, 0, 0, 1, 0, 0, 0, 8, -10, 70, -110)
+
+[node name="Platform14" parent="FloorCrumble" instance=ExtResource("2_a263u")]
+transform = Transform3D(8, 0, 0, 0, 1, 0, 0, 0, 8, -21, 70, -120)
+
+[node name="Platform15" parent="FloorCrumble" instance=ExtResource("2_a263u")]
+transform = Transform3D(8, 0, 0, 0, 1, 0, 0, 0, 8, -21, 70, -130)
+
+[node name="crumblingPlatform" parent="FloorCrumble" instance=ExtResource("6_sbw58")]
+transform = Transform3D(8, 0, 0, 0, 1, 0, 0, 0, 8, -21, 70, -90)
+
+[node name="crumblingPlatform2" parent="FloorCrumble" instance=ExtResource("6_sbw58")]
+transform = Transform3D(8, 0, 0, 0, 1, 0, 0, 0, 8, -10, 70, -100)
+
+[node name="crumblingPlatform3" parent="FloorCrumble" instance=ExtResource("6_sbw58")]
+transform = Transform3D(8, 0, 0, 0, 1, 0, 0, 0, 8, -21, 70, -110)
+
+[node name="crumblingPlatform4" parent="FloorCrumble" instance=ExtResource("6_sbw58")]
+transform = Transform3D(8, 0, 0, 0, 1, 0, 0, 0, 8, -10, 70, -120)
+
+[node name="crumblingPlatform5" parent="FloorCrumble" instance=ExtResource("6_sbw58")]
+transform = Transform3D(8, 0, 0, 0, 1, 0, 0, 0, 8, -10, 70, -130)
+
+[node name="Platform10" parent="FloorCrumble" instance=ExtResource("2_a263u")]
+transform = Transform3D(22, 0, 0, 0, 1, 0, 0, 0, 10, -16, 70, -80)
+
+[node name="MovingFloorHell" type="Node" parent="."]
+
+[node name="Platform16" parent="MovingFloorHell" instance=ExtResource("2_a263u")]
+transform = Transform3D(22, 0, 0, 0, 1, 0, 0, 0, 10, -16, 70, -140)
+
+[node name="Path3D" parent="MovingFloorHell" instance=ExtResource("6_eom4w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 70, -150)
+curve = SubResource("Curve3D_y6vp2")
+
+[node name="Path3D2" parent="MovingFloorHell" instance=ExtResource("6_eom4w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 86, 70, -260)
+curve = SubResource("Curve3D_xvdue")
+
+[node name="FinishLine" type="Node" parent="."]
+
+[node name="Teleporter" parent="FinishLine" instance=ExtResource("3_2vyn8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 98.7253, 70, -260)
+
+[node name="Platform2" parent="FinishLine" instance=ExtResource("2_a263u")]
+transform = Transform3D(10, 0, 0, 0, 5, 0, 0, 0, 10, 98.7253, 70, -260)

@@ -1,0 +1,72 @@
+[gd_scene load_steps=13 format=3 uid="uid://dqn5qg0jpqjx2"]
+
+[ext_resource type="Script" path="res://Scripts/crumbling_platform.gd" id="1_0qnry"]
+[ext_resource type="Texture2D" uid="uid://rvk24qyyi83i" path="res://Assets/WOOOD.jpg" id="2_r4uw0"]
+[ext_resource type="Texture2D" uid="uid://bsou3jlehv0mv" path="res://Assets/crumble.png" id="3_85uhg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pxjkh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s051v"]
+albedo_texture = ExtResource("2_r4uw0")
+
+[sub_resource type="BoxMesh" id="BoxMesh_kgh4p"]
+
+[sub_resource type="Skin" id="Skin_lt5rr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5fbr4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_oyt8r"]
+size = Vector3(1, 0.153809, 1)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_hcrc8"]
+direction = Vector3(1, 1, 1)
+gravity = Vector3(0, -1, 1)
+linear_accel_max = 2.0
+radial_accel_min = -26.55
+radial_accel_max = -23.82
+tangential_accel_min = -39.47
+tangential_accel_max = -9.21
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fhuoo"]
+albedo_texture = ExtResource("3_85uhg")
+
+[sub_resource type="BoxMesh" id="BoxMesh_o7sst"]
+material = SubResource("StandardMaterial3D_fhuoo")
+size = Vector3(2, 2, 2)
+
+[node name="crumblingPlatform" type="Node3D"]
+script = ExtResource("1_0qnry")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="collision" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_pxjkh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0, -0.00633454)
+material_override = SubResource("StandardMaterial3D_s051v")
+ignore_occlusion_culling = true
+mesh = SubResource("BoxMesh_kgh4p")
+skin = SubResource("Skin_lt5rr")
+surface_material_override/0 = SubResource("StandardMaterial3D_5fbr4")
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.748898, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.36453, 0)
+shape = SubResource("BoxShape3D_oyt8r")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="poof" type="GPUParticles3D" parent="."]
+emitting = false
+amount = 3
+lifetime = 0.43
+speed_scale = 3.66
+process_material = SubResource("ParticleProcessMaterial_hcrc8")
+draw_pass_1 = SubResource("BoxMesh_o7sst")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
