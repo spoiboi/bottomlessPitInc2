@@ -1,5 +1,7 @@
 res://default_env.tres
-res://Scenes/player.tscn
+res://Levels/hard_level.tscn
 res://Backgrounds/background3.gdshader
-res://Scripts/ice.gd
-res://Scripts/player.gd
+res://Scenes/blank_level.tscn
+res://Scenes/platform.tscn
+res://Scenes/blade.tscn
+res://Levels/blank_level.tscn
