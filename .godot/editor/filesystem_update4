@@ -1,3 +1,7 @@
 res://default_env.tres
-res://Levels/may_god_have_mercy_on_your_soul.tscn
+res://Levels/hard_level.tscn
 res://Backgrounds/background3.gdshader
+res://Scenes/blank_level.tscn
+res://Scenes/platform.tscn
+res://Scenes/blade.tscn
+res://Levels/blank_level.tscn

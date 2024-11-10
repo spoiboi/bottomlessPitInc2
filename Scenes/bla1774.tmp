@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://bwp6vjxcnp81b"]
+
+[ext_resource type="PackedScene" uid="uid://cotyop14wq5i6" path="res://Scenes/player.tscn" id="1_4vdl3"]
+[ext_resource type="PackedScene" uid="uid://csg7h6jwhtt3b" path="res://Scenes/platform.tscn" id="2_cengx"]
+[ext_resource type="PackedScene" uid="uid://cnab4kdt2ummt" path="res://Scenes/teleporter.tscn" id="3_f3djb"]
+[ext_resource type="PackedScene" uid="uid://ddl5ibdcryb5b" path="res://Scenes/deathplane.tscn" id="4_y3bwi"]
+[ext_resource type="PackedScene" uid="uid://ddoodpt7ajlro" path="res://Scenes/icy_platform.tscn" id="5_n55aj"]
+
+[node name="blankLevel" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_4vdl3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.77918, 0)
+SPEED = null
+
+[node name="Platform" parent="." instance=ExtResource("2_cengx")]
+transform = Transform3D(10, 0, 0, 0, 5, 0, 0, 0, 10, 0, -0.66388, 0)
+
+[node name="Platform2" parent="." instance=ExtResource("2_cengx")]
+transform = Transform3D(10, 0, 0, 0, 5, 0, 0, 0, 10, 0, -0.66388, -14.8707)
+
+[node name="Teleporter" parent="." instance=ExtResource("3_f3djb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.55574, -15.0408)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.178012, -0.984028, 3.66579e-09, 0.181233, 0.0327853, 0.982894, -0.967195, -0.174967, 0.184174, -0.746615, 9.72125, -3.10499)
+
+[node name="deathplane" parent="." instance=ExtResource("4_y3bwi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -14, 0)
+
+[node name="IcyPlatform" parent="." instance=ExtResource("5_n55aj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.2845, 8.16631, 0)

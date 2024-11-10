@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://ddoodpt7ajlro"]
+[gd_scene load_steps=8 format=3 uid="uid://ddoodpt7ajlro"]
 
 [ext_resource type="Texture2D" uid="uid://kmuxefap2hs8" path="res://Assets/Ice.jpg" id="1_ubhq2"]
+[ext_resource type="Script" path="res://Scenes/icy_platform.gd" id="1_xvfgg"]
+[ext_resource type="Script" path="res://Scripts/ice.gd" id="3_qto7c"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_feqew"]
 albedo_texture = ExtResource("1_ubhq2")
@@ -9,7 +11,10 @@ albedo_texture = ExtResource("1_ubhq2")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gv6hj"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_8iyg6"]
+
 [node name="IcyPlatform" type="Node3D"]
+script = ExtResource("1_xvfgg")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(2, 0, 0, 0, 0.5, 0, 0, 0, 2, 0, 0, 0)
@@ -21,3 +26,10 @@ transform = Transform3D(2, 0, 0, 0, 0.5, 0, 0, 0, 2, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("BoxShape3D_gv6hj")
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.315249, 0)
+script = ExtResource("3_qto7c")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_8iyg6")
