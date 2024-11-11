@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://l828sxkxmvlb"]
 
 [ext_resource type="Script" path="res://Levels/button_level.gd" id="1_5r7wc"]
-[ext_resource type="PackedScene" uid="uid://cotyop14wq5i6" path="res://Scenes/Player.tscn" id="1_t1a6m"]
+[ext_resource type="PackedScene" uid="uid://cotyop14wq5i6" path="res://Scenes/player.tscn" id="1_t1a6m"]
 [ext_resource type="PackedScene" uid="uid://cnab4kdt2ummt" path="res://Scenes/teleporter.tscn" id="2_olict"]
 [ext_resource type="PackedScene" uid="uid://ddl5ibdcryb5b" path="res://Scenes/deathplane.tscn" id="3_gpjeg"]
 [ext_resource type="PackedScene" uid="uid://csg7h6jwhtt3b" path="res://Scenes/platform.tscn" id="4_sm0h1"]
