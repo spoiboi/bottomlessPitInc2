@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://Scripts/player_camera.gd" id="3_gjw8x"]
 [ext_resource type="AudioStream" uid="uid://c5tcqouj78c2p" path="res://Sounds/a.mp3" id="4_vxdfa"]
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_n32bj"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dqt7o"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_lujla"]
 material = ExtResource("2_xmld4")
@@ -75,7 +75,7 @@ JUMP_VELOCITY = 13.0
 
 [node name="player" type="CollisionShape3D" parent="." groups=["player"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-shape = SubResource("CylinderShape3D_n32bj")
+shape = SubResource("CapsuleShape3D_dqt7o")
 
 [node name="character" parent="." instance=ExtResource("2_cu0d3")]
 transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, 0, 0, 0)

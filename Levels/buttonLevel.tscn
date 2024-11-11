@@ -26,7 +26,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.65463, 3.49348, -30.8326)
 transform = Transform3D(1, 0, 0, 0, -0.00111703, 0.999999, 0, -0.999999, -0.00111703, 0, 17.7798, 0)
 
 [node name="deathplane" parent="." instance=ExtResource("3_gpjeg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.97451, -14.067, -2.20094)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.975, -5, -32.0342)
 
 [node name="Platform" parent="." instance=ExtResource("4_sm0h1")]
 transform = Transform3D(10, 0, 0, 0, 2, 0, 0, 0, 10, -0.484835, -1.12977, -1.83241)
@@ -44,9 +44,6 @@ transform = Transform3D(0.240849, 0.998839, 0, -4.9942, 0.0481699, 0, 0, 0, 5, -
 
 [node name="OffPlatform2" parent="." instance=ExtResource("9_hkd4l")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -6.87194, 9.76328, -30)
-
-[node name="OnPlatform4" parent="." instance=ExtResource("8_b432t")]
-transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -7.19561, 14.5, -30.0841)
 
 [node name="OnPlatform5" parent="." instance=ExtResource("8_b432t")]
 transform = Transform3D(3.30001, 0.751264, 0, -3.75632, 0.660002, 0, 0, 0, 5, -6.96454, 5, -30)
@@ -76,7 +73,7 @@ transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 8.251, 6.33986, -30)
 transform = Transform3D(-2.18557e-07, -1, 0, 5, -4.37114e-08, 0, 0, 0, 5, 11.1752, 3.86187, -29.6987)
 
 [node name="Ball" parent="." instance=ExtResource("10_jwf8w")]
-transform = Transform3D(-2.95166, 0.153245, 0.514051, 0, 2.87497, -0.857065, -0.536407, -0.843253, -2.82864, -7.09385, 11.944, -30)
+transform = Transform3D(-2.95166, 0.153245, 0.514051, 0, 2.87497, -0.857065, -0.536407, -0.843253, -2.82864, -7, 25, -30)
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 7.15163, 3.92987, -8.54642)
