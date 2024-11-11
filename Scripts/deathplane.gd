@@ -10,4 +10,5 @@ func _ready():
 func _process(delta):
 	if($checker.get_collision_count() > 0):
 		for x in range($checker.get_collision_count()):
-			$checker.get_collider(x).respawn()
+			if $checker.get_collider(x).has_method("respawn"):
+				$checker.get_collider(x).respawn()
