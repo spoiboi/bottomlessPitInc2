@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://l828sxkxmvlb"]
+[gd_scene load_steps=13 format=3 uid="uid://l828sxkxmvlb"]
 
 [ext_resource type="Script" path="res://Levels/button_level.gd" id="1_5r7wc"]
 [ext_resource type="PackedScene" uid="uid://cotyop14wq5i6" path="res://Scenes/player.tscn" id="1_t1a6m"]
@@ -10,18 +10,20 @@
 [ext_resource type="PackedScene" uid="uid://byu2ial1jsp01" path="res://Scenes/on_platform.tscn" id="8_b432t"]
 [ext_resource type="PackedScene" uid="uid://dnmwaogw4ptfy" path="res://Scenes/off_platform.tscn" id="9_hkd4l"]
 [ext_resource type="PackedScene" uid="uid://dxlj86b2ptj4y" path="res://Scenes/Ball.tscn" id="10_jwf8w"]
+[ext_resource type="Texture2D" uid="uid://lk3y02h5pch3" path="res://Assets/imageedit_1_3010657052.png" id="11_lotmv"]
+[ext_resource type="Texture2D" uid="uid://c53c6eyrbw2m1" path="res://Assets/imageedit_1_9386139496.png" id="12_o7u0o"]
 
 [node name="ButtonLevel" type="Node3D"]
 script = ExtResource("1_5r7wc")
 
 [node name="Player" parent="." instance=ExtResource("1_t1a6m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.101671, 1.19209e-07, -0.0783763)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.426553, 1.91004, -0.0783763)
 
 [node name="Teleporter" parent="." instance=ExtResource("2_olict")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.65463, 3.49348, -30.8326)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -0.00111703, 0.999999, 0, -0.999999, -0.00111703, 0, 7.88574, 0)
+transform = Transform3D(1, 0, 0, 0, -0.00111703, 0.999999, 0, -0.999999, -0.00111703, 0, 17.7798, 0)
 
 [node name="deathplane" parent="." instance=ExtResource("3_gpjeg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.97451, -14.067, -2.20094)
@@ -30,7 +32,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.97451, -14.067, -2.20094)
 transform = Transform3D(10, 0, 0, 0, 2, 0, 0, 0, 10, -0.484835, -1.12977, -1.83241)
 
 [node name="Brother" parent="." instance=ExtResource("5_oolkk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8623, -0.359077, -4.47608)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.415432, -0.359077, -5.03089)
 
 [node name="Background2" parent="." instance=ExtResource("7_8seb6")]
 
@@ -75,3 +77,11 @@ transform = Transform3D(-2.18557e-07, -1, 0, 5, -4.37114e-08, 0, 0, 0, 5, 11.175
 
 [node name="Ball" parent="." instance=ExtResource("10_jwf8w")]
 transform = Transform3D(-2.95166, 0.153245, 0.514051, 0, 2.87497, -0.857065, -0.536407, -0.843253, -2.82864, -7.09385, 11.944, -30)
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 7.15163, 3.92987, -8.54642)
+texture = ExtResource("11_lotmv")
+
+[node name="Sprite3D2" type="Sprite3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -6.31115, 3.75896, -8.546)
+texture = ExtResource("12_o7u0o")
