@@ -24,7 +24,7 @@ func _on_ice_platform(is_on_ice):
 func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("menu"):
-		get_tree().change_scene_to_file("res://Scenes/title_screen.tscn")
+		get_tree().change_scene_to_file("res://Scenes/demo_screen.tscn")
 	
 	if Input.is_action_just_pressed("kys"):
 		respawn()

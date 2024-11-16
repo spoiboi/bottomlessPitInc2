@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bhfa2csjxaa3e"
+path="res://.godot/imported/Spinning Spike Spinners.mp3-12a0492315e5c6b5c79a048a947582f1.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Spinning Spike Spinners.mp3"
+dest_files=["res://.godot/imported/Spinning Spike Spinners.mp3-12a0492315e5c6b5c79a048a947582f1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

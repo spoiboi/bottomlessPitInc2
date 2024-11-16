@@ -1,3 +1,5 @@
+AudioStreamPlayer3D
+AudioStreamPlayer
 CollisionShape3D
 Area3D
 MeshInstance3D
@@ -5,8 +7,6 @@ DirectionalLight3D
 StaticBody3D
 AnimationPlayer
 GPUParticles3D
-AudioStreamPlayer
-AudioStreamPlayer3D
 AudioStreamPlayer2D
 Timer
 Panel

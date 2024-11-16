@@ -27,7 +27,7 @@ func _on_timer_timeout():
 		isAlive = false
 		$Timer.start(5)
 	else:
-		$poof.stop()
+		
 		position.y -= 1000000
 		_ready()
 		
