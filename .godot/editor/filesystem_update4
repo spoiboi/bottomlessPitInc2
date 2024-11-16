@@ -1,5 +1,4 @@
 res://default_env.tres
-res://Scenes/player.tscn
 res://Backgrounds/background3.gdshader
 res://Scenes/platform.tscn
 res://Scenes/spiky_cylinder.tscn
@@ -7,17 +6,14 @@ res://Scenes/vertical_spring.tscn
 res://Scenes/environment.tscn
 res://Scenes/deathplane.tscn
 res://Scenes/crumbling_platform.tscn
-res://Scenes/moving_platform.tscn
-res://Scenes/rotating_wheel.tscn
 res://Scenes/teleporter.tscn
-res://Levels/blank_level.tscn
 res://Levels/crumbling_hell.tscn
-
 res://Levels/buttonLevel.tscn
 res://Levels/may_god_have_mercy_on_your_soul.tscn
 res://Levels/parkor_level.tscn
-res://Levels/button_level.gd
 res://Scenes/onbutton.tscn
-res://Scenes/ball.gd
 res://Scenes/Ball.tscn
-
+res://Scripts/crumbling_platform.gd
+res://Scenes/player.tscn
+res://Scripts/crumbling_hell.gd
+res://Levels/button_level.gd
