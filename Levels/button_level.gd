@@ -19,20 +19,15 @@ func _toggle_on():
 	$OffPlatform6._toggle_off()
 	$OnPlatform2._restore_on()
 	$OnPlatform3._restore_on()
-	$OnPlatform4._restore_on()
 	$OnPlatform5._restore_on()
 	$OnPlatform6._restore_on()
 	$OnPlatform7._restore_on()
 	$OnPlatform8._restore_on()
 	$OnPlatform9._restore_on()
 	
-	
-	
-	
 func _toggle_off():
 	$OnPlatform2._toggle_on()
 	$OnPlatform3._toggle_on()
-	$OnPlatform4._toggle_on()
 	$OnPlatform5._toggle_on()
 	$OnPlatform6._toggle_on()
 	$OnPlatform7._toggle_on()
