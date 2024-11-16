@@ -1,0 +1,100 @@
+[gd_scene load_steps=12 format=3 uid="uid://v2o25x8olsc4"]
+
+[ext_resource type="Script" path="res://Scripts/bounce_ring.gd" id="1_5y8nd"]
+[ext_resource type="Script" path="res://Scripts/bounce_ring_movements.gd" id="3_oq8kx"]
+[ext_resource type="Texture2D" uid="uid://c7tvqkpfyvpve" path="res://Assets/Crystal.jpg" id="3_qpfp5"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_y61xj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oxp1i"]
+albedo_color = Color(1, 1, 1, 0.670588)
+albedo_texture = ExtResource("3_qpfp5")
+metallic = 0.75
+roughness = 0.8
+emission_enabled = true
+emission = Color(0.00756181, 0.183982, 0.265323, 1)
+emission_energy_multiplier = 4.17
+rim = 0.0
+anisotropy = -1.0
+
+[sub_resource type="TorusMesh" id="TorusMesh_455w6"]
+lightmap_size_hint = Vector2i(33, 6)
+inner_radius = 0.75
+
+[sub_resource type="TorusMesh" id="TorusMesh_ql3qg"]
+inner_radius = 0.7
+
+[sub_resource type="TorusMesh" id="TorusMesh_422ip"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_igg64"]
+albedo_texture = ExtResource("3_qpfp5")
+emission_enabled = true
+emission = Color(0.00784314, 0.184314, 0.266667, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_as1rp"]
+flip_faces = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gd3rk"]
+albedo_texture = ExtResource("3_qpfp5")
+emission_enabled = true
+emission = Color(0.00784314, 0.184314, 0.266667, 1)
+
+[node name="BounceRing" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -0.5, 0, 1, -2.18557e-08, 0, 0, 0)
+script = ExtResource("1_5y8nd")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="Area3D" type="Area3D" parent="StaticBody3D2"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2/Area3D"]
+transform = Transform3D(2, 0, 0, 0, -5.68248e-09, -2, 0, 0.13, -8.74228e-08, 0, 0, 0)
+shape = SubResource("CylinderShape3D_y61xj")
+
+[node name="Node3D" type="Node3D" parent="."]
+script = ExtResource("3_oq8kx")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_oxp1i")
+gi_lightmap_scale = 1
+mesh = SubResource("TorusMesh_455w6")
+skeleton = NodePath("../..")
+
+[node name="Node3D2" type="Node3D" parent="."]
+transform = Transform3D(0.55, 0, 0, 0, 0.55, 0, 0, 0, 0.734, 0, 0, 0)
+script = ExtResource("3_oq8kx")
+direction = -1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D2"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_oxp1i")
+gi_lightmap_scale = 1
+mesh = SubResource("TorusMesh_ql3qg")
+
+[node name="Node3D3" type="Node3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.3, 0, 0, 0)
+script = ExtResource("3_oq8kx")
+speed = 6
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D3"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_oxp1i")
+gi_lightmap_scale = 1
+mesh = SubResource("TorusMesh_422ip")
+
+[node name="Node3D4" type="Node3D" parent="."]
+transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 0.07, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D4"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_igg64")
+transparency = 0.17
+mesh = SubResource("CylinderMesh_as1rp")
+surface_material_override/0 = SubResource("StandardMaterial3D_gd3rk")
+
+[connection signal="body_entered" from="StaticBody3D2/Area3D" to="." method="_on_area_3d_body_entered"]
