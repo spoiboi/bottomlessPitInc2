@@ -11,13 +11,11 @@ res://Scenes/vertical_spring.tscn
 res://Scenes/environment.tscn
 res://Scenes/deathplane.tscn
 res://Scenes/crumbling_platform.tscn
-res://Scenes/moving_platform.tscn
-res://Scenes/rotating_wheel.tscn
 res://Scenes/teleporter.tscn
-res://Levels/blank_level.tscn
 res://Levels/crumbling_hell.tscn
 res://Levels/may_god_have_mercy_on_your_soul.tscn
 res://Levels/parkor_level.tscn
+
 res://Scenes/Ball.tscn
 res://Levels/first_button.tscn
 res://Scenes/offbutton.tscn
@@ -32,3 +30,4 @@ res://Scenes/onbutton_1.gd
 res://Scenes/gyonbutton.tscn
 res://Scenes/off_platform_1.gd
 res://Scenes/onbutton_2.gd
+

@@ -6,6 +6,9 @@ var first_time = true
 var jumping = true
 var on_ice = false
 var spawn_pos
+var on_floor
+@export var IS_ON_JUMP_WALL = false
+@export var IS_BOOSTED = false
 @export var SPEED = 7.5
 @export var JUMP_VELOCITY = 7.5
 
@@ -24,18 +27,25 @@ func _on_ice_platform(is_on_ice):
 func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("menu"):
-		get_tree().change_scene_to_file("res://Scenes/title_screen.tscn")
+		get_tree().change_scene_to_file("res://Scenes/demo_screen.tscn")
 	
 	if Input.is_action_just_pressed("kys"):
 		respawn()
+	
+	on_floor = is_on_floor()
+
 	# Add the gravity.
-	if not is_on_floor():
+	if not on_floor and not IS_BOOSTED:
 		velocity.y -= gravity * delta
 	elif (jumping==true):
-		jumping=false
+		jumping = false
 		$jumpcloud.restart()
 
-		
+	if IS_ON_JUMP_WALL:
+		on_floor = true
+		if (jumping==true):
+			jumping = false
+			$jumpcloud.restart()
 
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
@@ -49,12 +59,13 @@ func _physics_process(delta):
 	
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	direction = direction.rotated(Vector3.UP, -camera.theta + PI * 0.5)
-	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
+	if not IS_BOOSTED:
+		if direction:
+			velocity.x = direction.x * SPEED
+			velocity.z = direction.z * SPEED
+		else:
+			velocity.x = move_toward(velocity.x, 0, SPEED)
+			velocity.z = move_toward(velocity.z, 0, SPEED)
 	animate_model(input_dir)
 	move_and_slide()
 func rotate_model(input_dir):
@@ -72,7 +83,7 @@ func respawn():
 	#get_tree().reload_current_scene()
 	
 func animate_model(input_dir):
-	if is_on_floor():
+	if on_floor:
 		if input_dir == Vector2(0,0):
 			$character/AnimationPlayer.play("Idle")
 		else:

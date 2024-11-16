@@ -3,17 +3,20 @@ extends Node3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	$Brother.turning_on.connect(_toggle_on)
+	$Brother.turning_off.connect(_toggle_off)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+
 	$Brother.turning_on.connect(_toggle_on)
 	$Brother.turning_off.connect(_toggle_off)
 	$Brother2.turning_on_1.connect(_toggle_on_1)
 	$Brother2.turning_off_1.connect(_toggle_off_1)
 	$Brother3.turning_on_1.connect(_toggle_on_2)
 	$Brother3.turning_off_1.connect(_toggle_off_2)
+
 	
 func _toggle_on():
 	$OnPlatform2._toggle_on()

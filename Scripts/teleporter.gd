@@ -1,18 +1,20 @@
 extends Node3D
 
-var level_list = ["res://Levels/crumbling_hell.tscn", 
-"res://Levels/moving_to_your_moms_house.tscn", 
-"res://Levels/spiky_level.tscn",
-"res://Levels/good_luck.tscn",
-"res://Scenes/title_screen.tscn"]
+var level_list = ["res://Levels/crumbling_hell.tscn",  
+"res://Levels/may_god_have_mercy_on_your_soul.tscn",
+"res://Levels/hard_level.tscn",
+"res://Scenes/demo_screen.tscn"]
 
 var next_level = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if get_tree().current_scene.scene_file_path == "res://Levels/good_luck.tscn":
-		next_level = 4
+# next_level = level_list.bsearch(get_tree().current_scene.scene_file_path) + 1
+	if (get_tree().current_scene.scene_file_path == "res://Levels/crumbling_hell.tscn"):
+		next_level = 1
+	elif (get_tree().current_scene.scene_file_path == "res://Levels/may_god_have_mercy_on_your_soul.tscn"):
+		next_level = 2
 	else:
-		next_level = level_list.bsearch(get_tree().current_scene.scene_file_path) + 1
+		next_level = 3
 	
 
 
