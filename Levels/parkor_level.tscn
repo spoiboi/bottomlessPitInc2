@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bpnitji1wl4w6"]
+[gd_scene load_steps=9 format=3 uid="uid://bpnitji1wl4w6"]
 
 [ext_resource type="PackedScene" uid="uid://ddl5ibdcryb5b" path="res://Scenes/deathplane.tscn" id="1_32jpr"]
 [ext_resource type="PackedScene" uid="uid://cotyop14wq5i6" path="res://Scenes/Player.tscn" id="2_6bfa5"]
@@ -6,8 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://di35wor1moco7" path="res://Scenes/wall.tscn" id="4_xmc74"]
 [ext_resource type="PackedScene" uid="uid://rrh3jshuqh48" path="res://Scenes/boost_ring.tscn" id="5_130hj"]
 [ext_resource type="PackedScene" uid="uid://cnab4kdt2ummt" path="res://Scenes/teleporter.tscn" id="6_k455y"]
+[ext_resource type="PackedScene" uid="uid://dvwons2rfkk6c" path="res://Backgrounds/funny_background_2.tscn" id="7_kc8uu"]
+[ext_resource type="PackedScene" uid="uid://v2o25x8olsc4" path="res://Scenes/bounce_ring.tscn" id="8_1ub8u"]
 
 [node name="ParkorLevel" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.58747, 0, 12.7163)
 
 [node name="deathplane" parent="." instance=ExtResource("1_32jpr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -96.9073, 0)
@@ -39,102 +42,80 @@ transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 25.519, -9.16, -45)
 transform = Transform3D(20, 0, 0, 0, 6, 0, 0, 0, 20, 44.3381, 12.993, 28.588)
 
 [node name="Platform6" parent="." instance=ExtResource("3_7rf27")]
-transform = Transform3D(4, 0, 0, 0, 2, 0, 0, 0, 4, 61.8965, 22.3422, -16.6556)
+transform = Transform3D(4, 0, 0, 0, 2, 0, 0, 0, 4, 58.9112, 22.3422, -17.3498)
 
 [node name="Wall" parent="." instance=ExtResource("4_xmc74")]
-transform = Transform3D(7.92215, -0.835036, 0, 1.11338, 5.94161, 0, 0, 0, 8, -5.22156, 4.40614, -11.0113)
+transform = Transform3D(7.92215, -0.835034, 0, 1.11338, 5.94161, 0, 0, 0, 8, -5.22156, 4.40614, -11.0113)
 
 [node name="Wall3" parent="." instance=ExtResource("4_xmc74")]
-transform = Transform3D(7.99513, -0.697989, 0, 0.279196, 19.9878, 0, 0, 0, 20, 57.5221, 25.2821, -43.9877)
-jump = 20
+transform = Transform3D(7.99513, -0.697989, 0, 0.279196, 19.9878, 0, 0, 0, 20, 60.0214, 25.2821, -43.1546)
 
 [node name="Wall4" parent="." instance=ExtResource("4_xmc74")]
-transform = Transform3D(-3.46288e-07, 6.08345e-08, 10, 1.11338, 9.90268, 0, -7.92214, 1.39173, -4.37114e-07, 70.7121, 36.6055, -15.949)
-jump = 12
+transform = Transform3D(-3.46288e-07, 6.08345e-08, 10, 1.11338, 9.90268, 0, -7.92214, 1.39173, -4.37114e-07, 67.3103, 36.6055, -17.4069)
 
 [node name="Wall5" parent="." instance=ExtResource("4_xmc74")]
-transform = Transform3D(-3.46288e-07, 6.08345e-08, -10, 1.11338, 9.90268, 0, 7.92214, -1.39173, -4.37114e-07, 44.9308, 17.7606, -26.5373)
+transform = Transform3D(-3.46288e-07, 6.08345e-08, -10, 1.11338, 9.90268, 0, 7.92214, -1.39173, -4.37114e-07, 46.4728, 17.7606, -20.8452)
 
 [node name="Wall6" parent="." instance=ExtResource("4_xmc74")]
-transform = Transform3D(7.92215, -1.11338, 0, 1.11338, 7.92215, 0, 0, 0, 10, 34.1643, 17.7606, -11.5187)
+transform = Transform3D(7.92215, -1.11338, 0, 1.11338, 7.92215, 0, 0, 0, 10, 36.247, 17.7606, -8.18632)
 
 [node name="Wall7" parent="." instance=ExtResource("4_xmc74")]
 transform = Transform3D(-7.92215, 1.11338, -1.50996e-06, 1.11338, 7.92215, -1.49855e-14, 1.19621e-06, -1.68116e-07, -10, 45.4437, 17.7606, 3.18229)
 
 [node name="Wall2" parent="." instance=ExtResource("4_xmc74")]
-transform = Transform3D(-7.92215, 0.835036, -1.20797e-06, 1.11338, 5.94161, -3.61551e-13, 1.19621e-06, -1.26087e-07, -8, 4.19074, 4.40614, -20.931)
+transform = Transform3D(-7.92215, 0.835034, -1.20797e-06, 1.11338, 5.94161, -2.96055e-13, 1.19621e-06, -1.26087e-07, -8, 4.19074, 4.40614, -20.931)
 
 [node name="BoostRing" parent="." instance=ExtResource("5_130hj")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 4.60726, -30.8789)
-boost_duration = 0.22
-boost_x_strength = 5
-boost_z_strength = 5
-boost_y_strength = 0.2
+boost_duration = 0.4
+ring_boost = 12
 
 [node name="BoostRing2" parent="." instance=ExtResource("5_130hj")]
-transform = Transform3D(-4.37114e-07, 0, 10, 0, 10, 0, -10, 0, -4.37114e-07, 10, 4.607, -45)
+transform = Transform3D(1.19249e-07, 0, -10, 0, 10, 0, 10, 0, 1.19249e-07, 10, 4.607, -45)
 boost_duration = 0.55
-boost_x_strength = 3
-boost_z_strength = 3
-boost_y_strength = 0.25
 
 [node name="BoostRing7" parent="." instance=ExtResource("5_130hj")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 69.7595, 35.772, -30.578)
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 66.2188, 35.772, -29.6061)
 boost_duration = 0.5
-boost_x_strength = 5
-boost_z_strength = 5
-boost_y_strength = 0.25
 
 [node name="BoostRing3" parent="." instance=ExtResource("5_130hj")]
-transform = Transform3D(-4.37114e-07, 10, -3.49691e-07, 0, -4.37114e-07, -8, -10, -4.37114e-07, 1.52855e-14, 71.479, -1, -46)
+transform = Transform3D(10, 0, 0, 0, 1.19249e-07, 8, 0, -10, 9.5399e-08, 71.479, -1, -46)
 boost_duration = 1.0
-boost_y_strength = 1.0
-y_jump = 15
 vertical = true
+ring_boost = 10
 
 [node name="BoostRing6" parent="." instance=ExtResource("5_130hj")]
-transform = Transform3D(-4.37114e-07, 10, -3.49691e-07, 0, -4.37114e-07, -8, -10, -4.37114e-07, 1.52855e-14, 71.479, -13, -46)
+transform = Transform3D(10, 0, 0, 0, 1.19249e-07, 8, 0, -10, 9.5399e-08, 71.479, -13, -46)
 boost_duration = 1.0
-boost_y_strength = 1.0
-y_jump = 15
 vertical = true
-
-[node name="BoostRing4" parent="." instance=ExtResource("5_130hj")]
-transform = Transform3D(-3.49691e-07, 8, -2.62268e-07, 0, -3.49691e-07, -6, -8, -3.49691e-07, 1.14641e-14, 25.6986, -89.3236, -44.8386)
-boost_duration = 0.5
-boost_y_strength = 1.0
-y_jump = 50
-vertical = true
-
-[node name="BoostRing9" parent="." instance=ExtResource("5_130hj")]
-transform = Transform3D(-1.31134e-07, 3, -1.31134e-07, 0, -1.31134e-07, -3, -3, -1.31134e-07, 5.73206e-15, 49.425, -27.526, -41.1643)
-boost_duration = 0.5
-boost_y_strength = 1.0
-y_jump = 15
-vertical = true
-
-[node name="BoostRing10" parent="." instance=ExtResource("5_130hj")]
-transform = Transform3D(-1.31134e-07, 3, -1.31134e-07, 0, -1.31134e-07, -3, -3, -1.31134e-07, 5.73206e-15, 45.1715, -30.7498, -63.2341)
-boost_duration = 0.5
-boost_y_strength = 1.0
-y_jump = 15
-vertical = true
-
-[node name="BoostRing8" parent="." instance=ExtResource("5_130hj")]
-transform = Transform3D(-1.31134e-07, 3, -1.31134e-07, 0, -1.31134e-07, -3, -3, -1.31134e-07, 5.73206e-15, 55.7234, -29.526, -54.5731)
-boost_duration = 0.5
-boost_y_strength = 1.0
-y_jump = 13
-vertical = true
+ring_boost = 10
 
 [node name="BoostRing5" parent="." instance=ExtResource("5_130hj")]
-transform = Transform3D(-4.37114e-07, 10, -3.49691e-07, 0, -4.37114e-07, -8, -10, -4.37114e-07, 1.52855e-14, 71.479, 11, -46)
+transform = Transform3D(10, 0, 0, 0, 1.19249e-07, 8, 0, -10, 9.5399e-08, 71.479, 11, -46)
 boost_duration = 1.0
-boost_x_strength = 0
-boost_z_strength = 0
-boost_y_strength = 0.0
-y_jump = 15
 vertical = true
+ring_boost = 10
 
 [node name="Teleporter" parent="." instance=ExtResource("6_k455y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 17.1771, 33.0056)
+
+[node name="Background2" parent="." instance=ExtResource("7_kc8uu")]
+
+[node name="BounceRing" parent="." instance=ExtResource("8_1ub8u")]
+transform = Transform3D(5, 0, 0, 0, -2.18557e-07, -2.5, 0, 5, -1.09278e-07, 30, -89.324, -45)
+jump_percent = 1.1
+minimum_jump = 15
+maximum_jump = 70
+
+[node name="BounceRing2" parent="." instance=ExtResource("8_1ub8u")]
+transform = Transform3D(3, 0, 0, 0, -1.31134e-07, -1.5, 0, 3, -6.55671e-08, 46.5786, -27.526, -44.8435)
+
+[node name="BounceRing3" parent="." instance=ExtResource("8_1ub8u")]
+transform = Transform3D(3, 0, 0, 0, -1.31134e-07, -1.5, 0, 3, -6.55671e-08, 39.7569, -30.75, -60.5264)
+minimum_jump = 12
+
+[node name="BounceRing4" parent="." instance=ExtResource("8_1ub8u")]
+transform = Transform3D(3, 0, 0, 0, -1.31134e-07, -1.5, 0, 3, -6.55671e-08, 55.723, -32.1445, -54.573)
+jump_percent = 1.3
+minimum_jump = 15
+maximum_jump = 30

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://0l2p8xbijhok"
+path="res://.godot/imported/Stake Mixer.mp3-a8126f60c5c02bb155535c932a53b9ea.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Stake Mixer.mp3"
+dest_files=["res://.godot/imported/Stake Mixer.mp3-a8126f60c5c02bb155535c932a53b9ea.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

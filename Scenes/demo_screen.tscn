@@ -1,0 +1,98 @@
+[gd_scene load_steps=13 format=3 uid="uid://qop3btjvm1h1"]
+
+[ext_resource type="FontFile" uid="uid://oigad7atfyty" path="res://Nicolast.otf" id="1_uxfo3"]
+[ext_resource type="Script" path="res://Scripts/title_screen.gd" id="2_4fq4e"]
+[ext_resource type="Texture2D" uid="uid://caeh0anufrt3s" path="res://Assets/logo.png" id="3_7i181"]
+[ext_resource type="AudioStream" uid="uid://c8uxmkh06qu62" path="res://Sounds/Unfunky Groove.mp3" id="4_1byxk"]
+
+[sub_resource type="Theme" id="Theme_svx4q"]
+default_font = ExtResource("1_uxfo3")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kvepm"]
+bg_color = Color(0.964706, 0.964706, 0.964706, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_arbji"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8p1qj"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Theme" id="Theme_7qa7q"]
+/styles/normal = SubResource("StyleBoxFlat_kvepm")
+Panel/styles/normal = SubResource("StyleBoxFlat_arbji")
+Panel/styles/panel = SubResource("StyleBoxFlat_8p1qj")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0l0st"]
+bg_color = Color(0.964706, 0.376471, 0.392157, 1)
+
+[sub_resource type="Theme" id="Theme_gukyv"]
+default_font = ExtResource("1_uxfo3")
+default_font_size = 40
+Button/styles/normal = SubResource("StyleBoxFlat_0l0st")
+
+[sub_resource type="Theme" id="Theme_ecpc3"]
+default_font = ExtResource("1_uxfo3")
+Button/styles/normal = SubResource("StyleBoxFlat_0l0st")
+
+[node name="title screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_svx4q")
+script = ExtResource("2_4fq4e")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 2.185
+anchor_bottom = 2.524
+offset_right = 708.88
+offset_bottom = 197.448
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_7qa7q")
+
+[node name="level 1" type="Button" parent="."]
+layout_mode = 0
+offset_left = 407.0
+offset_top = 474.0
+offset_right = 671.0
+offset_bottom = 605.0
+theme = SubResource("Theme_gukyv")
+text = "Start Demo"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 222.0
+offset_right = 922.0
+offset_bottom = 437.0
+theme = SubResource("Theme_ecpc3")
+text = "BOTTOMLESS PIT DEMO
+
+TOUCH THE FROG AT THE END TO WIN!
+
+USE SPACE TO JUMP
+
+USE WASD TO MOVE
+
+ARROW KEYS FOR CAMERA
+
+USE K TO RESTART LEVEL
+
+ESC TO RETURN TO THE MENU"
+
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(585, 109)
+scale = Vector2(1, 1.14737)
+texture = ExtResource("3_7i181")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_1byxk")
+volume_db = -4.622
+autoplay = true
+
+[connection signal="pressed" from="level 1" to="." method="_on_start_pressed"]

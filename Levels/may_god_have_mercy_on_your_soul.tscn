@@ -1,12 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://c6mc8xci22cd3"]
+[gd_scene load_steps=12 format=3 uid="uid://bb6e6hflfpcd8"]
 
 [ext_resource type="PackedScene" uid="uid://cotyop14wq5i6" path="res://Scenes/Player.tscn" id="1_tsplm"]
 [ext_resource type="PackedScene" uid="uid://csg7h6jwhtt3b" path="res://Scenes/platform.tscn" id="2_a263u"]
+[ext_resource type="AudioStream" uid="uid://dqnr8efdj5jcv" path="res://Sounds/Strange Moves in a New World.mp3" id="2_nw6fj"]
 [ext_resource type="PackedScene" uid="uid://cnab4kdt2ummt" path="res://Scenes/teleporter.tscn" id="3_2vyn8"]
 [ext_resource type="PackedScene" uid="uid://ddl5ibdcryb5b" path="res://Scenes/deathplane.tscn" id="4_2i51c"]
 [ext_resource type="PackedScene" uid="uid://di35wor1moco7" path="res://Scenes/wall.tscn" id="5_e71hb"]
 [ext_resource type="PackedScene" uid="uid://bkol6cate26rl" path="res://Scenes/moving_platform.tscn" id="6_eom4w"]
 [ext_resource type="PackedScene" uid="uid://dqn5qg0jpqjx2" path="res://Scenes/trick_crumbling_platform.tscn" id="6_sbw58"]
+[ext_resource type="PackedScene" uid="uid://wkbbl7c6vjce" path="res://Backgrounds/funny_background1.tscn" id="8_d8j6y"]
 
 [sub_resource type="Curve3D" id="Curve3D_y6vp2"]
 _data = {
@@ -24,8 +26,12 @@ point_count = 3
 
 [node name="blankLevel2" type="Node3D"]
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_nw6fj")
+autoplay = true
+
 [node name="Player" parent="." instance=ExtResource("1_tsplm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20.8723, 0)
 
 [node name="Platform" parent="." instance=ExtResource("2_a263u")]
 transform = Transform3D(10, 0, 0, 0, 5, 0, 0, 0, 10, 0, -0.66388, 0)
@@ -133,7 +139,9 @@ curve = SubResource("Curve3D_xvdue")
 [node name="FinishLine" type="Node" parent="."]
 
 [node name="Teleporter" parent="FinishLine" instance=ExtResource("3_2vyn8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 98.7253, 70, -260)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 98.7253, 74.7322, -260)
 
 [node name="Platform2" parent="FinishLine" instance=ExtResource("2_a263u")]
 transform = Transform3D(10, 0, 0, 0, 5, 0, 0, 0, 10, 98.7253, 70, -260)
+
+[node name="Background1" parent="." instance=ExtResource("8_d8j6y")]

@@ -16,6 +16,16 @@ var offCount = 0
 signal turning_on
 signal turning_off
 
+var gryph = 0
+
+func _toggle_off():
+	position.y -= 300
+	gryph += 1
+	
+func _restore_off():
+	if (gryph != 0):
+		position.y += 300
+
 func _on_on_area_shape_body_entered(body: Node3D) -> void:
 	if (onCount == 0):
 		$onStaticShape.position.y -= .45

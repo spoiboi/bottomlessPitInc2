@@ -31,7 +31,6 @@ albedo_texture = ExtResource("2_w188c")
 
 [sub_resource type="BoxMesh" id="BoxMesh_o7sst"]
 material = SubResource("StandardMaterial3D_fhuoo")
-size = Vector3(2, 2, 2)
 
 [node name="crumblingPlatform" type="Node3D"]
 script = ExtResource("1_wmjh1")
@@ -57,7 +56,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.748898, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.36453, 0)
 shape = SubResource("BoxShape3D_oyt8r")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="crumble_time" type="Timer" parent="."]
 
 [node name="poof" type="GPUParticles3D" parent="."]
 emitting = false
@@ -68,4 +67,4 @@ process_material = SubResource("ParticleProcessMaterial_hcrc8")
 draw_pass_1 = SubResource("BoxMesh_o7sst")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="crumble_time" to="." method="_on_timer_timeout"]

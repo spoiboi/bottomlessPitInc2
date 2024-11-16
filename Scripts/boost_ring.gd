@@ -1,47 +1,46 @@
 extends Node3D
 
 @export var boost_duration = .2
-@export var boost_x_strength = 1
-@export var boost_z_strength = 1
-@export var boost_y_strength = .5
-@export var y_jump = 0
 @export var vertical = false
+@export var ring_boost = 5
 var boosted = false
 var current_Body
-var location = [0,0,0]
-var delta_Location = [0,0,0]
+var ring_body
+var ring_angle
+var boost_numbers = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	ring_body = get_parent().get_node(get_path())
+	ring_angle = ring_body.get_rotation()
+	#x is up/down, y is left/right
+	boost_numbers = [sin(ring_angle[1]), 
+	sin(ring_angle[0]), cos(ring_angle[1])]
+	# Replace with function body.
 
 func _physics_process(delta):
-	rotate_object_local(Vector3(0, 0, 1), delta)
+	ring_body.rotate_object_local(Vector3(0, 0, 1), 3*delta)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if boosted:
 		if not vertical:
-			for i in 3:
-				delta_Location[i] = location[i] - current_Body.get_global_position()[i]
-			location = Vector3((location[0] - delta_Location[0]* boost_x_strength), 
-				(location[1] + abs(delta_Location[1]* boost_y_strength)), 
-				(location[2] - delta_Location[2]* boost_z_strength))
-			current_Body.set_global_position(location)
-			location = current_Body.get_global_position()
-			current_Body.velocity.y = 0
+				current_Body.velocity.x = -boost_numbers[0] * ring_boost
+				current_Body.velocity.z = -boost_numbers[2] * ring_boost
+				current_Body.velocity.y = (-boost_numbers[1]+.52)  * ring_boost
 		else:
-			current_Body.velocity.y = y_jump
+			current_Body.velocity.x = 0
+			current_Body.velocity.z = 0
+			current_Body.velocity.y = (-boost_numbers[1]+.52) * ring_boost
 
 
 func _on_area_3d_body_entered(body):
 	if body.name == "Player":
-		if body.velocity.y <= 0:
-			body.velocity.y = 0.1
 		$Timer.start(boost_duration)
 		current_Body = body
-		location = current_Body.get_global_position()
 		boosted = true
+		current_Body.IS_BOOSTED = true
 
 func _on_timer_timeout():
+	current_Body.IS_BOOSTED = false
 	boosted = false

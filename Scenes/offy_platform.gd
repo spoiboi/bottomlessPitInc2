@@ -13,9 +13,9 @@ func _process(delta: float) -> void:
 var gryph = 0
 
 func _toggle_off():
-	position.y += 300
+	position.y -= 300
 	gryph += 1
 	
 func _restore_off():
 	if (gryph != 0):
-		position.y -= 300
+		position.y += 300
