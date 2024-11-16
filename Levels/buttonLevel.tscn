@@ -1,6 +1,5 @@
-[gd_scene load_steps=13 format=3 uid="uid://l828sxkxmvlb"]
+[gd_scene load_steps=13 format=3 uid="uid://cu0gnj30lsr2n"]
 
-[ext_resource type="Script" path="res://Levels/button_level.gd" id="1_5r7wc"]
 [ext_resource type="PackedScene" uid="uid://cotyop14wq5i6" path="res://Scenes/player.tscn" id="1_t1a6m"]
 [ext_resource type="PackedScene" uid="uid://cnab4kdt2ummt" path="res://Scenes/teleporter.tscn" id="2_olict"]
 [ext_resource type="PackedScene" uid="uid://ddl5ibdcryb5b" path="res://Scenes/deathplane.tscn" id="3_gpjeg"]
@@ -13,8 +12,54 @@
 [ext_resource type="Texture2D" uid="uid://lk3y02h5pch3" path="res://Assets/imageedit_1_3010657052.png" id="11_lotmv"]
 [ext_resource type="Texture2D" uid="uid://c53c6eyrbw2m1" path="res://Assets/imageedit_1_9386139496.png" id="12_o7u0o"]
 
+[sub_resource type="GDScript" id="GDScript_qmoto"]
+script/source = "extends Node3D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	$Brother.turning_on.connect(_toggle_on)
+	$Brother.turning_off.connect(_toggle_off)
+	
+func _toggle_on():
+	$OffPlatform2._toggle_off()
+	$OffPlatform3._toggle_off()
+	$OffPlatform4._toggle_off()
+	$OffPlatform5._toggle_off()
+	$OffPlatform6._toggle_off()
+	$OnPlatform2._restore_on()
+	$OnPlatform3._restore_on()
+	$OnPlatform5._restore_on()
+	$OnPlatform6._restore_on()
+	$OnPlatform7._restore_on()
+	$OnPlatform8._restore_on()
+	$OnPlatform9._restore_on()
+	
+func _toggle_off():
+	$OnPlatform2._toggle_on()
+	$OnPlatform3._toggle_on()
+	$OnPlatform5._toggle_on()
+	$OnPlatform6._toggle_on()
+	$OnPlatform7._toggle_on()
+	$OnPlatform8._toggle_on()
+	$OnPlatform9._toggle_on()
+	$OffPlatform2._restore_off()
+	$OffPlatform3._restore_off()
+	$OffPlatform4._restore_off()
+	$OffPlatform5._restore_off()
+	$OffPlatform6._restore_off()
+
+
+	
+"
+
 [node name="ButtonLevel" type="Node3D"]
-script = ExtResource("1_5r7wc")
+script = SubResource("GDScript_qmoto")
 
 [node name="Player" parent="." instance=ExtResource("1_t1a6m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.426553, 1.91004, -0.0783763)
@@ -32,45 +77,45 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.975, -5, -32.0342)
 transform = Transform3D(10, 0, 0, 0, 2, 0, 0, 0, 10, -0.484835, -1.12977, -1.83241)
 
 [node name="Brother" parent="." instance=ExtResource("5_oolkk")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.415432, -0.359077, -5.03089)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.415432, -0.359077, -0.232779)
 
 [node name="Background2" parent="." instance=ExtResource("7_8seb6")]
 
 [node name="OnPlatform2" parent="." instance=ExtResource("8_b432t")]
-transform = Transform3D(-2.18557e-07, -1, 0, 5, -4.37114e-08, 0, 0, 0, 5, -9.56954, 12, -30)
+transform = Transform3D(-2.18557e-07, -1, 0, 5, -4.37114e-08, 0, 0, 0, 5, -9.57, 312, -30)
 
 [node name="OnPlatform3" parent="." instance=ExtResource("8_b432t")]
-transform = Transform3D(0.240849, 0.998839, 0, -4.9942, 0.0481699, 0, 0, 0, 5, -4.68481, 12, -30)
+transform = Transform3D(0.240849, 0.998839, 0, -4.9942, 0.0481699, 0, 0, 0, 5, -4.685, 312, -30)
 
 [node name="OffPlatform2" parent="." instance=ExtResource("9_hkd4l")]
-transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -6.87194, 9.76328, -30)
+transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -6.872, 309.763, -30)
 
 [node name="OnPlatform5" parent="." instance=ExtResource("8_b432t")]
-transform = Transform3D(3.30001, 0.751264, 0, -3.75632, 0.660002, 0, 0, 0, 5, -6.96454, 5, -30)
+transform = Transform3D(3.30001, 0.751264, 0, -3.75632, 0.660002, 0, 0, 0, 5, -6.965, 305, -30)
 
 [node name="OnPlatform6" parent="." instance=ExtResource("8_b432t")]
-transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -2.56954, 3, -30)
+transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -2.57, 303, -30)
 
 [node name="OnPlatform7" parent="." instance=ExtResource("8_b432t")]
-transform = Transform3D(-2.18557e-07, -1, 0, 5, -4.37114e-08, 0, 0, 0, 5, 0.23046, -1.37333, -30)
+transform = Transform3D(-2.18557e-07, -1, 0, 5, -4.37114e-08, 0, 0, 0, 5, 0.23, 298.627, -30)
 
 [node name="OnPlatform8" parent="." instance=ExtResource("8_b432t")]
-transform = Transform3D(-2.18557e-07, -1, 0, 5, -4.37114e-08, 0, 0, 0, 5, 5.43046, -1.37333, -30)
+transform = Transform3D(-2.18557e-07, -1, 0, 5, -4.37114e-08, 0, 0, 0, 5, 5.43, 298.627, -30)
 
 [node name="OnPlatform9" parent="." instance=ExtResource("8_b432t")]
-transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 2.73046, -3.57333, -30)
+transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 2.73, 296.427, -30)
 
 [node name="OffPlatform3" parent="." instance=ExtResource("9_hkd4l")]
-transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 2.93046, 1.32667, -30)
+transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 2.93, 301.327, -30)
 
 [node name="OffPlatform4" parent="." instance=ExtResource("9_hkd4l")]
-transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 8.49744, 1.3346, -30)
+transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 8.497, 301.335, -30)
 
 [node name="OffPlatform5" parent="." instance=ExtResource("9_hkd4l")]
-transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 8.251, 6.33986, -30)
+transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 8.251, 306.34, -30)
 
 [node name="OffPlatform6" parent="." instance=ExtResource("9_hkd4l")]
-transform = Transform3D(-2.18557e-07, -1, 0, 5, -4.37114e-08, 0, 0, 0, 5, 11.1752, 3.86187, -29.6987)
+transform = Transform3D(-2.18557e-07, -1, 0, 5, -4.37114e-08, 0, 0, 0, 5, 11.175, 303.862, -29.699)
 
 [node name="Ball" parent="." instance=ExtResource("10_jwf8w")]
 transform = Transform3D(-2.95166, 0.153245, 0.514051, 0, 2.87497, -0.857065, -0.536407, -0.843253, -2.82864, -7, 25, -30)
