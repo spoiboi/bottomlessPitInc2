@@ -26,7 +26,7 @@ point_count = 5
 [node name="blankLevel2" type="Node3D"]
 
 [node name="Player" parent="." instance=ExtResource("1_w433o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.649, -102.142)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.35151, 0)
 
 [node name="Platform" parent="." instance=ExtResource("2_vw2ca")]
 transform = Transform3D(10, 0, 0, 0, 5, 0, 0, 0, 10, 0, -0.66388, 0)
