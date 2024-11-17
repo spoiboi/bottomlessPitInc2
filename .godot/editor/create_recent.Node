@@ -1,9 +1,5 @@
-
-AudioStreamPlayer3D
-AudioStreamPlayer
-
+WorldEnvironment
 Sprite3D
-
 CollisionShape3D
 RigidBody3D
 MeshInstance3D
@@ -14,4 +10,6 @@ StaticBody3D
 DirectionalLight3D
 AnimationPlayer
 GPUParticles3D
+AudioStreamPlayer
+AudioStreamPlayer3D
 AudioStreamPlayer2D

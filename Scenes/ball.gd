@@ -2,7 +2,7 @@ extends Node3D
 
 var spawn_posx = -7
 var spawn_posy = 25
-var spawn_posz = -30
+var spawn_posz = -80
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
