@@ -27,6 +27,7 @@ script = ExtResource("1_8xcsw")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_oxp1i")
+transparency = 0.44
 gi_lightmap_scale = 1
 mesh = SubResource("TorusMesh_455w6")
 

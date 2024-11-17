@@ -10,11 +10,9 @@ func _ready():
 
 func _process(delta: float) -> void:
 	if current_Body != null:
-		print(current_Body.velocity.y)
 		if Input.is_action_just_pressed("jump"):
 			current_Body.velocity.y = maxBounceHeight
 			current_Body.jumping = true
-	pass # Replace with function body.
 
 func _on_area_3d_body_entered(body):
 	if body.name == "Player":
@@ -23,4 +21,3 @@ func _on_area_3d_body_entered(body):
 func _on_area_3d_body_exited(body: Node3D) -> void:
 	if body.name == "Player":
 		current_Body = null
-		
