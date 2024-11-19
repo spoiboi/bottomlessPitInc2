@@ -1,10 +1,11 @@
-[gd_scene load_steps=17 format=3 uid="uid://cotyop14wq5i6"]
+[gd_scene load_steps=18 format=3 uid="uid://cotyop14wq5i6"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_51qa5"]
 [ext_resource type="PackedScene" uid="uid://ysyt4r1ufi72" path="res://Scenes/character.tscn" id="2_cu0d3"]
 [ext_resource type="Material" uid="uid://86i0gut57do5" path="res://Scenes/playerMatte.tres" id="2_xmld4"]
 [ext_resource type="Script" path="res://Scripts/player_camera.gd" id="3_gjw8x"]
 [ext_resource type="AudioStream" uid="uid://c5tcqouj78c2p" path="res://Sounds/a.mp3" id="4_vxdfa"]
+[ext_resource type="Texture2D" uid="uid://m3yqcfyowipt" path="res://Assets/dropshadow.png" id="6_46sgf"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dqt7o"]
 
@@ -142,3 +143,9 @@ draw_pass_1 = SubResource("SphereMesh_362s6")
 [node name="jump" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_vxdfa")
 volume_db = 5.778
+
+[node name="Decal" type="Decal" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.01, 0)
+size = Vector3(1.25, 2.931, 1.25)
+texture_albedo = ExtResource("6_46sgf")
+upper_fade = 0.00788341

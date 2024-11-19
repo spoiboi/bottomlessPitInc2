@@ -16,7 +16,6 @@ func _on_area_3d_body_entered(body):
 	if body.name == "Player":
 		$poof.restart()
 		$crumble_time.start(2)
-		print("crumble time started")
 		
 
 func _on_timer_timeout():
@@ -25,11 +24,10 @@ func _on_timer_timeout():
 		$poof.emitting=false;
 		default = false;
 		$crumble_time.start(4)
-		print("respawn timer started")
 	else:
+		$poof.emitting=false;
 		default = true;
 		position.y-=10000
-		print("returned to default") 
 		$crumble_time.stop()
 		
 		

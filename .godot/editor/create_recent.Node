@@ -1,3 +1,4 @@
+Decal
 WorldEnvironment
 Sprite3D
 CollisionShape3D
@@ -12,4 +13,3 @@ AnimationPlayer
 GPUParticles3D
 AudioStreamPlayer
 AudioStreamPlayer3D
-AudioStreamPlayer2D
