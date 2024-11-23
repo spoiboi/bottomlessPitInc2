@@ -2,6 +2,7 @@ res://default_env.tres
 res://Scenes/player.tscn
 res://Backgrounds/background1.gdshader
 res://Backgrounds/background3.gdshader
+
 res://Backgrounds/background2.gdshader
 res://Backgrounds/background4.gdshader
 res://Scenes/platform.tscn
@@ -28,3 +29,4 @@ res://Levels/escape_the_pit.tscn
 res://Levels/crossy_spikes.tscn
 res://Levels/hard_level.tscn
 res://Levels/funny level.tscn
+
