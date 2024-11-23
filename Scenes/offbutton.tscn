@@ -1,3 +1,7 @@
-[gd_scene format=3 uid="uid://5lyq1vbk3kjr"]
+[gd_scene format=3 uid="uid://tn3fnjwjb5x8"]
 
 [node name="Offbutton" type="Node3D"]
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
