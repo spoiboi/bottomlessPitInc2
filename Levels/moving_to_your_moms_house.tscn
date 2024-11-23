@@ -1,10 +1,10 @@
 [gd_scene load_steps=11 format=3 uid="uid://b0dqt2gdgfgg7"]
 
-[ext_resource type="PackedScene" uid="uid://cotyop14wq5i6" path="res://Scenes/Player.tscn" id="2_wowgn"]
+[ext_resource type="PackedScene" uid="uid://cotyop14wq5i6" path="res://Scenes/player.tscn" id="2_wowgn"]
 [ext_resource type="PackedScene" uid="uid://csg7h6jwhtt3b" path="res://Scenes/platform.tscn" id="3_lr4lw"]
 [ext_resource type="PackedScene" uid="uid://bkol6cate26rl" path="res://Scenes/moving_platform.tscn" id="4_vfelj"]
-[ext_resource type="PackedScene" uid="uid://bqanftgk7h1hd" path="res://Scenes/teleporter.tscn" id="5_cai8f"]
-[ext_resource type="PackedScene" uid="uid://dnr22wo8t4i7c" path="res://Scenes/deathplane.tscn" id="6_hkwkn"]
+[ext_resource type="PackedScene" uid="uid://cnab4kdt2ummt" path="res://Scenes/teleporter.tscn" id="5_cai8f"]
+[ext_resource type="PackedScene" uid="uid://ddl5ibdcryb5b" path="res://Scenes/deathplane.tscn" id="6_hkwkn"]
 [ext_resource type="PackedScene" uid="uid://dvwons2rfkk6c" path="res://Backgrounds/funny_background_2.tscn" id="7_id7ea"]
 [ext_resource type="AudioStream" uid="uid://bs0xcs1jsiix6" path="res://Sounds/level.mp3" id="7_l2a1x"]
 
