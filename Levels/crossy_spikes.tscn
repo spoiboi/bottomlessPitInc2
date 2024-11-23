@@ -1,0 +1,116 @@
+[gd_scene load_steps=11 format=3 uid="uid://b58vg1s0ms3hr"]
+
+[ext_resource type="PackedScene" uid="uid://c27k478gxu8bx" path="res://Scenes/Player.tscn" id="1_w433o"]
+[ext_resource type="PackedScene" uid="uid://csg7h6jwhtt3b" path="res://Scenes/platform.tscn" id="2_vw2ca"]
+[ext_resource type="PackedScene" uid="uid://cnab4kdt2ummt" path="res://Scenes/teleporter.tscn" id="3_koqfx"]
+[ext_resource type="PackedScene" uid="uid://ddl5ibdcryb5b" path="res://Scenes/deathplane.tscn" id="4_w5qrm"]
+[ext_resource type="PackedScene" uid="uid://wkbbl7c6vjce" path="res://Backgrounds/funny_background1.tscn" id="5_b2xt8"]
+[ext_resource type="PackedScene" uid="uid://ds6snrftu1ftl" path="res://Scenes/spiky_cylinder.tscn" id="6_uxkro"]
+[ext_resource type="PackedScene" uid="uid://cad240igulhrq" path="res://Scenes/jump_pad.tscn" id="7_0kaum"]
+[ext_resource type="PackedScene" uid="uid://bkol6cate26rl" path="res://Scenes/moving_platform.tscn" id="8_2n7er"]
+
+[sub_resource type="Curve3D" id="Curve3D_n2hsq"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 25, 0, 0, 0, 0, 0, 0, 0, 0, -25, 0, 0, 0, 0, 0, 0, 0, 0, 25, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0)
+}
+point_count = 3
+
+[sub_resource type="Curve3D" id="Curve3D_vh7qs"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -80, 0, 0, 0, 0, 0, 0, 0, -25, -80, 0, 0, 0, 0, 0, 0, 0, -25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
+}
+point_count = 5
+
+[node name="blankLevel2" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_w433o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.35151, 0)
+
+[node name="Platform" parent="." instance=ExtResource("2_vw2ca")]
+transform = Transform3D(10, 0, 0, 0, 5, 0, 0, 0, 10, 0, -0.66388, 0)
+
+[node name="Platform3" parent="." instance=ExtResource("2_vw2ca")]
+transform = Transform3D(10, 0, 0, 0, 5, 0, 0, 0, 10, 0, 18, -14.968)
+
+[node name="Platform2" parent="." instance=ExtResource("2_vw2ca")]
+transform = Transform3D(10, 0, 0, 0, 5, 0, 0, 0, 10, 0, -0.66388, -202.318)
+
+[node name="Platform4" parent="." instance=ExtResource("2_vw2ca")]
+transform = Transform3D(10, 0, 0, 0, 5, 0, 0, 0, 10, 0, 5.037, -87.61)
+
+[node name="Teleporter" parent="." instance=ExtResource("3_koqfx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.55574, -202.488)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.178012, -0.984028, -1.1419e-08, 0.181233, 0.0327853, 0.982894, -0.967195, -0.174967, 0.184175, -0.746615, 34.2878, -13.9446)
+
+[node name="deathplane" parent="." instance=ExtResource("4_w5qrm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -14, 0)
+
+[node name="SpikyCylinder" parent="." instance=ExtResource("6_uxkro")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 13, -31.289)
+speed = 1.25
+
+[node name="SpikyCylinder4" parent="." instance=ExtResource("6_uxkro")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13, -125.506)
+speed = -1.3
+
+[node name="SpikyCylinder5" parent="." instance=ExtResource("6_uxkro")]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 5, 16, -147.915)
+speed = -1.5
+
+[node name="SpikyCylinder6" parent="." instance=ExtResource("6_uxkro")]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -5, 16, -161.026)
+speed = 1.5
+
+[node name="SpikyCylinder2" parent="." instance=ExtResource("6_uxkro")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -19, 11, -63.969)
+speed = 1.1
+
+[node name="SpikyCylinder3" parent="." instance=ExtResource("6_uxkro")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 19, 11, -63.969)
+speed = -1.1
+
+[node name="JumpPad1" parent="." instance=ExtResource("7_0kaum")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 6.855, -0.2, -3.215)
+maxBounceHeight = 20
+
+[node name="JumpPad4" parent="." instance=ExtResource("7_0kaum")]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 3, 0, 6.277, -116.248)
+maxBounceHeight = 27
+
+[node name="JumpPad5" parent="." instance=ExtResource("7_0kaum")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, -11.1591, -189.851)
+maxBounceHeight = 27
+
+[node name="JumpPad2" parent="." instance=ExtResource("7_0kaum")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 6.855, 6, -7.248)
+maxBounceHeight = 20
+
+[node name="JumpPad3" parent="." instance=ExtResource("7_0kaum")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 1.836, 12, -7.248)
+maxBounceHeight = 20
+
+[node name="Background1" parent="." instance=ExtResource("5_b2xt8")]
+
+[node name="Path3D" parent="." instance=ExtResource("8_2n7er")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14.815, -47.822)
+curve = SubResource("Curve3D_n2hsq")
+move_speed = 8.0
+
+[node name="Path3D2" parent="." instance=ExtResource("8_2n7er")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 14, -80.689)
+curve = SubResource("Curve3D_n2hsq")
+move_speed = 8.0
+
+[node name="Path3D3" parent="." instance=ExtResource("8_2n7er")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -97.881)
+curve = SubResource("Curve3D_vh7qs")
+move_speed = 5.0
+
+[node name="Path3D4" parent="." instance=ExtResource("8_2n7er")]
+transform = Transform3D(1, -8.74228e-08, -8.74228e-08, -8.74228e-08, -1, 0, -8.74228e-08, 7.64274e-15, -1, 0, -20, -177.831)
+curve = SubResource("Curve3D_vh7qs")
+move_speed = 5.0

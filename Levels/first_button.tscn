@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Levels/first_button.gd" id="1_lwi0u"]
 [ext_resource type="PackedScene" uid="uid://csg7h6jwhtt3b" path="res://Scenes/platform.tscn" id="1_oni34"]
-[ext_resource type="PackedScene" uid="uid://cotyop14wq5i6" path="res://Scenes/player.tscn" id="2_rrrrs"]
+[ext_resource type="PackedScene" uid="uid://cotyop14wq5i6" path="res://Scenes/Player.tscn" id="2_rrrrs"]
 [ext_resource type="PackedScene" uid="uid://briu0fuadh25y" path="res://Scenes/onbutton.tscn" id="3_rvs1j"]
 [ext_resource type="PackedScene" uid="uid://ddl5ibdcryb5b" path="res://Scenes/deathplane.tscn" id="4_tfx2g"]
 [ext_resource type="PackedScene" uid="uid://dvwons2rfkk6c" path="res://Backgrounds/funny_background_2.tscn" id="5_wrv8h"]
