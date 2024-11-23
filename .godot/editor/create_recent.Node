@@ -1,13 +1,16 @@
+
 Sprite3D
 DirectionalLight3D
 Decal
 WorldEnvironment
+
 CollisionShape3D
 RigidBody3D
 MeshInstance3D
-Area3D
 MeshInstance3D
+
 StaticBody3D
+
 AnimationPlayer
 GPUParticles3D
 AudioStreamPlayer

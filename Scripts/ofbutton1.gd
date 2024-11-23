@@ -12,7 +12,8 @@ func _process(delta: float) -> void:
 
 var count = 0
 
-func _on_area_3d_body_entered(body: Node3D) -> void:
-	if (count < 2):
-		position.y -= 0.4
-	count = count + 1
+func _on_off_area_shape_body_entered(body: Node3D) -> void:
+	$offStaticShape.position.y -= .45
+	$offAreaShape.position.y -= .45
+	$offMeshShape.position.y -= .45
+	emit_signal("turning_off")
