@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Levels/first_button.gd" id="1_lwi0u"]
 [ext_resource type="PackedScene" uid="uid://csg7h6jwhtt3b" path="res://Scenes/platform.tscn" id="1_oni34"]
-[ext_resource type="PackedScene" uid="uid://cotyop14wq5i6" path="res://Scenes/Player.tscn" id="2_rrrrs"]
+[ext_resource type="PackedScene" uid="uid://cotyop14wq5i6" path="res://Scenes/player.tscn" id="2_rrrrs"]
 [ext_resource type="PackedScene" uid="uid://briu0fuadh25y" path="res://Scenes/onbutton.tscn" id="3_rvs1j"]
 [ext_resource type="PackedScene" uid="uid://ddl5ibdcryb5b" path="res://Scenes/deathplane.tscn" id="4_tfx2g"]
 [ext_resource type="PackedScene" uid="uid://dvwons2rfkk6c" path="res://Backgrounds/funny_background_2.tscn" id="5_wrv8h"]
@@ -164,3 +164,7 @@ transform = Transform3D(-2.18557e-07, -1, 0, 5, -4.37114e-08, 0, 0, 0, 5, -21.23
 
 [node name="OffPlatform15" parent="." instance=ExtResource("13_2k4ll")]
 transform = Transform3D(9.55343e-15, 4.37114e-08, 5, 5, -4.37114e-08, 0, 2.18557e-07, 1, -2.18557e-07, -19.373, 297.665, -47.292)
+
+[node name="Sprite3D" type="Sprite3D" parent="OffPlatform15"]
+transform = Transform3D(-0.00172779, 0.0986978, 0.0159926, 4.43638e-08, -0.015995, 0.0987125, 0.0999851, 0.00170555, 0.000276316, 0, 0.54623, 0.0244286)
+texture = ExtResource("18_srw1g")
