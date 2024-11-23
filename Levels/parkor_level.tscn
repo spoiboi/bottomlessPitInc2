@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bpnitji1wl4w6"]
+[gd_scene load_steps=10 format=3 uid="uid://bpnitji1wl4w6"]
 
 [ext_resource type="PackedScene" uid="uid://ddl5ibdcryb5b" path="res://Scenes/deathplane.tscn" id="1_32jpr"]
 [ext_resource type="PackedScene" uid="uid://csg7h6jwhtt3b" path="res://Scenes/platform.tscn" id="3_7rf27"]
@@ -7,7 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://cnab4kdt2ummt" path="res://Scenes/teleporter.tscn" id="6_k455y"]
 [ext_resource type="PackedScene" uid="uid://dvwons2rfkk6c" path="res://Backgrounds/funny_background_2.tscn" id="7_kc8uu"]
 [ext_resource type="PackedScene" uid="uid://v2o25x8olsc4" path="res://Scenes/bounce_ring.tscn" id="8_1ub8u"]
-[ext_resource type="PackedScene" uid="uid://cotyop14wq5i6" path="res://Scenes/Player.tscn" id="8_fpvbk"]
+[ext_resource type="PackedScene" uid="uid://c27k478gxu8bx" path="res://Scenes/Player.tscn" id="8_fpvbk"]
+[ext_resource type="AudioStream" uid="uid://bs0xcs1jsiix6" path="res://Sounds/level.mp3" id="9_dhxro"]
 
 [node name="ParkorLevel" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.58747, 0, 12.7163)
@@ -39,7 +40,7 @@ transform = Transform3D(15, 0, 0, 0, 6, 0, 0, 0, 15, 71.4791, -22.4512, -44)
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 25.519, -9.16, -45)
 
 [node name="Platform5" parent="." instance=ExtResource("3_7rf27")]
-transform = Transform3D(20, 0, 0, 0, 6, 0, 0, 0, 20, 44.3381, 12.993, 28.588)
+transform = Transform3D(20, 0, 0, 0, 6, 0, 0, 0, 20, 44.3381, 12.993, 21.588)
 
 [node name="Platform6" parent="." instance=ExtResource("3_7rf27")]
 transform = Transform3D(4, 0, 0, 0, 2, 0, 0, 0, 4, 58.9112, 22.3422, -17.3498)
@@ -57,10 +58,10 @@ transform = Transform3D(-3.46288e-07, 6.08345e-08, 10, 1.11338, 9.90268, 0, -7.9
 transform = Transform3D(-3.46288e-07, 6.08345e-08, -10, 1.11338, 9.90268, 0, 7.92214, -1.39173, -4.37114e-07, 46.4728, 17.7606, -20.8452)
 
 [node name="Wall6" parent="." instance=ExtResource("4_xmc74")]
-transform = Transform3D(7.92215, -1.11338, 0, 1.11338, 7.92215, 0, 0, 0, 10, 36.247, 17.7606, -8.18632)
+transform = Transform3D(7.92215, -1.11338, 0, 1.11338, 7.92215, 0, 0, 0, 10, 38.247, 17.7606, -10.1863)
 
 [node name="Wall7" parent="." instance=ExtResource("4_xmc74")]
-transform = Transform3D(-7.92215, 1.11338, -1.50996e-06, 1.11338, 7.92215, -1.49855e-14, 1.19621e-06, -1.68116e-07, -10, 45.4437, 17.7606, 3.18229)
+transform = Transform3D(-7.92215, 1.11338, -1.50996e-06, 1.11338, 7.92215, -1.49855e-14, 1.19621e-06, -1.68116e-07, -10, 45.4437, 17.7606, 0.18229)
 
 [node name="Wall2" parent="." instance=ExtResource("4_xmc74")]
 transform = Transform3D(-7.92215, 0.835034, -1.20797e-06, 1.11338, 5.94161, -2.96055e-13, 1.19621e-06, -1.26087e-07, -8, 4.19074, 4.40614, -20.931)
@@ -98,7 +99,7 @@ vertical = true
 ring_boost = 10
 
 [node name="Teleporter" parent="." instance=ExtResource("6_k455y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 17.1771, 33.0056)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 17.1771, 22.0056)
 
 [node name="Background2" parent="." instance=ExtResource("7_kc8uu")]
 
@@ -120,3 +121,13 @@ transform = Transform3D(3, 0, 0, 0, -1.31134e-07, -1.5, 0, 3, -6.55671e-08, 55.7
 jump_percent = 1.3
 minimum_jump = 15
 maximum_jump = 30
+
+[node name="Platform11" parent="." instance=ExtResource("3_7rf27")]
+transform = Transform3D(-1.00536e-07, 1.15, 0, -1.62635, -3.55449e-08, -1.62635, -1.62635, -3.55449e-08, 1.62635, 30.3926, -4.70088, -42.1723)
+
+[node name="Platform12" parent="." instance=ExtResource("3_7rf27")]
+transform = Transform3D(-1.31134e-07, 1.16, 0, -3, -5.07052e-08, -5.5529e-22, -8.32934e-22, -1.4078e-29, 2, 30.3926, -3.02488, -42.1723)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_dhxro")
+autoplay = true

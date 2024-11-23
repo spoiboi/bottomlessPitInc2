@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b58vg1s0ms3hr"]
+[gd_scene load_steps=13 format=3 uid="uid://b58vg1s0ms3hr"]
 
 [ext_resource type="PackedScene" uid="uid://c27k478gxu8bx" path="res://Scenes/Player.tscn" id="1_w433o"]
 [ext_resource type="PackedScene" uid="uid://csg7h6jwhtt3b" path="res://Scenes/platform.tscn" id="2_vw2ca"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ds6snrftu1ftl" path="res://Scenes/spiky_cylinder.tscn" id="6_uxkro"]
 [ext_resource type="PackedScene" uid="uid://cad240igulhrq" path="res://Scenes/jump_pad.tscn" id="7_0kaum"]
 [ext_resource type="PackedScene" uid="uid://bkol6cate26rl" path="res://Scenes/moving_platform.tscn" id="8_2n7er"]
+[ext_resource type="AudioStream" uid="uid://c8uxmkh06qu62" path="res://Sounds/Unfunky Groove.mp3" id="9_g2yis"]
 
 [sub_resource type="Curve3D" id="Curve3D_n2hsq"]
 _data = {
@@ -120,3 +121,7 @@ move_speed = 7.0
 [node name="Path3D4" parent="." instance=ExtResource("8_2n7er")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -97.631)
 curve = SubResource("Curve3D_j5byb")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_g2yis")
+autoplay = true
