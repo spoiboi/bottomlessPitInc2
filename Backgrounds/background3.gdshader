@@ -1,18 +1,17 @@
 shader_type sky;
 
 uniform sampler2D image;
-uniform float delta = 0.1;
+uniform float stretch : hint_range(0.0, 2.0);
+uniform float wave_speed : hint_range(0.0, 2.0);
 
 void sky() {
-	float x_pos = SKY_COORDS.x * 2.0;
 
-	//float y_pos = atanh(SKY_COORDS.y) + TIME * delta;
-	float y_pos = SKY_COORDS.y - TIME * delta;
-	if (SKY_COORDS.y >= 0.6) {
-		y_pos -= 0.1;
-	} else if (SKY_COORDS.y >= 0.4) {
-		y_pos = (SKY_COORDS.y - 0.4) * 0.5 + 0.4 - TIME * delta;
-	}
+    vec2 skipped = SKY_COORDS;
 
-	COLOR = texture(image, vec2(x_pos, y_pos)).rgb;
+    skipped.x += sin(SKY_COORDS.y * 50.0 + TIME * wave_speed) * 0.015 * stretch;
+
+
+    skipped.y += mod(SKY_COORDS.y + (TIME * 0.015), 1.0);
+
+	COLOR = texture(image, skipped).rgb * (1.0 - SKY_COORDS.y);
 }
