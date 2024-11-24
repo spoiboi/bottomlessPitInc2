@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://b58vg1s0ms3hr"]
 
-[ext_resource type="PackedScene" uid="uid://cotyop14wq5i6" path="res://Scenes/Player.tscn" id="1_w433o"]
+[ext_resource type="PackedScene" uid="uid://c27k478gxu8bx" path="res://Scenes/Player.tscn" id="1_w433o"]
 [ext_resource type="PackedScene" uid="uid://csg7h6jwhtt3b" path="res://Scenes/platform.tscn" id="2_vw2ca"]
 [ext_resource type="PackedScene" uid="uid://cnab4kdt2ummt" path="res://Scenes/teleporter.tscn" id="3_koqfx"]
 [ext_resource type="PackedScene" uid="uid://ddl5ibdcryb5b" path="res://Scenes/deathplane.tscn" id="4_w5qrm"]
@@ -17,12 +17,12 @@ _data = {
 }
 point_count = 3
 
-[sub_resource type="Curve3D" id="Curve3D_vh7qs"]
+[sub_resource type="Curve3D" id="Curve3D_dt6vh"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, -25, 0, 0, 0, 0, 0, 0, 0, 0, -80, 0, 0, 0, 0, 0, 0, 0, -15, -80, 0, 0, 0, 0, 0, 0, 0, 0, -25),
-"tilts": PackedFloat32Array(0, 0, 0, 0)
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, -42, 0, 0, 0, 0, 0, 0, 0, 0, -85, 0, 0, 0, 0, 0, 0, 0, 0, -42),
+"tilts": PackedFloat32Array(0, 0, 0)
 }
-point_count = 4
+point_count = 3
 
 [sub_resource type="Curve3D" id="Curve3D_j5byb"]
 _data = {
@@ -48,6 +48,18 @@ transform = Transform3D(10, 0, 0, 0, 5, 0, 0, 0, 10, 0, -0.66388, -202.318)
 [node name="Platform4" parent="." instance=ExtResource("2_vw2ca")]
 transform = Transform3D(10, 0, 0, 0, 5, 0, 0, 0, 10, 0, 5.037, -87.61)
 
+[node name="Platform5" parent="." instance=ExtResource("2_vw2ca")]
+transform = Transform3D(5, 0, 0, 0, 2.5, 0, 0, 0, 5, -2.13322, 5.037, -132.321)
+
+[node name="Platform8" parent="." instance=ExtResource("2_vw2ca")]
+transform = Transform3D(5, 0, 0, 0, 2.5, 0, 0, 0, 5, 2.53781, 5.037, -132.321)
+
+[node name="Platform7" parent="." instance=ExtResource("2_vw2ca")]
+transform = Transform3D(5, 0, 0, 0, 2.5, 0, 0, 0, 5, -7.06171, 5.14734, -132.321)
+
+[node name="Platform6" parent="." instance=ExtResource("2_vw2ca")]
+transform = Transform3D(5, 0, 0, 0, 2.5, 0, 0, 0, 5, 7.02493, 5.037, -132.321)
+
 [node name="Teleporter" parent="." instance=ExtResource("3_koqfx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.55574, -202.488)
 
@@ -62,7 +74,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 13,
 speed = 1.25
 
 [node name="SpikyCylinder4" parent="." instance=ExtResource("6_uxkro")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13, -125.506)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.8827, -125.506)
 speed = -1.3
 
 [node name="SpikyCylinder5" parent="." instance=ExtResource("6_uxkro")]
@@ -87,10 +99,10 @@ maxBounceHeight = 20
 
 [node name="JumpPad4" parent="." instance=ExtResource("7_0kaum")]
 transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 3, 0, 6.277, -116.248)
-maxBounceHeight = 27
+maxBounceHeight = 26
 
 [node name="JumpPad5" parent="." instance=ExtResource("7_0kaum")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, -10, -189.851)
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, -10, -189.851)
 maxBounceHeight = 25
 
 [node name="JumpPad2" parent="." instance=ExtResource("7_0kaum")]
@@ -115,7 +127,7 @@ move_speed = 8.0
 
 [node name="Path3D3" parent="." instance=ExtResource("8_2n7er")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -97.881)
-curve = SubResource("Curve3D_vh7qs")
+curve = SubResource("Curve3D_dt6vh")
 move_speed = 5.5
 
 [node name="Path3D4" parent="." instance=ExtResource("8_2n7er")]
@@ -125,3 +137,21 @@ curve = SubResource("Curve3D_j5byb")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_g2yis")
 autoplay = true
+
+[node name="Platform11" parent="." instance=ExtResource("2_vw2ca")]
+transform = Transform3D(-1.62635, -8.5813e-08, 1.62635, -1.62635, -3.55449e-08, -1.62635, 1.71626e-07, -1.15, -7.109e-08, 8.15829, 8.29912, -190.908)
+
+[node name="Platform12" parent="." instance=ExtResource("2_vw2ca")]
+transform = Transform3D(5.73206e-15, -5.07052e-08, 2, -3, -5.07052e-08, -5.55289e-22, 1.31134e-07, -1.16, -8.74228e-08, 8.15829, 9.97512, -190.908)
+
+[node name="Platform15" parent="." instance=ExtResource("2_vw2ca")]
+transform = Transform3D(-1.62635, -8.5813e-08, 1.62635, -1.62635, -3.55449e-08, -1.62635, 1.71626e-07, -1.15, -7.109e-08, 0.0282211, 23.1518, -138.144)
+
+[node name="Platform16" parent="." instance=ExtResource("2_vw2ca")]
+transform = Transform3D(5.73206e-15, -5.07052e-08, 2, -3, -5.07052e-08, -5.55289e-22, 1.31134e-07, -1.16, -8.74228e-08, 0.0282211, 24.8278, -138.144)
+
+[node name="Platform13" parent="." instance=ExtResource("2_vw2ca")]
+transform = Transform3D(1.676, 1.13489e-07, -1.57513, 1.57513, 6.1618e-08, 1.676, 2.49795e-07, -1.15, -6.56421e-08, 8.18427, 9.97472, -116.966)
+
+[node name="Platform14" parent="." instance=ExtResource("2_vw2ca")]
+transform = Transform3D(0.0930288, 5.33742e-08, -1.99904, 2.99856, 8.97127e-08, 0.0620192, 2.36184e-07, -1.16, -8.71837e-08, 8.1323, 8.29952, -116.966)
