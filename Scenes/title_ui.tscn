@@ -1,0 +1,49 @@
+[gd_scene load_steps=2 format=3 uid="uid://d05qq8yv3u7n"]
+
+[ext_resource type="Texture2D" uid="uid://pqx4ufpwsei2" path="res://Assets/logoNEW.png" id="1_kqbvd"]
+
+[node name="title_ui" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LogoNew" type="Sprite2D" parent="."]
+position = Vector2(286, 229)
+rotation = -0.394444
+scale = Vector2(1.28819, 1.20922)
+texture = ExtResource("1_kqbvd")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 736.0
+offset_top = 309.0
+offset_right = 1093.0
+offset_bottom = 383.0
+text = "New Game"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 736.0
+offset_top = 396.0
+offset_right = 1093.0
+offset_bottom = 470.0
+text = "Level Select"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 737.0
+offset_top = 480.0
+offset_right = 1094.0
+offset_bottom = 554.0
+text = "Options"
+
+[node name="Button4" type="Button" parent="."]
+layout_mode = 0
+offset_left = 737.0
+offset_top = 563.0
+offset_right = 1094.0
+offset_bottom = 637.0
+text = "Credits"

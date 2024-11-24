@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://b1rcch3rmsm6q"]
+
+[ext_resource type="Script" path="res://title_screen.gd" id="1_vav38"]
+[ext_resource type="PackedScene" uid="uid://wkbbl7c6vjce" path="res://Backgrounds/funny_background1.tscn" id="1_wms45"]
+[ext_resource type="PackedScene" uid="uid://d05qq8yv3u7n" path="res://Scenes/title_ui.tscn" id="2_7q6gp"]
+[ext_resource type="PackedScene" uid="uid://ysyt4r1ufi72" path="res://Scenes/character.tscn" id="2_oarpf"]
+
+[node name="Title Screen" type="Node3D"]
+script = ExtResource("1_vav38")
+
+[node name="title_ui" parent="." instance=ExtResource("2_7q6gp")]
+
+[node name="Background1" parent="." instance=ExtResource("1_wms45")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+
+[node name="goon" type="RigidBody3D" parent="."]
+
+[node name="anim_idle" parent="goon" instance=ExtResource("2_oarpf")]
+transform = Transform3D(0.707107, -0.707107, -3.09086e-08, 0, -4.37114e-08, 1, -0.707107, -0.707107, -3.09086e-08, 0, 0, 1.34229)

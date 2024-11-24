@@ -29,9 +29,7 @@ func _on_timer_timeout():
 		default = true;
 		position.y-=10000
 		$crumble_time.stop()
-		
-		
-	# queue_free()
+
 
 func respawn():
 	pass

@@ -144,10 +144,8 @@ draw_pass_1 = SubResource("SphereMesh_362s6")
 stream = ExtResource("4_vxdfa")
 volume_db = 5.778
 
-
 [node name="Decal" type="Decal" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.74497, 0)
 size = Vector3(1.25, 8, 1.25)
-
 texture_albedo = ExtResource("6_46sgf")
 upper_fade = 0.00788341
