@@ -5,7 +5,8 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_wgm5v"]
 shader = ExtResource("1_dlk3w")
-shader_parameter/delta = 0.02
+shader_parameter/stretch = null
+shader_parameter/wave_speed = null
 shader_parameter/image = ExtResource("2_4bxlp")
 
 [sub_resource type="Sky" id="Sky_5eb7n"]

@@ -7,8 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cnab4kdt2ummt" path="res://Scenes/teleporter.tscn" id="6_k455y"]
 [ext_resource type="PackedScene" uid="uid://dvwons2rfkk6c" path="res://Backgrounds/funny_background_2.tscn" id="7_kc8uu"]
 [ext_resource type="PackedScene" uid="uid://v2o25x8olsc4" path="res://Scenes/bounce_ring.tscn" id="8_1ub8u"]
-[ext_resource type="PackedScene" uid="uid://c27k478gxu8bx" path="res://Scenes/Player.tscn" id="8_fpvbk"]
-[ext_resource type="AudioStream" uid="uid://bs0xcs1jsiix6" path="res://Sounds/level.mp3" id="9_dhxro"]
+[ext_resource type="PackedScene" uid="uid://c27k478gxu8bx" path="res://Scenes/player.tscn" id="8_fpvbk"]
 
 [node name="ParkorLevel" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.58747, 0, 12.7163)

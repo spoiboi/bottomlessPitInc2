@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://bb6e6hflfpcd8"]
 
-[ext_resource type="PackedScene" uid="uid://cotyop14wq5i6" path="res://Scenes/Player.tscn" id="1_tsplm"]
+[ext_resource type="PackedScene" uid="uid://c27k478gxu8bx" path="res://Scenes/player.tscn" id="1_tsplm"]
 [ext_resource type="PackedScene" uid="uid://csg7h6jwhtt3b" path="res://Scenes/platform.tscn" id="2_a263u"]
 [ext_resource type="AudioStream" uid="uid://dqnr8efdj5jcv" path="res://Sounds/Strange Moves in a New World.mp3" id="2_nw6fj"]
 [ext_resource type="PackedScene" uid="uid://cnab4kdt2ummt" path="res://Scenes/teleporter.tscn" id="3_2vyn8"]

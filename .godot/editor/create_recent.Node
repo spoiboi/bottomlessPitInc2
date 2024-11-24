@@ -1,17 +1,22 @@
 
+Button
+Sprite2D
+Timer
+RigidBody3D
+Camera3D
+DirectionalLight3D
+
+WorldEnvironment
+
+Sprite3D
 StaticBody3D
 Area3D
 AudioStreamPlayer3D
 AudioStreamPlayer
-Sprite3D
+
 DirectionalLight3D
 
 CollisionShape3D
-RigidBody3D
 MeshInstance3D
 MeshInstance3D
-
 AnimationPlayer
-GPUParticles3D
-AudioStreamPlayer
-AudioStreamPlayer3D

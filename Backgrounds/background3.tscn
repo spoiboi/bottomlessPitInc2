@@ -1,0 +1,20 @@
+[gd_scene load_steps=6 format=3 uid="uid://c2dqj6wvtyvw4"]
+
+[ext_resource type="Shader" path="res://Backgrounds/background3.gdshader" id="1_p4xr3"]
+[ext_resource type="Texture2D" uid="uid://xqcnbt7laar7" path="res://Backgrounds/psychedelic_background.png" id="2_kccel"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cvtkb"]
+shader = ExtResource("1_p4xr3")
+shader_parameter/stretch = null
+shader_parameter/wave_speed = null
+shader_parameter/image = ExtResource("2_kccel")
+
+[sub_resource type="Sky" id="Sky_g38ao"]
+sky_material = SubResource("ShaderMaterial_cvtkb")
+
+[sub_resource type="Environment" id="Environment_bvtue"]
+background_mode = 2
+sky = SubResource("Sky_g38ao")
+
+[node name="Background3" type="WorldEnvironment"]
+environment = SubResource("Environment_bvtue")

@@ -16,6 +16,7 @@ var on_floor
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity") * 3
 func _init():
 	spawn_pos = position
+
 func _ready():
 	pass
 	#var ice_platform = get_parent().get_node("IcyPlatform/Area3D")
@@ -48,7 +49,7 @@ func _physics_process(delta):
 			$jumpcloud.restart()
 
 	# Handle jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and !jumping and (is_on_floor() or velocity.y >=-3):
 		velocity.y = JUMP_VELOCITY
 		jumping = true
 
@@ -66,8 +67,10 @@ func _physics_process(delta):
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 			velocity.z = move_toward(velocity.z, 0, SPEED)
+	# print(velocity.y)
 	animate_model(input_dir)
 	move_and_slide()
+
 func rotate_model(input_dir):
 	if input_dir == Vector2(0,0):
 		pass
@@ -80,7 +83,6 @@ func respawn():
 	velocity.y = 0
 	position = spawn_pos 
 	position.y += 20
-	#get_tree().reload_current_scene()
 	
 func animate_model(input_dir):
 	if on_floor:

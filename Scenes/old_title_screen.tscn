@@ -1,12 +1,12 @@
 [gd_scene load_steps=15 format=3 uid="uid://cmolak1p7byp"]
 
-[ext_resource type="FontFile" uid="uid://oigad7atfyty" path="res://Nicolast.otf" id="1_j1cod"]
-[ext_resource type="Script" path="res://Scripts/title_screen.gd" id="1_ppbl8"]
-[ext_resource type="Texture2D" uid="uid://caeh0anufrt3s" path="res://Assets/logo.png" id="3_pp3rk"]
-[ext_resource type="AudioStream" uid="uid://c8uxmkh06qu62" path="res://Sounds/Unfunky Groove.mp3" id="4_n0fc1"]
+[ext_resource type="FontFile" uid="uid://oigad7atfyty" path="res://Nicolast.otf" id="1_eurcx"]
+[ext_resource type="Script" path="res://Scripts/old_title_screen.gd" id="2_acqyp"]
+[ext_resource type="Texture2D" uid="uid://caeh0anufrt3s" path="res://Assets/logo.png" id="3_xp505"]
+[ext_resource type="AudioStream" uid="uid://c8uxmkh06qu62" path="res://Sounds/Unfunky Groove.mp3" id="4_ul8j0"]
 
 [sub_resource type="Theme" id="Theme_svx4q"]
-default_font = ExtResource("1_j1cod")
+default_font = ExtResource("1_eurcx")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kvepm"]
 bg_color = Color(0.964706, 0.964706, 0.964706, 1)
@@ -26,21 +26,21 @@ Panel/styles/panel = SubResource("StyleBoxFlat_8p1qj")
 bg_color = Color(0.964706, 0.376471, 0.392157, 1)
 
 [sub_resource type="Theme" id="Theme_gukyv"]
-default_font = ExtResource("1_j1cod")
+default_font = ExtResource("1_eurcx")
 default_font_size = 40
 Button/styles/normal = SubResource("StyleBoxFlat_0l0st")
 
 [sub_resource type="Theme" id="Theme_lk6tq"]
-default_font = ExtResource("1_j1cod")
+default_font = ExtResource("1_eurcx")
 Button/styles/normal = SubResource("StyleBoxFlat_0l0st")
 
 [sub_resource type="Theme" id="Theme_thqqn"]
-default_font = ExtResource("1_j1cod")
+default_font = ExtResource("1_eurcx")
 default_font_size = 40
 Button/styles/normal = SubResource("StyleBoxFlat_0l0st")
 
 [sub_resource type="Theme" id="Theme_ecpc3"]
-default_font = ExtResource("1_j1cod")
+default_font = ExtResource("1_eurcx")
 Button/styles/normal = SubResource("StyleBoxFlat_0l0st")
 
 [node name="title screen" type="Control"]
@@ -51,7 +51,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_svx4q")
-script = ExtResource("1_ppbl8")
+script = ExtResource("2_acqyp")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -116,7 +116,7 @@ ESC TO RETURN TO THE MENU"
 [node name="Logo" type="Sprite2D" parent="."]
 position = Vector2(585, 109)
 scale = Vector2(1, 1.14737)
-texture = ExtResource("3_pp3rk")
+texture = ExtResource("3_xp505")
 
 [node name="level 4" type="Button" parent="."]
 layout_mode = 0
@@ -128,7 +128,7 @@ theme = SubResource("Theme_thqqn")
 text = "Level 4"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_n0fc1")
+stream = ExtResource("4_ul8j0")
 volume_db = -4.622
 autoplay = true
 
