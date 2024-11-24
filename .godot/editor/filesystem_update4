@@ -1,10 +1,10 @@
 res://default_env.tres
-res://Scenes/player.tscn
+res://Backgrounds/background4.tscn
 res://Backgrounds/background1.gdshader
 res://Backgrounds/background3.gdshader
-
-res://Backgrounds/background2.gdshader
 res://Backgrounds/background4.gdshader
+res://Backgrounds/background2.gdshader
+res://Backgrounds/background3.tscn
 res://Scenes/platform.tscn
 res://Scenes/spiky_cylinder.tscn
 res://Scenes/environment.tscn
@@ -15,18 +15,10 @@ res://Scenes/rotating_wheel.tscn
 res://Scenes/teleporter.tscn
 res://Levels/blank_level.tscn
 res://Levels/crumbling_hell.tscn
-res://Levels/buttonLevel.tscn
 res://Levels/may_god_have_mercy_on_your_soul.tscn
 res://Levels/parkor_level.tscn
 res://Scenes/onbutton.tscn
 res://Scenes/Ball.tscn
-res://Levels/first_button.tscn
-res://Scenes/offbutton.tscn
-res://Scenes/on_platform.tscn
-res://Scenes/on_platform1.tscn
-res://Levels/good_luck.tscn
-res://Levels/escape_the_pit.tscn
-res://Levels/crossy_spikes.tscn
-res://Levels/hard_level.tscn
-res://Levels/funny level.tscn
-
+res://Scenes/blank_level.tscn
+res://Backgrounds/funny_background1.tscn
+res://Backgrounds/funny_background_2.tscn

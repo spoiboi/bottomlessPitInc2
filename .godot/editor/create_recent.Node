@@ -1,16 +1,14 @@
-
+WorldEnvironment
 Sprite3D
 StaticBody3D
 Area3D
 AudioStreamPlayer3D
 AudioStreamPlayer
 DirectionalLight3D
-
 CollisionShape3D
 RigidBody3D
 MeshInstance3D
 MeshInstance3D
-
 AnimationPlayer
 GPUParticles3D
 AudioStreamPlayer
