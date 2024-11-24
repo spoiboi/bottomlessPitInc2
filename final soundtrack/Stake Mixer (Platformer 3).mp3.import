@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cwv0pd75f413r"
+path="res://.godot/imported/Stake Mixer (Platformer 3).mp3-047101a07d83d6051f1d2bed05f5edc7.mp3str"
+
+[deps]
+
+source_file="res://final soundtrack/Stake Mixer (Platformer 3).mp3"
+dest_files=["res://.godot/imported/Stake Mixer (Platformer 3).mp3-047101a07d83d6051f1d2bed05f5edc7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,16 +1,18 @@
-extends Control
+extends Node3D
+
+var isVisible = false
+@onready var audio = $AudioStreamPlayer
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	$title_ui.visible = false
 
 
-func _on_start_pressed():
-	get_tree().change_scene_to_file("res://Levels/crumbling_hell.tscn")
-
-
-func _on_level_2_pressed():
-	get_tree().change_scene_to_file("res://Levels/moving_to_your_moms_house.tscn")
-
-
-func _on_level_3_pressed():
-	get_tree().change_scene_to_file("res://Levels/spiky_level.tscn")
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	if !audio.playing:
+		audio.play()
+		
+	if !isVisible and $goon.position.y < -60:
+		isVisible = true
+		$title_ui.visible = true
 	
-func _on_level_4_pressed():
-	get_tree().change_scene_to_file("res://Levels/good_luck.tscn")

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bds1ggw72wki6"
+path="res://.godot/imported/Ultimate Final Ascent (Finale).mp3-47e9ca73ec0ddc86eb669e4042e09ee0.mp3str"
+
+[deps]
+
+source_file="res://final soundtrack/Ultimate Final Ascent (Finale).mp3"
+dest_files=["res://.godot/imported/Ultimate Final Ascent (Finale).mp3-47e9ca73ec0ddc86eb669e4042e09ee0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

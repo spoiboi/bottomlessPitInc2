@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://4jp8t1cp6idv"]
+
+[ext_resource type="Texture2D" uid="uid://duxeonj386nna" path="res://Assets/splash screen_.png" id="1_8llw5"]
+[ext_resource type="FontFile" uid="uid://oigad7atfyty" path="res://Nicolast.otf" id="2_htie4"]
+
+[node name="Control" type="Control"]
+modulate = Color(1, 1, 1, 0.815686)
+self_modulate = Color(1, 1, 1, 0.192157)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SplashScreen" type="Sprite2D" parent="."]
+position = Vector2(498, 364)
+texture = ExtResource("1_8llw5")
+
+[node name="world" type="Label" parent="."]
+layout_mode = 0
+offset_left = 133.0
+offset_top = 198.0
+offset_right = 339.0
+offset_bottom = 244.0
+rotation = -0.226893
+theme_override_fonts/font = ExtResource("2_htie4")
+theme_override_font_sizes/font_size = 24
+text = "World 1-1"
+
+[node name="name" type="Label" parent="."]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 330.0
+offset_right = 719.0
+offset_bottom = 490.0
+rotation = -0.226893
+theme_override_fonts/font = ExtResource("2_htie4")
+theme_override_font_sizes/font_size = 60
+text = "\"Level Name Here\""

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c37t0ivoyw6fw"
+path="res://.godot/imported/Strange Moves in a New World (Platformer 2).mp3-ef32142e0d4e38b5f8b09854c5e06f88.mp3str"
+
+[deps]
+
+source_file="res://final soundtrack/Strange Moves in a New World (Platformer 2).mp3"
+dest_files=["res://.godot/imported/Strange Moves in a New World (Platformer 2).mp3-ef32142e0d4e38b5f8b09854c5e06f88.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

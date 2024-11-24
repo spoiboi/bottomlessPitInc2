@@ -3,7 +3,7 @@ extends Node3D
 var level_list = ["res://Levels/crumbling_hell.tscn",  
 "res://Levels/may_god_have_mercy_on_your_soul.tscn",
 "res://Levels/hard_level.tscn",
-"res://Scenes/demo_screen.tscn"]
+"res://Scenes/title_screen.tscn"]
 
 var next_level = 0
 # Called when the node enters the scene tree for the first time.

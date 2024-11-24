@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://d05qq8yv3u7n"]
+[gd_scene load_steps=4 format=3 uid="uid://d05qq8yv3u7n"]
 
 [ext_resource type="Texture2D" uid="uid://pqx4ufpwsei2" path="res://Assets/logoNEW.png" id="1_kqbvd"]
+[ext_resource type="Script" path="res://Scenes/title_ui.gd" id="1_vuggy"]
+[ext_resource type="FontFile" uid="uid://oigad7atfyty" path="res://Nicolast.otf" id="3_38jx8"]
 
 [node name="title_ui" type="Control"]
 layout_mode = 3
@@ -9,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_vuggy")
 
 [node name="LogoNew" type="Sprite2D" parent="."]
 position = Vector2(286, 229)
@@ -22,6 +25,8 @@ offset_left = 736.0
 offset_top = 309.0
 offset_right = 1093.0
 offset_bottom = 383.0
+theme_override_fonts/font = ExtResource("3_38jx8")
+theme_override_font_sizes/font_size = 36
 text = "New Game"
 
 [node name="Button2" type="Button" parent="."]
@@ -30,6 +35,8 @@ offset_left = 736.0
 offset_top = 396.0
 offset_right = 1093.0
 offset_bottom = 470.0
+theme_override_fonts/font = ExtResource("3_38jx8")
+theme_override_font_sizes/font_size = 36
 text = "Level Select"
 
 [node name="Button3" type="Button" parent="."]
@@ -38,6 +45,8 @@ offset_left = 737.0
 offset_top = 480.0
 offset_right = 1094.0
 offset_bottom = 554.0
+theme_override_fonts/font = ExtResource("3_38jx8")
+theme_override_font_sizes/font_size = 36
 text = "Options"
 
 [node name="Button4" type="Button" parent="."]
@@ -46,4 +55,55 @@ offset_left = 737.0
 offset_top = 563.0
 offset_right = 1094.0
 offset_bottom = 637.0
+theme_override_fonts/font = ExtResource("3_38jx8")
+theme_override_font_sizes/font_size = 36
 text = "Credits"
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 722.0
+offset_top = 709.0
+offset_right = 1137.0
+offset_bottom = 1260.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 28.0
+offset_right = 426.0
+offset_bottom = 544.0
+text = "Director/Lead:
+             Noah Bearden (spoiboi)
+
+Level Design/Game Elements:
+             Noah Bearden
+             Owen Addison
+             Gavin
+             Kane
+             Braiden Larson
+
+Soundtrack:
+             Preston P
+
+Past Contributors:
+             Parker Peterson
+             Andrew Weibe
+
+Special Thanks:
+             UNL Game Dev Club"
+
+[node name="Button5" type="Button" parent="."]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 864.0
+offset_right = 376.0
+offset_bottom = 958.0
+theme_override_fonts/font = ExtResource("3_38jx8")
+theme_override_font_sizes/font_size = 36
+text = "<Back"
+
+[connection signal="pressed" from="Button" to="." method="on_new_game"]
+[connection signal="pressed" from="Button2" to="." method="on_level_select"]
+[connection signal="pressed" from="Button3" to="." method="on_options"]
+[connection signal="pressed" from="Button4" to="." method="on_credits"]
+[connection signal="pressed" from="Button5" to="." method="on_back"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ds02yprusvcp5"
+path="res://.godot/imported/We Found Something Cool (Wild Card).mp3-42f074e240690b5f6105c2aadb2ee4f7.mp3str"
+
+[deps]
+
+source_file="res://final soundtrack/We Found Something Cool (Wild Card).mp3"
+dest_files=["res://.godot/imported/We Found Something Cool (Wild Card).mp3-42f074e240690b5f6105c2aadb2ee4f7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
