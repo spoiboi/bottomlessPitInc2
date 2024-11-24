@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://qop3btjvm1h1"]
+[gd_scene load_steps=13 format=3 uid="uid://2rtglg417kgt"]
 
 [ext_resource type="FontFile" uid="uid://oigad7atfyty" path="res://Nicolast.otf" id="1_uxfo3"]
 [ext_resource type="Script" path="res://Scripts/title_screen.gd" id="2_4fq4e"]
@@ -57,9 +57,9 @@ theme = SubResource("Theme_7qa7q")
 
 [node name="level 1" type="Button" parent="."]
 layout_mode = 0
-offset_left = 407.0
+offset_left = 395.0
 offset_top = 474.0
-offset_right = 671.0
+offset_right = 675.0
 offset_bottom = 605.0
 theme = SubResource("Theme_gukyv")
 text = "Start Demo"

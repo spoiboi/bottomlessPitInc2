@@ -29,34 +29,34 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.083, 0)
 transform = Transform3D(10, 0, 0, 0, 5, 0, 0, 0, 10, 0, -0.66388, 0)
 
 [node name="Platform3" parent="." instance=ExtResource("2_54h1c")]
-transform = Transform3D(4, 0, 0, 0, 2, 0, 0, 0, 4, 0, 14.1413, -33.2797)
+transform = Transform3D(4, 0, 0, 0, 2, 0, 0, 0, 4, 0, 14.1413, -36.1273)
 
 [node name="Platform6" parent="." instance=ExtResource("2_54h1c")]
-transform = Transform3D(8, 0, 0, 0, 4, 0, 0, 0, 8, 0, 13.8651, -65.0311)
+transform = Transform3D(8, 0, 0, 0, 4, 0, 0, 0, 8, 0, 13.8651, -66.5844)
 
 [node name="Platform7" parent="." instance=ExtResource("2_54h1c")]
-transform = Transform3D(5, 0, 0, 0, 2.16506, 2.5, 0, -1.25, 4.33013, 0, 29.5381, -63.8986)
+transform = Transform3D(5, 0, 0, 0, 2.16506, 2.5, 0, -1.25, 4.33013, 0, 29.5381, -65.4519)
 
 [node name="Platform9" parent="." instance=ExtResource("2_54h1c")]
-transform = Transform3D(1.62635, -1.47232e-08, -1.62635, -1.62635, -3.55449e-08, -1.62635, -2.94464e-08, 1.15, -7.10898e-08, -8, 34.3079, -54.517)
+transform = Transform3D(1.62635, -1.47232e-08, -1.62635, -1.62635, -3.55449e-08, -1.62635, -2.94464e-08, 1.15, -7.10898e-08, -8, 34.3079, -56.0703)
 
 [node name="Platform10" parent="." instance=ExtResource("2_54h1c")]
-transform = Transform3D(5.73206e-15, -5.07052e-08, -2, -3, -5.07052e-08, -1.31773e-22, -1.31134e-07, 1.16, -8.74228e-08, -8, 35.9839, -54.517)
+transform = Transform3D(5.73206e-15, -5.07052e-08, -2, -3, -5.07052e-08, -1.31773e-22, -1.31134e-07, 1.16, -8.74228e-08, -8, 35.9839, -56.0703)
 
 [node name="Platform11" parent="." instance=ExtResource("2_54h1c")]
-transform = Transform3D(1.62635, -1.47232e-08, -1.62635, -1.62635, -3.55449e-08, -1.62635, -2.94464e-08, 1.15, -7.10898e-08, 8, 34.3079, -54.517)
+transform = Transform3D(1.62635, -1.47232e-08, -1.62635, -1.62635, -3.55449e-08, -1.62635, -2.94464e-08, 1.15, -7.10898e-08, 8, 34.3079, -56.0703)
 
 [node name="Platform12" parent="." instance=ExtResource("2_54h1c")]
-transform = Transform3D(5.73206e-15, -5.07052e-08, -2, -3, -5.07052e-08, -1.31773e-22, -1.31134e-07, 1.16, -8.74228e-08, 8, 35.9839, -54.517)
+transform = Transform3D(5.73206e-15, -5.07052e-08, -2, -3, -5.07052e-08, -1.31773e-22, -1.31134e-07, 1.16, -8.74228e-08, 8, 35.9839, -56.0703)
 
 [node name="Platform8" parent="." instance=ExtResource("2_54h1c")]
-transform = Transform3D(8, 0, 0, 0, 4, 0, 0, 0, 8, 0, 28, -45.0466)
+transform = Transform3D(8, 0, 0, 0, 4, 0, 0, 0, 8, 0, 28, -46.5999)
 
 [node name="Platform5" parent="." instance=ExtResource("2_54h1c")]
-transform = Transform3D(-6.55671e-07, -4, 0, 15, -1.74846e-07, 0, 0, 0, 6, 0, 7.14622, -25.1609)
+transform = Transform3D(-6.55671e-07, -4, 0, 15, -1.74846e-07, 0, 0, 0, 8, 0, 7.14622, -24.3216)
 
 [node name="Teleporter" parent="." instance=ExtResource("3_8y22p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 31.6057, -43.9358)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 31.6057, -45.4891)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.178012, -0.984028, -1.04058e-08, 0.181233, 0.0327853, 0.982894, -0.967195, -0.174967, 0.184175, -0.746615, 16.2737, -3.10499)
@@ -69,15 +69,15 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 5.113, -0.618, -24.769)
 maxBounceHeight = 30
 
 [node name="JumpPad4" parent="." instance=ExtResource("5_mcf1c")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 14.0061, -70.7075)
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 14.0061, -72.2607)
 maxBounceHeight = 30
 
 [node name="Path3D" parent="." instance=ExtResource("6_iyr54")]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 13.652, -43.0568)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 13.652, -44.6101)
 curve = SubResource("Curve3D_c5ijh")
 
 [node name="BounceRing" parent="." instance=ExtResource("7_jny8r")]
-transform = Transform3D(3, 0, 0, 0, -1.31134e-07, -1.5, 0, 3, -6.55671e-08, 0, 4.65199, -54.056)
+transform = Transform3D(3, 0, 0, 0, -1.31134e-07, -1.5, 0, 3, -6.55671e-08, 0, 4.65199, -55.6093)
 jump_percent = 0.9
 minimum_jump = 20
 maximum_jump = 100
@@ -105,5 +105,5 @@ autoplay = true
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -5.113, -0.618, -24.769)
 
 [node name="JumpPad2" parent="." instance=ExtResource("5_mcf1c")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 30.9424, -61.3414)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 30.9424, -62.8947)
 maxBounceHeight = 20

@@ -25,9 +25,9 @@ func _physics_process(delta):
 func _process(delta):
 	if boosted:
 		if not vertical:
-				current_Body.velocity.x = -boost_numbers[0] * ring_boost
-				current_Body.velocity.z = -boost_numbers[2] * ring_boost
-				current_Body.velocity.y = -boost_numbers[1]  * ring_boost + 0.52
+			current_Body.velocity.x = -boost_numbers[0] * ring_boost
+			current_Body.velocity.z = -boost_numbers[2] * ring_boost
+			current_Body.velocity.y = -boost_numbers[1]  * ring_boost + 0.52
 		else:
 			current_Body.velocity.x = 0
 			current_Body.velocity.z = 0
