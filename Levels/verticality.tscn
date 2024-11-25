@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://bxr3v6bjdwsck"]
+[gd_scene load_steps=16 format=3 uid="uid://bxr3v6bjdwsck"]
 
-[ext_resource type="PackedScene" uid="uid://c27k478gxu8bx" path="res://Scenes/Player.tscn" id="1_mxt2k"]
+[ext_resource type="Script" path="res://Levels/verticality.gd" id="1_d1q1r"]
+[ext_resource type="PackedScene" uid="uid://c27k478gxu8bx" path="res://Scenes/player.tscn" id="1_mxt2k"]
 [ext_resource type="PackedScene" uid="uid://csg7h6jwhtt3b" path="res://Scenes/platform.tscn" id="2_54h1c"]
 [ext_resource type="PackedScene" uid="uid://cnab4kdt2ummt" path="res://Scenes/teleporter.tscn" id="3_8y22p"]
 [ext_resource type="PackedScene" uid="uid://ddl5ibdcryb5b" path="res://Scenes/deathplane.tscn" id="4_cxwhc"]
@@ -9,9 +10,10 @@
 [ext_resource type="PackedScene" uid="uid://v2o25x8olsc4" path="res://Scenes/bounce_ring.tscn" id="7_jny8r"]
 [ext_resource type="PackedScene" uid="uid://dyauuntaex86k" path="res://Scenes/crumbling_platform.tscn" id="8_yii1e"]
 [ext_resource type="PackedScene" uid="uid://rrh3jshuqh48" path="res://Scenes/boost_ring.tscn" id="9_ak5wm"]
-[ext_resource type="PackedScene" uid="uid://dvwons2rfkk6c" path="res://Backgrounds/funny_background_2.tscn" id="10_8tqdl"]
-[ext_resource type="AudioStream" uid="uid://bs0xcs1jsiix6" path="res://Sounds/level.mp3" id="11_gcrdj"]
+[ext_resource type="AudioStream" uid="uid://c37t0ivoyw6fw" path="res://final soundtrack/Strange Moves in a New World (Platformer 2).mp3" id="11_yrw2g"]
 [ext_resource type="PackedScene" uid="uid://c6rsumoi1fdm1" path="res://Scenes/jump_pad_extra.tscn" id="12_j58vo"]
+[ext_resource type="PackedScene" uid="uid://br5c2tgvmpuvd" path="res://Backgrounds/background4.tscn" id="14_3ydjl"]
+[ext_resource type="PackedScene" uid="uid://4jp8t1cp6idv" path="res://Scenes/splash_screen.tscn" id="14_72i0o"]
 
 [sub_resource type="Curve3D" id="Curve3D_c5ijh"]
 _data = {
@@ -21,9 +23,10 @@ _data = {
 point_count = 4
 
 [node name="blankLevel" type="Node3D"]
+script = ExtResource("1_d1q1r")
 
 [node name="Player" parent="." instance=ExtResource("1_mxt2k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.083, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.083, 0)
 
 [node name="Platform" parent="." instance=ExtResource("2_54h1c")]
 transform = Transform3D(10, 0, 0, 0, 5, 0, 0, 0, 10, 0, -0.66388, 0)
@@ -95,10 +98,8 @@ transform = Transform3D(2.89229, 0, 0.796668, 0, 3, 0, -0.796668, 0, 2.89229, -3
 boost_duration = 1.6
 ring_boost = 6
 
-[node name="Background2" parent="." instance=ExtResource("10_8tqdl")]
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("11_gcrdj")
+stream = ExtResource("11_yrw2g")
 autoplay = true
 
 [node name="JumpPad" parent="." instance=ExtResource("12_j58vo")]
@@ -107,3 +108,7 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -5.113, -0.618, -24.769)
 [node name="JumpPad2" parent="." instance=ExtResource("5_mcf1c")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 30.9424, -62.8947)
 maxBounceHeight = 20
+
+[node name="splash_screen" parent="." instance=ExtResource("14_72i0o")]
+
+[node name="Background1" parent="." instance=ExtResource("14_3ydjl")]

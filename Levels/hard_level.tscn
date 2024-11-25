@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://5716jmgk8eyw"]
+[gd_scene load_steps=11 format=3 uid="uid://5716jmgk8eyw"]
 
-[ext_resource type="PackedScene" uid="uid://cotyop14wq5i6" path="res://Scenes/player.tscn" id="1_4vyp0"]
+[ext_resource type="PackedScene" uid="uid://c27k478gxu8bx" path="res://Scenes/player.tscn" id="1_4vyp0"]
+[ext_resource type="Script" path="res://Levels/hard_level.gd" id="1_bbs7p"]
 [ext_resource type="AudioStream" uid="uid://0l2p8xbijhok" path="res://Sounds/Stake Mixer.mp3" id="1_vam0p"]
 [ext_resource type="PackedScene" uid="uid://ddl5ibdcryb5b" path="res://Scenes/deathplane.tscn" id="2_pkeck"]
 [ext_resource type="PackedScene" uid="uid://cnab4kdt2ummt" path="res://Scenes/teleporter.tscn" id="3_b6p6f"]
@@ -8,8 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://wkbbl7c6vjce" path="res://Backgrounds/funny_background1.tscn" id="5_5duy8"]
 [ext_resource type="PackedScene" uid="uid://ds6snrftu1ftl" path="res://Scenes/spiky_cylinder.tscn" id="6_fi3oy"]
 [ext_resource type="PackedScene" uid="uid://cg23p2g0r0um5" path="res://Scenes/blade.tscn" id="7_bem1h"]
+[ext_resource type="PackedScene" uid="uid://4jp8t1cp6idv" path="res://Scenes/splash_screen.tscn" id="10_mja60"]
 
 [node name="HardLevel" type="Node3D"]
+script = ExtResource("1_bbs7p")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55, 6, -5)
@@ -65,3 +68,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55, 6, -5)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.2483, -0.8043, 0.53986, 0.0536739, 0.567881, 0.821359, -0.967195, -0.174967, 0.184175, 0, 15, 0)
+
+[node name="splash_screen" parent="." instance=ExtResource("10_mja60")]

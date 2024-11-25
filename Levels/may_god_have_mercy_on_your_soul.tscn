@@ -1,5 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://bb6e6hflfpcd8"]
+[gd_scene load_steps=14 format=3 uid="uid://bb6e6hflfpcd8"]
 
+[ext_resource type="Script" path="res://Levels/may_god_have_mercy_on_your_soul.gd" id="1_1cmqw"]
 [ext_resource type="PackedScene" uid="uid://c27k478gxu8bx" path="res://Scenes/player.tscn" id="1_tsplm"]
 [ext_resource type="PackedScene" uid="uid://csg7h6jwhtt3b" path="res://Scenes/platform.tscn" id="2_a263u"]
 [ext_resource type="AudioStream" uid="uid://dqnr8efdj5jcv" path="res://Sounds/Strange Moves in a New World.mp3" id="2_nw6fj"]
@@ -8,7 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://di35wor1moco7" path="res://Scenes/wall.tscn" id="5_e71hb"]
 [ext_resource type="PackedScene" uid="uid://bkol6cate26rl" path="res://Scenes/moving_platform.tscn" id="6_eom4w"]
 [ext_resource type="PackedScene" uid="uid://dqn5qg0jpqjx2" path="res://Scenes/trick_crumbling_platform.tscn" id="6_sbw58"]
-[ext_resource type="PackedScene" uid="uid://wkbbl7c6vjce" path="res://Backgrounds/funny_background1.tscn" id="8_d8j6y"]
+[ext_resource type="PackedScene" uid="uid://4jp8t1cp6idv" path="res://Scenes/splash_screen.tscn" id="11_ievyj"]
+[ext_resource type="PackedScene" uid="uid://br5c2tgvmpuvd" path="res://Backgrounds/background4.tscn" id="11_kaka3"]
 
 [sub_resource type="Curve3D" id="Curve3D_y6vp2"]
 _data = {
@@ -24,7 +26,8 @@ _data = {
 }
 point_count = 3
 
-[node name="blankLevel2" type="Node3D"]
+[node name="have_mercy" type="Node3D"]
+script = ExtResource("1_1cmqw")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_nw6fj")
@@ -131,10 +134,12 @@ transform = Transform3D(22, 0, 0, 0, 1, 0, 0, 0, 10, -16, 70, -140)
 [node name="Path3D" parent="MovingFloorHell" instance=ExtResource("6_eom4w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 70, -150)
 curve = SubResource("Curve3D_y6vp2")
+move_speed = 10.0
 
 [node name="Path3D2" parent="MovingFloorHell" instance=ExtResource("6_eom4w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 86, 70, -260)
 curve = SubResource("Curve3D_xvdue")
+move_speed = 10.0
 
 [node name="FinishLine" type="Node" parent="."]
 
@@ -144,4 +149,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 98.7253, 74.7322, -260)
 [node name="Platform2" parent="FinishLine" instance=ExtResource("2_a263u")]
 transform = Transform3D(10, 0, 0, 0, 5, 0, 0, 0, 10, 98.7253, 70, -260)
 
-[node name="Background1" parent="." instance=ExtResource("8_d8j6y")]
+[node name="splash_screen" parent="." instance=ExtResource("11_ievyj")]
+
+[node name="Background1" parent="." instance=ExtResource("11_kaka3")]

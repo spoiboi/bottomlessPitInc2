@@ -1,14 +1,19 @@
 extends Node3D
 
+@onready var ui = $splash_screen
+var sum = 0
 
+func handle_ui(delta):
+	if ui.visible:
+		sum+=(6*delta)
+		if sum >= 10:
+			ui.position.x+=10
+			if ui.position.x >= 1200:
+				ui.visible=false
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-
+func _ready():
+	$splash_screen/world.text = "Level 4"
+	$splash_screen/name.text = "This game\n has puzzles?"
 	$Brother.turning_on.connect(_toggle_on)
 	$Brother.turning_off.connect(_toggle_off)
 	$Brother2.turning_on_1.connect(_toggle_on_1)
@@ -29,6 +34,17 @@ func _process(delta: float) -> void:
 	$Brother4.four_to_two_off.connect(f_t_t_off)
 	$Brother4.four_to_three_on.connect(f_t_th_on)
 	$Brother4.four_to_three_off.connect(f_t_th_off)
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	handle_ui(delta)
+	if !$AudioStreamPlayer.playing:
+		$AudioStreamPlayer.play()
+	
 
 	
 func _toggle_on():

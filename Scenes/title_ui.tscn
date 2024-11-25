@@ -78,16 +78,16 @@ text = "Director/Lead:
 Level Design/Game Elements:
              Noah Bearden
              Owen Addison
-             Gavin
-             Kane
+             Gavin Shaner
+             Kane Maley
              Braiden Larson
 
 Soundtrack:
              Preston P
 
-Past Contributors:
+Past Contributor who left us to make his own game 
+but did a lot:
              Parker Peterson
-             Andrew Weibe
 
 Special Thanks:
              UNL Game Dev Club"
@@ -102,8 +102,72 @@ theme_override_fonts/font = ExtResource("3_38jx8")
 theme_override_font_sizes/font_size = 36
 text = "<Back"
 
+[node name="Button6" type="Button" parent="."]
+offset_left = 1185.0
+offset_top = 51.0
+offset_right = 1359.0
+offset_bottom = 198.0
+text = "1"
+
+[node name="Button7" type="Button" parent="."]
+offset_left = 1416.0
+offset_top = 54.0
+offset_right = 1590.0
+offset_bottom = 201.0
+text = "2"
+
+[node name="Button8" type="Button" parent="."]
+offset_left = 1638.0
+offset_top = 54.0
+offset_right = 1812.0
+offset_bottom = 201.0
+text = "3"
+
+[node name="Button9" type="Button" parent="."]
+offset_left = 1186.0
+offset_top = 270.0
+offset_right = 1360.0
+offset_bottom = 417.0
+text = "4"
+
+[node name="Button10" type="Button" parent="."]
+offset_left = 1420.0
+offset_top = 273.0
+offset_right = 1594.0
+offset_bottom = 420.0
+text = "5"
+
+[node name="Button11" type="Button" parent="."]
+offset_left = 1651.0
+offset_top = 267.0
+offset_right = 1825.0
+offset_bottom = 414.0
+text = "6"
+
+[node name="Button12" type="Button" parent="."]
+offset_left = 1267.0
+offset_top = 462.0
+offset_right = 1441.0
+offset_bottom = 609.0
+text = "7"
+
+[node name="Button13" type="Button" parent="."]
+offset_left = 1549.0
+offset_top = 462.0
+offset_right = 1723.0
+offset_bottom = 609.0
+text = "8"
+
 [connection signal="pressed" from="Button" to="." method="on_new_game"]
 [connection signal="pressed" from="Button2" to="." method="on_level_select"]
 [connection signal="pressed" from="Button3" to="." method="on_options"]
 [connection signal="pressed" from="Button4" to="." method="on_credits"]
 [connection signal="pressed" from="Button5" to="." method="on_back"]
+[connection signal="pressed" from="Button6" to="." method="level_1"]
+[connection signal="pressed" from="Button7" to="." method="level_2"]
+[connection signal="pressed" from="Button8" to="." method="level_3"]
+[connection signal="pressed" from="Button9" to="." method="level_4"]
+[connection signal="pressed" from="Button10" to="." method="level_5"]
+[connection signal="pressed" from="Button11" to="." method="level_6"]
+[connection signal="pressed" from="Button12" to="." method="level_7"]
+[connection signal="pressed" from="Button13" to="." method="level_8"]

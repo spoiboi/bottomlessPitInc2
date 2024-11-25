@@ -1,8 +1,8 @@
-[gd_scene load_steps=21 format=3 uid="uid://mgbkded0kwd5"]
+[gd_scene load_steps=23 format=3 uid="uid://mgbkded0kwd5"]
 
 [ext_resource type="Script" path="res://Levels/first_button.gd" id="1_lwi0u"]
 [ext_resource type="PackedScene" uid="uid://csg7h6jwhtt3b" path="res://Scenes/platform.tscn" id="1_oni34"]
-[ext_resource type="PackedScene" uid="uid://cotyop14wq5i6" path="res://Scenes/player.tscn" id="2_rrrrs"]
+[ext_resource type="PackedScene" uid="uid://c27k478gxu8bx" path="res://Scenes/player.tscn" id="2_rrrrs"]
 [ext_resource type="PackedScene" uid="uid://briu0fuadh25y" path="res://Scenes/onbutton.tscn" id="3_rvs1j"]
 [ext_resource type="PackedScene" uid="uid://ddl5ibdcryb5b" path="res://Scenes/deathplane.tscn" id="4_tfx2g"]
 [ext_resource type="PackedScene" uid="uid://dvwons2rfkk6c" path="res://Backgrounds/funny_background_2.tscn" id="5_wrv8h"]
@@ -20,6 +20,8 @@
 [ext_resource type="Texture2D" uid="uid://bnerle1ndw74o" path="res://Assets/imageedit_3_8075767447.png" id="18_srw1g"]
 [ext_resource type="PackedScene" uid="uid://ndapljhl15vh" path="res://Scenes/on_platform1.tscn" id="19_1qlni"]
 [ext_resource type="Script" path="res://Scenes/onbutton_3.gd" id="20_vo0m8"]
+[ext_resource type="PackedScene" uid="uid://4jp8t1cp6idv" path="res://Scenes/splash_screen.tscn" id="21_si2co"]
+[ext_resource type="AudioStream" uid="uid://44gmyfmioeml" path="res://final soundtrack/Doot Doot Master (Platformer 1.5).mp3" id="22_euwny"]
 
 [node name="FirstButton" type="Node3D"]
 script = ExtResource("1_lwi0u")
@@ -39,7 +41,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8725, 8.41118, -8.32253)
 [node name="Background2" parent="deathplane" instance=ExtResource("5_wrv8h")]
 
 [node name="Teleporter" parent="." instance=ExtResource("8_iwwt0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.451, -1.218, -80.004)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -1.218, -80.004)
 
 [node name="Platform3" parent="." instance=ExtResource("1_oni34")]
 transform = Transform3D(10, 0, 0, 0, 2, 0, 0, 0, 10, -0.484835, -1.12977, -63.4494)
@@ -128,7 +130,7 @@ transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 24.123, 300, -43)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.2, 300, -49)
 
 [node name="Sprite3D" type="Sprite3D" parent="OffPlatform11"]
-transform = Transform3D(-0.4, 0, -3.49691e-08, 0, 0.4, 0, 3.49691e-08, 0, -0.4, 0.24831, 0.936681, -3.07767)
+transform = Transform3D(-0.4, 0, 3.49691e-08, 0, 0.4, 0, -3.49691e-08, 0, -0.4, 0.24831, 0.936681, -3.07767)
 texture = ExtResource("18_srw1g")
 
 [node name="OnPlatform" parent="." instance=ExtResource("19_1qlni")]
@@ -168,3 +170,8 @@ transform = Transform3D(9.55343e-15, 4.37114e-08, 5, 5, -4.37114e-08, 0, 2.18557
 [node name="Sprite3D" type="Sprite3D" parent="OffPlatform15"]
 transform = Transform3D(-0.00172779, 0.0986978, 0.0159926, 4.43638e-08, -0.015995, 0.0987125, 0.0999851, 0.00170555, 0.000276316, 0, 0.54623, 0.0244286)
 texture = ExtResource("18_srw1g")
+
+[node name="splash_screen" parent="." instance=ExtResource("21_si2co")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("22_euwny")

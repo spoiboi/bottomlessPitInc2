@@ -1,21 +1,21 @@
 extends Node3D
 
-var level_list = ["res://Levels/crumbling_hell.tscn",  
+var level_list = ["res://Levels/crumbling_hell.tscn", 
+"res://Levels/moving_to_your_moms_house.tscn", 
+"res://Levels/spiky_level.tscn",
+"res://Levels/first_button.tscn",
 "res://Levels/may_god_have_mercy_on_your_soul.tscn",
-"res://Levels/hard_level.tscn",
+"res://Levels/verticality.tscn",
+"res://Levels/crossy_spikes.tscn",
+"res://Levels/escape_the_pit.tscn",
 "res://Scenes/title_screen.tscn"]
 
 var next_level = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
-# next_level = level_list.bsearch(get_tree().current_scene.scene_file_path) + 1
-	if (get_tree().current_scene.scene_file_path == "res://Levels/crumbling_hell.tscn"):
-		next_level = 1
-	elif (get_tree().current_scene.scene_file_path == "res://Levels/may_god_have_mercy_on_your_soul.tscn"):
-		next_level = 2
-	else:
-		next_level = 3
-	
+	for i in range(0, level_list.size()):
+		if (level_list[i] == get_tree().current_scene.scene_file_path):
+			next_level = i+1
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

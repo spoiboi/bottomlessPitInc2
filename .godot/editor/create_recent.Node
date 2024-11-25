@@ -1,8 +1,9 @@
+Node
+Button
+AudioStreamPlayer
 DirectionalLight3D
 Label
-Button
 Panel
-AudioStreamPlayer
 Sprite2D
 Timer
 RigidBody3D

@@ -1,11 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://dvxtai5y0to2"]
+[gd_scene load_steps=8 format=3 uid="uid://dvxtai5y0to2"]
 
+[ext_resource type="Script" path="res://Levels/escape_the_pit.gd" id="1_4whid"]
 [ext_resource type="PackedScene" uid="uid://c27k478gxu8bx" path="res://Scenes/player.tscn" id="1_jn6o6"]
 [ext_resource type="PackedScene" uid="uid://csg7h6jwhtt3b" path="res://Scenes/platform.tscn" id="2_yam2s"]
 [ext_resource type="PackedScene" uid="uid://ddl5ibdcryb5b" path="res://Scenes/deathplane.tscn" id="3_bu6vc"]
 [ext_resource type="PackedScene" uid="uid://c2dqj6wvtyvw4" path="res://Backgrounds/background3.tscn" id="4_kuagw"]
+[ext_resource type="AudioStream" uid="uid://bds1ggw72wki6" path="res://final soundtrack/Ultimate Final Ascent (Finale).mp3" id="6_c34tb"]
+[ext_resource type="PackedScene" uid="uid://4jp8t1cp6idv" path="res://Scenes/splash_screen.tscn" id="7_7i0q1"]
 
 [node name="EscapeThePit" type="Node3D"]
+script = ExtResource("1_4whid")
 
 [node name="Player" parent="." instance=ExtResource("1_jn6o6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.91413, 0)
@@ -14,7 +18,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.91413, 0)
 transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -2.56708, 0)
 
 [node name="Platform2" parent="." instance=ExtResource("2_yam2s")]
-transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -0.772332, -15.6868)
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 20, 0, -0.772332, -16.7745)
 
 [node name="deathplane" parent="." instance=ExtResource("3_bu6vc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10.2482, 0)
@@ -23,3 +27,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10.2482, 0)
 transform = Transform3D(1, 0, 0, 0, -0.48542, 0.874281, 0, -0.874281, -0.48542, -0.67105, 10.7319, -1.22835)
 
 [node name="Background3" parent="." instance=ExtResource("4_kuagw")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_c34tb")
+
+[node name="splash_screen" parent="." instance=ExtResource("7_7i0q1")]

@@ -1,12 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://b0dqt2gdgfgg7"]
+[gd_scene load_steps=13 format=3 uid="uid://b0dqt2gdgfgg7"]
 
-[ext_resource type="PackedScene" uid="uid://cotyop14wq5i6" path="res://Scenes/player.tscn" id="2_wowgn"]
+[ext_resource type="Script" path="res://Levels/moving_to_your_moms_house.gd" id="1_ycd30"]
+[ext_resource type="PackedScene" uid="uid://c27k478gxu8bx" path="res://Scenes/player.tscn" id="2_wowgn"]
 [ext_resource type="PackedScene" uid="uid://csg7h6jwhtt3b" path="res://Scenes/platform.tscn" id="3_lr4lw"]
 [ext_resource type="PackedScene" uid="uid://bkol6cate26rl" path="res://Scenes/moving_platform.tscn" id="4_vfelj"]
 [ext_resource type="PackedScene" uid="uid://cnab4kdt2ummt" path="res://Scenes/teleporter.tscn" id="5_cai8f"]
 [ext_resource type="PackedScene" uid="uid://ddl5ibdcryb5b" path="res://Scenes/deathplane.tscn" id="6_hkwkn"]
-[ext_resource type="PackedScene" uid="uid://dvwons2rfkk6c" path="res://Backgrounds/funny_background_2.tscn" id="7_id7ea"]
-[ext_resource type="AudioStream" uid="uid://bs0xcs1jsiix6" path="res://Sounds/level.mp3" id="7_l2a1x"]
+[ext_resource type="AudioStream" uid="uid://du0p4jx6qhvrc" path="res://final soundtrack/Leaps and Hurtboxes (Platformer 1).mp3" id="7_fa6cu"]
+[ext_resource type="PackedScene" uid="uid://wkbbl7c6vjce" path="res://Backgrounds/funny_background1.tscn" id="9_02fwm"]
+[ext_resource type="PackedScene" uid="uid://4jp8t1cp6idv" path="res://Scenes/splash_screen.tscn" id="9_h13ff"]
 
 [sub_resource type="Curve3D" id="Curve3D_18ngg"]
 _data = {
@@ -30,6 +32,7 @@ _data = {
 point_count = 5
 
 [node name="MovingToYourMom\'sHouse" type="Node3D"]
+script = ExtResource("1_ycd30")
 
 [node name="Player" parent="." instance=ExtResource("2_wowgn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, 0)
@@ -66,7 +69,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.2534, 54.1064, -139.791)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -57.3445, 0)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_l2a1x")
+stream = ExtResource("7_fa6cu")
 autoplay = true
 
-[node name="Background2" parent="." instance=ExtResource("7_id7ea")]
+[node name="splash_screen" parent="." instance=ExtResource("9_h13ff")]
+
+[node name="Background1" parent="." instance=ExtResource("9_02fwm")]

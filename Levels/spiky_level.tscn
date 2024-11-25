@@ -1,14 +1,17 @@
-[gd_scene load_steps=8 format=3 uid="uid://cjcyg5y6n41s"]
+[gd_scene load_steps=10 format=3 uid="uid://cjcyg5y6n41s"]
 
 [ext_resource type="PackedScene" uid="uid://ds6snrftu1ftl" path="res://Scenes/spiky_cylinder.tscn" id="1_v6cwk"]
+[ext_resource type="Script" path="res://Levels/spiky_level.gd" id="1_wymt6"]
 [ext_resource type="PackedScene" uid="uid://csg7h6jwhtt3b" path="res://Scenes/platform.tscn" id="2_2agm4"]
 [ext_resource type="PackedScene" uid="uid://ddl5ibdcryb5b" path="res://Scenes/deathplane.tscn" id="3_5oroo"]
-[ext_resource type="PackedScene" uid="uid://cotyop14wq5i6" path="res://Scenes/player.tscn" id="4_1io7e"]
+[ext_resource type="PackedScene" uid="uid://c27k478gxu8bx" path="res://Scenes/player.tscn" id="4_1io7e"]
 [ext_resource type="PackedScene" uid="uid://cnab4kdt2ummt" path="res://Scenes/teleporter.tscn" id="5_t40n3"]
-[ext_resource type="PackedScene" uid="uid://wkbbl7c6vjce" path="res://Backgrounds/funny_background1.tscn" id="6_pxa6l"]
-[ext_resource type="AudioStream" uid="uid://bs0xcs1jsiix6" path="res://Sounds/level.mp3" id="7_xj2mt"]
+[ext_resource type="AudioStream" uid="uid://44gmyfmioeml" path="res://final soundtrack/Doot Doot Master (Platformer 1.5).mp3" id="7_uwpwe"]
+[ext_resource type="PackedScene" uid="uid://4jp8t1cp6idv" path="res://Scenes/splash_screen.tscn" id="9_3txib"]
+[ext_resource type="PackedScene" uid="uid://dvwons2rfkk6c" path="res://Backgrounds/funny_background_2.tscn" id="9_je1kc"]
 
 [node name="Node3D" type="Node3D"]
+script = ExtResource("1_wymt6")
 
 [node name="SpikyCylinder" parent="." instance=ExtResource("1_v6cwk")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.269, -5, -13.618)
@@ -37,8 +40,10 @@ transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -10, -66.8415)
 [node name="Teleporter" parent="." instance=ExtResource("5_t40n3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8, -66.3116)
 
-[node name="WorldEnvironment" parent="." instance=ExtResource("6_pxa6l")]
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_xj2mt")
+stream = ExtResource("7_uwpwe")
 autoplay = true
+
+[node name="splash_screen" parent="." instance=ExtResource("9_3txib")]
+
+[node name="Background2" parent="." instance=ExtResource("9_je1kc")]

@@ -1,14 +1,16 @@
-[gd_scene load_steps=13 format=3 uid="uid://b58vg1s0ms3hr"]
+[gd_scene load_steps=15 format=3 uid="uid://b58vg1s0ms3hr"]
 
-[ext_resource type="PackedScene" uid="uid://c27k478gxu8bx" path="res://Scenes/Player.tscn" id="1_w433o"]
+[ext_resource type="Script" path="res://Levels/crossy_spikes.gd" id="1_o4ygj"]
+[ext_resource type="PackedScene" uid="uid://c27k478gxu8bx" path="res://Scenes/player.tscn" id="1_w433o"]
 [ext_resource type="PackedScene" uid="uid://csg7h6jwhtt3b" path="res://Scenes/platform.tscn" id="2_vw2ca"]
 [ext_resource type="PackedScene" uid="uid://cnab4kdt2ummt" path="res://Scenes/teleporter.tscn" id="3_koqfx"]
 [ext_resource type="PackedScene" uid="uid://ddl5ibdcryb5b" path="res://Scenes/deathplane.tscn" id="4_w5qrm"]
-[ext_resource type="PackedScene" uid="uid://wkbbl7c6vjce" path="res://Backgrounds/funny_background1.tscn" id="5_b2xt8"]
 [ext_resource type="PackedScene" uid="uid://ds6snrftu1ftl" path="res://Scenes/spiky_cylinder.tscn" id="6_uxkro"]
 [ext_resource type="PackedScene" uid="uid://cad240igulhrq" path="res://Scenes/jump_pad.tscn" id="7_0kaum"]
 [ext_resource type="PackedScene" uid="uid://bkol6cate26rl" path="res://Scenes/moving_platform.tscn" id="8_2n7er"]
-[ext_resource type="AudioStream" uid="uid://c8uxmkh06qu62" path="res://Sounds/Unfunky Groove.mp3" id="9_g2yis"]
+[ext_resource type="AudioStream" uid="uid://cwv0pd75f413r" path="res://final soundtrack/Stake Mixer (Platformer 3).mp3" id="10_mjbfg"]
+[ext_resource type="PackedScene" uid="uid://4jp8t1cp6idv" path="res://Scenes/splash_screen.tscn" id="11_8ixda"]
+[ext_resource type="PackedScene" uid="uid://c2dqj6wvtyvw4" path="res://Backgrounds/background3.tscn" id="11_s68sy"]
 
 [sub_resource type="Curve3D" id="Curve3D_n2hsq"]
 _data = {
@@ -32,6 +34,7 @@ _data = {
 point_count = 3
 
 [node name="blankLevel3" type="Node3D"]
+script = ExtResource("1_o4ygj")
 
 [node name="Player" parent="." instance=ExtResource("1_w433o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.083, 0)
@@ -113,8 +116,6 @@ maxBounceHeight = 20
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 1.836, 12, -7.248)
 maxBounceHeight = 20
 
-[node name="Background1" parent="." instance=ExtResource("5_b2xt8")]
-
 [node name="Path3D" parent="." instance=ExtResource("8_2n7er")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14.815, -47.822)
 curve = SubResource("Curve3D_n2hsq")
@@ -135,7 +136,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -97.631)
 curve = SubResource("Curve3D_j5byb")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("9_g2yis")
+stream = ExtResource("10_mjbfg")
 autoplay = true
 
 [node name="Platform11" parent="." instance=ExtResource("2_vw2ca")]
@@ -155,3 +156,7 @@ transform = Transform3D(1.676, 1.13489e-07, -1.57513, 1.57513, 6.1618e-08, 1.676
 
 [node name="Platform14" parent="." instance=ExtResource("2_vw2ca")]
 transform = Transform3D(0.0930288, 5.33742e-08, -1.99904, 2.99856, 8.97127e-08, 0.0620192, 2.36184e-07, -1.16, -8.71837e-08, 8.1323, 8.29952, -116.966)
+
+[node name="splash_screen" parent="." instance=ExtResource("11_8ixda")]
+
+[node name="Background3" parent="." instance=ExtResource("11_s68sy")]
