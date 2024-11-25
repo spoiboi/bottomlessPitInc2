@@ -1,12 +1,16 @@
-[gd_scene load_steps=8 format=3 uid="uid://dvxtai5y0to2"]
+[gd_scene load_steps=12 format=3 uid="uid://dvxtai5y0to2"]
 
 [ext_resource type="Script" path="res://Levels/escape_the_pit.gd" id="1_4whid"]
 [ext_resource type="PackedScene" uid="uid://c27k478gxu8bx" path="res://Scenes/player.tscn" id="1_jn6o6"]
 [ext_resource type="PackedScene" uid="uid://csg7h6jwhtt3b" path="res://Scenes/platform.tscn" id="2_yam2s"]
 [ext_resource type="PackedScene" uid="uid://ddl5ibdcryb5b" path="res://Scenes/deathplane.tscn" id="3_bu6vc"]
 [ext_resource type="PackedScene" uid="uid://c2dqj6wvtyvw4" path="res://Backgrounds/background3.tscn" id="4_kuagw"]
+[ext_resource type="PackedScene" uid="uid://dyauuntaex86k" path="res://Scenes/crumbling_platform.tscn" id="4_vsb5m"]
+[ext_resource type="PackedScene" uid="uid://di35wor1moco7" path="res://Scenes/wall.tscn" id="5_8evis"]
 [ext_resource type="AudioStream" uid="uid://bds1ggw72wki6" path="res://final soundtrack/Ultimate Final Ascent (Finale).mp3" id="6_c34tb"]
+[ext_resource type="PackedScene" uid="uid://cad240igulhrq" path="res://Scenes/jump_pad.tscn" id="6_txjln"]
 [ext_resource type="PackedScene" uid="uid://4jp8t1cp6idv" path="res://Scenes/splash_screen.tscn" id="7_7i0q1"]
+[ext_resource type="PackedScene" uid="uid://cnab4kdt2ummt" path="res://Scenes/teleporter.tscn" id="8_hdoq6"]
 
 [node name="EscapeThePit" type="Node3D"]
 script = ExtResource("1_4whid")
@@ -20,6 +24,59 @@ transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -2.56708, 0)
 [node name="Platform2" parent="." instance=ExtResource("2_yam2s")]
 transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 20, 0, -0.772332, -16.7745)
 
+[node name="crumble" type="Node" parent="."]
+
+[node name="crumblingPlatform" parent="crumble" instance=ExtResource("4_vsb5m")]
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, 0, -36.1779)
+
+[node name="crumblingPlatform2" parent="crumble" instance=ExtResource("4_vsb5m")]
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, 2.12481, -48.4073)
+
+[node name="crumblingPlatform3" parent="crumble" instance=ExtResource("4_vsb5m")]
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, 4.08413, -60.0322)
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Wall" parent="Node" instance=ExtResource("5_8evis")]
+transform = Transform3D(7.07107, 0, -7.07107, 0, 10, 0, 7.07107, 0, 7.07107, -4.25, 8.53219, -69.2403)
+
+[node name="Wall2" parent="Node" instance=ExtResource("5_8evis")]
+transform = Transform3D(-7.07107, 0, -7.07107, 0, 10, 0, 7.07107, 0, -7.07107, 5.33446, 17.7222, -72.8029)
+
+[node name="Wall3" parent="Node" instance=ExtResource("5_8evis")]
+transform = Transform3D(7.07107, 0, 7.07107, 0, 10, 0, -7.07107, 0, 7.07107, 4.28361, 25.3031, -61.9311)
+
+[node name="Wall4" parent="Node" instance=ExtResource("5_8evis")]
+transform = Transform3D(7.07107, 0, -7.07107, 0, 10, 0, 7.07107, 0, 7.07107, -4.25, 29.5328, -69.2403)
+
+[node name="Node2" type="Node" parent="."]
+
+[node name="JumpPad3" parent="Node2" instance=ExtResource("6_txjln")]
+transform = Transform3D(10, 0, 0, 0, 3, 0, 0, 0, 10, -3.7386, 36.328, -113.982)
+maxBounceHeight = 30
+
+[node name="JumpPad4" parent="Node2" instance=ExtResource("6_txjln")]
+transform = Transform3D(10, 0, 0, 0, 3, 0, 0, 0, 10, -3.7386, 45.6095, -129.041)
+maxBounceHeight = 30
+
+[node name="JumpPad5" parent="Node2" instance=ExtResource("6_txjln")]
+transform = Transform3D(10, 0, 0, 0, 3, 0, 0, 0, 10, -3.7386, 56.7524, -141.641)
+maxBounceHeight = 30
+
+[node name="JumpPad6" parent="Node2" instance=ExtResource("6_txjln")]
+transform = Transform3D(10, 0, 0, 0, 3, 0, 0, 0, 10, -3.7386, 69.0872, -159.626)
+maxBounceHeight = 30
+
+[node name="JumpPad7" parent="Node2" instance=ExtResource("6_txjln")]
+transform = Transform3D(10, 0, 0, 0, 3, 0, 0, 0, 10, -3.7386, 82.9765, -174.101)
+maxBounceHeight = 30
+
+[node name="Platform" parent="Node2" instance=ExtResource("2_yam2s")]
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 30, 0, 36.0857, -89.2508)
+
+[node name="Platform2" parent="Node2" instance=ExtResource("2_yam2s")]
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 30, -0.109314, 94.5924, -197.862)
+
 [node name="deathplane" parent="." instance=ExtResource("3_bu6vc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10.2482, 0)
 
@@ -32,3 +89,6 @@ transform = Transform3D(1, 0, 0, 0, -0.48542, 0.874281, 0, -0.874281, -0.48542, 
 stream = ExtResource("6_c34tb")
 
 [node name="splash_screen" parent="." instance=ExtResource("7_7i0q1")]
+
+[node name="Teleporter" parent="." instance=ExtResource("8_hdoq6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.321972, 98.3519, -203.873)
