@@ -1,0 +1,75 @@
+[gd_scene load_steps=14 format=3 uid="uid://bghgupiauv8k5"]
+
+[ext_resource type="PackedScene" uid="uid://cge8wwata6dkq" path="res://Assets/anim_idle.glb" id="1_tj1xl"]
+[ext_resource type="Texture2D" uid="uid://cx0e21gf78fhk" path="res://Assets/white.png" id="2_ahi0t"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m4qev"]
+albedo_texture = ExtResource("2_ahi0t")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sclet"]
+albedo_texture = ExtResource("2_ahi0t")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x6pfb"]
+albedo_texture = ExtResource("2_ahi0t")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7oqu3"]
+albedo_texture = ExtResource("2_ahi0t")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_515h0"]
+albedo_texture = ExtResource("2_ahi0t")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_738xo"]
+albedo_texture = ExtResource("2_ahi0t")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i2ciq"]
+albedo_texture = ExtResource("2_ahi0t")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uy83p"]
+albedo_texture = ExtResource("2_ahi0t")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pmdyt"]
+albedo_texture = ExtResource("2_ahi0t")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3mhqx"]
+albedo_texture = ExtResource("2_ahi0t")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ws7lh"]
+albedo_texture = ExtResource("2_ahi0t")
+
+[node name="anim_idle" instance=ExtResource("1_tj1xl")]
+
+[node name="HairBackup" parent="." index="2"]
+visible = false
+
+[node name="Hair" parent="Armature/Skeleton3D" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_m4qev")
+
+[node name="Head" parent="Armature/Skeleton3D" index="1"]
+surface_material_override/0 = SubResource("StandardMaterial3D_sclet")
+
+[node name="LeftForearm" parent="Armature/Skeleton3D" index="2"]
+surface_material_override/0 = SubResource("StandardMaterial3D_x6pfb")
+
+[node name="LeftLeg" parent="Armature/Skeleton3D" index="3"]
+surface_material_override/0 = SubResource("StandardMaterial3D_7oqu3")
+
+[node name="LeftUpperArm" parent="Armature/Skeleton3D" index="4"]
+surface_material_override/0 = SubResource("StandardMaterial3D_515h0")
+
+[node name="RightForearm" parent="Armature/Skeleton3D" index="5"]
+surface_material_override/0 = SubResource("StandardMaterial3D_738xo")
+
+[node name="RightLeg" parent="Armature/Skeleton3D" index="6"]
+surface_material_override/0 = SubResource("StandardMaterial3D_i2ciq")
+
+[node name="RightUpperArm" parent="Armature/Skeleton3D" index="7"]
+surface_material_override/0 = SubResource("StandardMaterial3D_uy83p")
+
+[node name="ShortsLeft" parent="Armature/Skeleton3D" index="8"]
+surface_material_override/0 = SubResource("StandardMaterial3D_pmdyt")
+
+[node name="ShortsRight" parent="Armature/Skeleton3D" index="9"]
+surface_material_override/0 = SubResource("StandardMaterial3D_3mhqx")
+
+[node name="Torso" parent="Armature/Skeleton3D" index="10"]
+surface_material_override/0 = SubResource("StandardMaterial3D_ws7lh")

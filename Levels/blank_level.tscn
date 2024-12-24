@@ -1,18 +1,18 @@
 [gd_scene load_steps=8 format=3 uid="uid://dttdy4dcm5nt0"]
 
 [ext_resource type="Script" path="res://Scripts/blank_level.gd" id="1_a7roa"]
-[ext_resource type="PackedScene" uid="uid://c27k478gxu8bx" path="res://Scenes/player.tscn" id="1_dewut"]
 [ext_resource type="PackedScene" uid="uid://csg7h6jwhtt3b" path="res://Scenes/platform.tscn" id="2_f51ui"]
+[ext_resource type="PackedScene" uid="uid://djvxrkk70yxcu" path="res://Scenes/platformblank.tscn" id="2_qhbrf"]
 [ext_resource type="PackedScene" uid="uid://cnab4kdt2ummt" path="res://Scenes/teleporter.tscn" id="3_3ok5c"]
 [ext_resource type="PackedScene" uid="uid://ddl5ibdcryb5b" path="res://Scenes/deathplane.tscn" id="4_7hdd8"]
-[ext_resource type="PackedScene" uid="uid://c2dqj6wvtyvw4" path="res://Backgrounds/background3.tscn" id="5_0l68a"]
 [ext_resource type="PackedScene" uid="uid://4jp8t1cp6idv" path="res://Scenes/splash_screen.tscn" id="7_sfdig"]
+[ext_resource type="PackedScene" uid="uid://n3y4injy4xvl" path="res://Scenes/playerGHOST.tscn" id="7_vv11v"]
 
 [node name="blankLevel2" type="Node3D"]
 script = ExtResource("1_a7roa")
 
-[node name="Player" parent="." instance=ExtResource("1_dewut")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.94297, 0)
+[node name="Platform3" parent="." instance=ExtResource("2_qhbrf")]
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, 1.94297, 14.4023)
 
 [node name="Platform" parent="." instance=ExtResource("2_f51ui")]
 transform = Transform3D(10, 0, 0, 0, 5, 0, 0, 0, 10, 0, -0.66388, 0)
@@ -26,9 +26,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.55574, -15.0408)
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.178012, -0.984028, 3.66579e-09, 0.181233, 0.0327853, 0.982894, -0.967195, -0.174967, 0.184174, -0.746615, 9.72125, -3.10499)
 
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.178012, -0.984028, -1.45017e-08, 0.776639, 0.140495, 0.614078, -0.604271, -0.109313, 0.789245, -0.746615, 9.72125, 57.7043)
+
+[node name="DirectionalLight3D3" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.178012, -0.984028, -7.88841e-08, -0.952296, -0.172272, 0.251901, -0.247877, -0.0448413, -0.967753, -0.746615, 9.90636, -20.1988)
+
 [node name="deathplane" parent="." instance=ExtResource("4_7hdd8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -14, 0)
 
-[node name="Background3" parent="." instance=ExtResource("5_0l68a")]
-
 [node name="splash_screen" parent="." instance=ExtResource("7_sfdig")]
+
+[node name="Player" parent="." instance=ExtResource("7_vv11v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.40426, 0)
