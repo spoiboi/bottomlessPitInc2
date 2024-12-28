@@ -10,6 +10,7 @@
 script = ExtResource("1_vav38")
 
 [node name="title_ui" parent="." instance=ExtResource("2_7q6gp")]
+visible = false
 
 [node name="Background1" parent="." instance=ExtResource("1_wms45")]
 

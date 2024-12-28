@@ -1,14 +1,6 @@
 res://default_env.tres
-res://Scenes/jump_pad.tscn
+res://Scenes/crumbling_platform.tscn
 res://Backgrounds/background3.gdshader
-res://Backgrounds/background4.gdshader
-res://Backgrounds/background2.gdshader
 res://Backgrounds/background1.gdshader
-res://Levels/escape_the_pit.tscn
-res://Levels/verticality.tscn
-res://Levels/blank_level.tscn
-res://Scenes/platformblank.tscn
-res://Scenes/playerGHOST.tscn
-res://Scenes/player.tscn
-res://Scripts/player_camera.gd
-res://Levels/first_button.tscn
+res://Backgrounds/background2.gdshader
+res://Backgrounds/background4.gdshader

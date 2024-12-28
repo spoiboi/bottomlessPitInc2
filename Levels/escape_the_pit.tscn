@@ -43,36 +43,33 @@ transform = Transform3D(7.07107, 0, -7.07107, 0, 10, 0, 7.07107, 0, 7.07107, -4.
 [node name="Wall2" parent="Node" instance=ExtResource("5_8evis")]
 transform = Transform3D(-7.07107, 0, -7.07107, 0, 10, 0, 7.07107, 0, -7.07107, 5.33446, 17.7222, -72.8029)
 
-[node name="Wall3" parent="Node" instance=ExtResource("5_8evis")]
-transform = Transform3D(7.07107, 0, 7.07107, 0, 10, 0, -7.07107, 0, 7.07107, 4.28361, 25.3031, -61.9311)
-
 [node name="Wall4" parent="Node" instance=ExtResource("5_8evis")]
 transform = Transform3D(7.07107, 0, -7.07107, 0, 10, 0, 7.07107, 0, 7.07107, -4.25, 29.5328, -69.2403)
 
 [node name="Node2" type="Node" parent="."]
 
 [node name="JumpPad3" parent="Node2" instance=ExtResource("6_txjln")]
-transform = Transform3D(10, 0, 0, 0, 3, 0, 0, 0, 10, -3.7386, 36.328, -113.982)
+transform = Transform3D(10, 0, 0, 0, 3, 0, 0, 0, 10, 1, 36.328, -113.982)
 maxBounceHeight = 30
 
 [node name="JumpPad4" parent="Node2" instance=ExtResource("6_txjln")]
-transform = Transform3D(10, 0, 0, 0, 3, 0, 0, 0, 10, -3.7386, 45.6095, -129.041)
+transform = Transform3D(10, 0, 0, 0, 3, 0, 0, 0, 10, 1, 45.6095, -129.041)
 maxBounceHeight = 30
 
 [node name="JumpPad5" parent="Node2" instance=ExtResource("6_txjln")]
-transform = Transform3D(10, 0, 0, 0, 3, 0, 0, 0, 10, -3.7386, 56.7524, -141.641)
+transform = Transform3D(10, 0, 0, 0, 3, 0, 0, 0, 10, 1, 56.7524, -141.641)
 maxBounceHeight = 30
 
 [node name="JumpPad6" parent="Node2" instance=ExtResource("6_txjln")]
-transform = Transform3D(10, 0, 0, 0, 3, 0, 0, 0, 10, -3.7386, 69.0872, -159.626)
+transform = Transform3D(10, 0, 0, 0, 3, 0, 0, 0, 10, 1, 69.0872, -159.626)
 maxBounceHeight = 30
 
 [node name="JumpPad7" parent="Node2" instance=ExtResource("6_txjln")]
-transform = Transform3D(10, 0, 0, 0, 3, 0, 0, 0, 10, -3.7386, 82.9765, -174.101)
+transform = Transform3D(10, 0, 0, 0, 3, 0, 0, 0, 10, 1, 82.9765, -174.101)
 maxBounceHeight = 30
 
 [node name="Platform" parent="Node2" instance=ExtResource("2_yam2s")]
-transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 30, 0, 36.0857, -89.2508)
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 30, 1, 36.0857, -89.2508)
 
 [node name="Platform2" parent="Node2" instance=ExtResource("2_yam2s")]
 transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 30, -0.109314, 94.5924, -197.862)
